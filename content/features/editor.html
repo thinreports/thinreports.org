@@ -1,0 +1,114 @@
+---
+id: features-editor
+title: "Features › ThinReports Editor"
+---
+
+<h2>Features</h2>
+
+<%= render 'features/nav' %>
+
+<div class="section">
+  <h2 class="sub">ThinReports Editor</h2>
+  <p>
+    ThinReports Editor は ThinReports で扱う帳票レイアウトを編集する専用のGUIツールです。
+    Editor を使うことによって、マウスやキーボードによる直感的な操作で業務システムで求められるような、
+    複雑な帳票レイアウトも簡単に作成することが可能です。
+    <em class="since">Since 0.7.0</em> より Windows 版に加えて Mac/Ubuntu 版もリリースしています。
+  </p>
+  <p>
+    ThinReports Editor は、主に以下の特徴を持ちます。
+  </p>
+  <ul>
+    <li><em class="since">Since 0.7.0</em> レイアウト定義のエクスポート（仕様書の自動生成）</li>
+    <li><em class="since">Since 0.7.0</em> 単位mmによるデザイン（mm⇔pxの変換）</li>
+    <li>標準フォントのビルトイン（IPAフォント/Courier/Times Roman/Helvetica）</li>
+    <li>タブによる複数レイアウトの同時編集</li>
+    <li>定型用紙サイズ (A3/A4/B4/B5) と、ユーザ定義サイズの指定</li>
+    <li>基本図形の描画、編集 (四角形、線形、楕円形、静的テキスト)</li>
+    <li>動的/静的テキスト領域における横位置、縦位置指定</li>
+    <li>動的<em class="since">Since 0.7.0</em>/静的テキストにおける行間、文字間隔指定</li>
+    <li>静的画像の埋め込み機能 (PNG/JPEG)</li>
+    <li>Generator によって動的にテキストデータを埋込むことが可能なテキストブロック機能</li>
+    <li><em class="since">Since 0.7.0</em> Generator によって動的にイメージを埋込むことが可能なイメージブロック機能</li>
+    <li>日付時刻書式、数値書式などの簡易書式機能</li>
+    <li>自動改ページ、ページフッター、フッター機能を有するリスト機能</li>
+    <li>ユーザ補助機能
+      <ul>
+        <li>拡大縮小機能</li>
+        <li>元に戻す、やり直し機能 (Undo/Redo)</li>
+        <li>吸着レイアウトガイド機能 (図形の整列に利用)</li>
+        <li>図形の複数選択機能による一括属性変更、整列機能</li>
+        <li>レイヤー機能 (前面、最前面、背面、再背面)</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<div class="section">
+  <h3>Screen Shots</h3>
+</div>
+
+<div class="box screenshots clearfix" id="screenshots">
+  <dl>
+    <dt><%= colorbox_image_tag '/assets/images/fet/editor/sc1.png', 'ThinReports Editor' %></dt>
+    <dd class="desc">ThinReports Editor</dd>
+  </dl>
+  <dl>
+    <dt><%= colorbox_image_tag '/assets/images/fet/editor/sc2.png', '新規帳票作成' %></dt>
+    <dd class="desc">新規帳票作成</dd>
+  </dl>
+  <dl>
+    <dt><%= colorbox_image_tag '/assets/images/fet/editor/sc3.png', 'プロパティ編集' %></dt>
+    <dd class="desc">プロパティ編集</dd>
+  </dl>
+  <dl>
+    <dt><%= colorbox_image_tag '/assets/images/fet/editor/sc4.png', '一覧表の作成' %></dt>
+    <dd class="desc">一覧表の作成</dd>
+  </dl>
+  <dl>
+    <dt><%= colorbox_image_tag '/assets/images/fet/editor/sc5.png', '複数選択と整列' %></dt>
+    <dd class="desc">複数選択と整列</dd>
+  </dl>
+  <dl>
+    <dt><%= colorbox_image_tag '/assets/images/fet/editor/sc6.png', '見積書作成例' %></dt>
+    <dd class="desc">見積書作成例</dd>
+  </dl>
+  <dl>
+    <dt><%= colorbox_image_tag '/assets/images/fet/editor/sc7.png', '画像の埋め込み' %></dt>
+    <dd class="desc">画像の埋め込み</dd>
+  </dl>
+  <dl>
+    <dt><%= colorbox_image_tag '/assets/images/fet/editor/sc8.png', 'テキストの縦横位置揃え' %></dt>
+    <dd class="desc">テキストの縦横位置</dd>
+  </dl>
+</div>
+
+<div class="section">
+  <h3>Requirements</h3>
+  <p>
+    ThinReports Editor は、現時点で以下のプラットフォームに対応しています。
+  </p>
+  <ul>
+    <li>Windows XP/Vista/7</li>
+    <li><em class="since">Since 0.7.0</em> Mac OS X 10.6+</li>
+    <li><em class="since">Since 0.7.0</em> Linux (Ubuntu 11.04+)</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h3>License</h3>
+  <p>
+    <%= external_link_to 'GNU GENERAL PUBLIC LICENSE Version 3 license', 'http://www.gnu.org/licenses/gpl.html' %>
+  </p>
+</div>
+
+<script type="text/javascript" src="/assets/javascript/utils.js"></script>
+<script type="text/javascript" src="/assets/vendor/colorbox/jquery.colorbox.min.js"></script>
+<script type="text/javascript">
+  $('#screenshots a').colorbox();
+</script>
+
+<% content_for :css do %>
+<link rel="stylesheet" type="text/css" href="/assets/vendor/colorbox/colorbox.css" media="all" />
+<% end %>
+

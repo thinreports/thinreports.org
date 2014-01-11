@@ -1,0 +1,133 @@
+--- 
+id: top
+title: 帳票ソリューション for Ruby and Rails
+---
+
+<h2><img src="/assets/images/top/h2.png" alt="帳票ソリューション for Ruby and Rails"></h2>
+
+<div id="callout" class="clearfix">
+  <div id="detail">
+    <p class="desc">
+      <em>ThinReports</em> は <em class="pdf">PDF</em> 形式の帳票生成を
+      <em class="ruby">Ruby</em> によって実現するシンプルで新しいソリューションです。
+      ThinReports が提供する専用レイアウトエディタ <em>ThinReports Editor</em> と
+      専用ライブラリ <em>ThinReports Generator</em> によって、Ruby や <em class="ruby">Ruby on Rails</em> のような
+      Ruby製のフレームワークを使った帳票開発の負担を軽減 - thin - することを目指します。
+    </p>
+    <div class="navigate-to">
+      <%= link_to 'More details', '/features/', :class => 'navigate' %>
+    </div>
+    <div class="dw">
+      <%= link_to 'Download Now', '/download/', :title => 'Download Now' %>
+      <p>Latest release:<%= version_number %></p>
+    </div>
+  </div>
+  <div id="showcase">
+    <div id="prezi-presentation">
+      <iframe src="http://prezi.com/embed/hbts1q3y8zhd/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=1&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined" width="400" height="300" frameBorder="0"></iframe>
+      <div class="switch-to-images">
+        <a href="#"><strong>Switch</strong> to static presentation if you can't play this.</a>
+      </div>
+    </div>
+    <div id="static-presentation">
+      <div id="showcase-images">
+        <%= link_to '<img src="/assets/images/top/sc-3.png" alt="Show and print reports as PDF">', '/features/', 
+                    :title => 'Show and print reports as PDF' %>
+        <%= link_to '<img src="/assets/images/top/sc-1.png" alt="ThinReports Editor">', '/features/editor/',
+                    :title => 'ThinReports Editor' %>
+        <%= link_to '<img src="/assets/images/top/sc-2.png" alt="ThinReports Generator for Ruby">', '/features/generator/', 
+                    :title => 'ThinReports Generator' %>
+      </div>
+      <div id="showcase-nav"></div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="/assets/javascript/jquery.cycle.min.js"></script>
+<script type="text/javascript">
+  $('.switch-to-images a').click(function(e) {
+    $('#prezi-presentation, #static-presentation').toggle();
+    $('#showcase-images').cycle({
+      fx: 'fade', 
+      timeout: 8000,
+      pager: '#showcase-nav'
+    });
+    e.preventDefault();
+  });
+</script>
+
+<div class="clearfix">
+  <div id="start" class="section">
+    <h3>Get Start</h3>
+    <h4><%= link_to 'What is ThinReports?', '/features/', :class => 'navigate' %></h4>
+    <p>
+      ThinReports の概要と仕組み、そして ThinReports が提供する Editor/Generator それぞれについて
+      詳しく説明しています。まずは、こちらから ThinReports に触れてください。
+    </p>
+    <h4><%= link_to 'Get ThinReports', '/download/', :class => 'navigate' %></h4>
+    <p>
+      ThinReports が提供するツールの最新版がダウンロードできます。ThinReports に少しでも興味を持って頂けたら
+      ぜひこちらからダウンロードしてください！
+    </p>
+    <h4><%= link_to 'Get Documentations', '/documentation/', :class => 'navigate' %></h4>
+    <p>
+      ThinReports を利用する上で役に立つさまざまなドキュメントを紹介しています。
+      ThinReports をこれから始める方はまずこちらを参考にしてください。
+    </p>
+    <h4><%= link_to 'Get Help', '/support/', :class => 'navigate' %></h4>
+    <p>
+      Project Site 上に設置された、誰でも利用できる Open Forum や、
+      将来提供予定の Subscription Support (有償サポート) について説明しています。
+      ThinReports の使い方で助けが必要な方はこちらへ。
+    </p>
+  </div>
+  <div id="news">
+    <h3>News <%= link_to_feed '<img src="/assets/images/bt/feed.png" alt="Feed" class="small-bt">' %></h3>
+    <div id="news-entries">
+      <div class="empty-set"></div>
+    </div>
+    <div class="navigate-to">
+      <%= link_project_to 'More News', 'news', :class => 'navigate' %>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/assets/javascript/jquery.jgfeed.min.js"></script>
+<script type="text/javascript" src="/assets/javascript/utils.js"></script>
+<script type="text/javascript"> $.showFeeds('#news-entries', '<%= original_feed_url %>', 5); </script>
+
+<% content_for :css do %>
+<link rel="stylesheet" type="text/css" href="/assets/vendor/colorbox/colorbox.css" media="all" />
+<% end %>
+
+<div class="resource">
+  <div class="section clearfix">
+    <h3>Award</h3>
+    <a href="http://www.slideshare.net/thinreports/fukuoka-ruby-award-2012" id="award-slide" title="FUKUOKA Ruby Award 2012 Presentation">
+      <img src="/assets/images/top/award-slide-thumb.png" alt="Slide">第4回フクオカRuby大賞の受賞式で発表した際のスライドです。
+    </a>
+    <a href="http://www.facebook.com/photo.php?fbid=337731029611996&set=s.310476205678238&type=1&theater" id="award-trophy" title="FUKUOKA Ruby Award 2012 Trophy">
+      <img src="/assets/images/top/award-trophy-thumb.jpg" alt="Trophy">授賞式で頂いた賞状とトロフィーです。
+    </a>
+  </div>
+  <div class="section clearfix">
+    <h3>Learn</h3>
+    <a href="http://www.slideshare.net/thinreports/thinreports-osc2011shimane" id="res-slide" title="Ruby向け帳票ソリューション「ThinReports」の開発で知るOSSの威力 via SlideShare">
+      <img src="/assets/images/top/res-slide-thumb.png" alt="Slide">ThinReportsの開発経緯から0.7の機能と今後、そしてThinReportsを支えるOSSや技術を紹介したスライドです。
+    </a>
+    <a href="http://www.ustream.tv/recorded/18492103" id="res-video" title="In OSC2011 Shimane via Ustream">
+      <img src="/assets/images/top/res-video-thumb.png" alt="Video">2011/11/12に島根県松江市で開催された「OSC2011 Shimane」で発表した際の動画です。
+    </a>
+  </div>
+</div>
+
+<script type="text/javascript" src="/assets/vendor/colorbox/jquery.colorbox.min.js"></script>
+<script type="text/javascript">
+  var createTitle_ = function() {
+    return "<a href=" + $(this).attr('href') +">" + $(this).attr('title') + "</a>";
+  };
+  $('#res-slide').colorbox({href: "http://www.slideshare.net/slideshow/embed_code/10148583", iframe: true, innerWidth: 510, innerHeight: 426, title: createTitle_});
+  $('#res-video').colorbox({href: "http://www.ustream.tv/embed/recorded/18492103", iframe: true, innerWidth: 608, innerHeight: 368, title: createTitle_});
+  $('#award-slide').colorbox({href: "http://www.slideshare.net/slideshow/embed_code/11734889", iframe: true, innerWidth: 510, innerHeight: 426, title: createTitle_});
+  $('#award-trophy').colorbox({href: "http://sphotos-a.ak.fbcdn.net/hphotos-ak-frc1/429278_337731029611996_452444515_n.jpg", iframe: false, innerWidth: 510, innerHeight: 426, title: createTitle_});
+</script>
+

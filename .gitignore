@@ -1,0 +1,8 @@
+Capfile
+Gemfile.lock
+.ruby-version
+
+.sass-cache/
+output/
+tmp/
+

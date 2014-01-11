@@ -1,0 +1,58 @@
+--- 
+id: features-concepts
+title: "Features › Concepts"
+---
+
+<h2>Features</h2>
+
+<%= render 'features/nav' %>
+
+<div class="section">
+  <h2 class="sub">Concepts</h2>
+</div>
+
+<div class="section">
+  <h3>Basic Specifications</h3>
+  <dl class="h4s">
+    <dt>Based on SVG 1.1</dt>
+    <dd>
+      ThinReports は Editor 上の図形描画からレイアウト定義の保持まで全面的に SVG を採用しています。
+    </dd>
+    <dt><em class="pdf">PDF</em> Supported!</dt>
+    <dd>
+      <em class="since">0.6.0.pre3</em> より <em class="pdf">PDF</em> 出力に対応したことにより、
+      <em class="since">0.7.0</em> でPXD形式は廃止となりました。
+      とはいえ、 ThinReports が SVG をベースにすることは変わらず、<%= link_to 'Why SVG?', '#why-svg' %> の通り今後もブラウザだけで動作する帳票機能の実現を目標とします。
+    </dd>
+  </dl>
+</div>
+
+<div class="section" id="why-svg">
+  <h3>Why SVG?</h3>
+  <p>
+    <%= external_link_to 'SVG', 'http://www.w3.org/Graphics/SVG/' %> は、XML形式の2次元画像フォーマットです。
+    つまり、Text だけで繊細なイメージを表現することが可能なのです。そしてこれは ThinReports が SVG を採用した最大の理由であり、その利点は以下のものが挙げられます。
+  </p>
+  <dl class="h4s">
+    <dt>Fast</dt>
+    <dd>
+      一般的に Text の加工処理は Binary の生成処理に比べて高速であると言えます。
+      また、Generator によって生成された帳票も Text であるため（PXD形式の場合）、HTTP圧縮等の既存技術を使ってレスポンスデータの容量を小さくすることができ、
+      レスポンスパフォーマンスの向上も期待できます。
+    </dd>
+    <dt>Scalable</dt>
+    <dd>
+      Generator は、Text 加工さえ可能であれば、Ruby に限らず
+      どんなプログラム言語でも実装できます。今後、Java や PHP ,Python などをサポートするかもしれません。
+    </dd>
+    <dt>Show and print reports on Web Browsers <%= em_for_future_plan %></dt>
+    <dd>
+      SVG は、多くのウェブブラウザがサポートしており(最近では IE9 も対応を表明)、その点だけで言えば ThinReports で作成した帳票をブラウザ単体で閲覧・印刷することが可能です。
+    </dd>
+    <dd>
+      しかし、各ブラウザにおける SVG の安定性や互換性、さらにはブラウザの印刷機能に関する問題などを考慮すると、現時点では困難と言わざるを得ない状況です。
+      それでも ThinReports Team は、これを目標の一つとして積極的に取り組んでいきます。
+    </dd>
+  </dl>
+</div>
+

@@ -1,0 +1,1008 @@
+---
+is_hidden: true
+---
+
+@import 'compass/css3';
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,300,300italic);
+
+@function image-path($filename) {
+  @return url(/assets/images/#{$filename});
+}
+
+@mixin base-font-style {
+  font-family: 'Roboto', Helvetica, Arial, Meiryo, "Hiragino Kaku Gothic Pro", "MS PGothic", sans-serif;
+  font-weight: 300;
+  color: #666;
+}
+
+@mixin subject-font-style {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #333;
+}
+
+body {
+  @include base-font-style;
+  font-size: 10pt;
+  background: #fff;
+  margin: 100px 0 0 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: underline;
+  color: #333;
+  outline: none;
+}
+
+a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+a.external {
+  color: #006593;
+  background: transparent image-path("external.png") no-repeat left center;
+  padding-left: 12px;
+}
+
+a.external-base {
+  color: #006593;
+}
+
+em {
+  font-style: normal;
+}
+
+.navigate, .r-navigate {
+  background-color: transparent;
+  background-image: image-path("circle-arrow.png");
+  background-repeat: no-repeat;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.navigate, {
+  background-position: left center;
+  padding-left: 20px;
+}
+
+.r-navigate {
+  background-position: right center;
+  padding-right: 20px;
+}
+
+
+abbr {
+  border: 0;
+}
+
+img {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  outline: none;
+}
+
+h1, h2, h3, h4 {
+  @include subject-font-style;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 48px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+
+/* 2th h2 behaves like h3 */
+h2.sub {
+  border-bottom: 0;
+  margin-bottom: 0;
+  font-size: 32px !important;
+  margin-top: 35px;
+}
+
+h3 {
+  font-size: 32px;
+  margin-top: 35px;
+  text-align: left;
+}
+
+h4 {
+  color: black;
+  font-size: 18px;
+  margin-top: 25px;
+}
+
+ul, ol, li, dl, dt, dd, p {
+  margin: 0;
+  padding: 0;
+}
+
+ol li {
+  margin-bottom: 0.5em;
+}
+
+table, th, td {
+  border-spacing: 0;
+  border-collapse: collapse;
+  padding: 0;
+  margin: 0;
+}
+
+#nav ul, #footer-nav ul, #content-nav ul {
+  list-style: none;
+}
+
+.container {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#container {
+  position: relative;
+}
+
+#header {
+  height: 180px;
+}
+
+#tools {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  white-space: nowrap;
+}
+
+#side {
+  width: 215px;
+  float: left;
+}
+
+#main {
+  margin-bottom: 200px;
+}
+
+#content {
+  float: left;
+  width: 745px;
+}
+
+#message {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+
+  #message-container {
+    width: 960px;
+    margin: 0 auto;
+
+    a {
+      display: block;
+      text-align: left;
+      width: 400px;
+      height: 40px;
+      margin-left: auto;
+      padding: 5px 50px 5px 5px;
+      border-color: #666;
+      border-width: 0 3px 3px 3px;
+      border-style: solid;
+      text-decoration: none !important;
+      @include border-radius(0px 0 8px 8px);
+      background: #fff image-path("message-arrow.png") no-repeat 98% center;
+
+      span {
+        @include inline-block;
+        color: #666;
+        background: transparent image-path("message-icon.png") no-repeat 10px center;
+        padding-left: 50px;
+      }
+
+      &:hover {
+        border-color: #000 !important;
+      }
+    }
+  }
+}
+
+
+/**
+ * GitHub icon
+ */
+.github-tool-icon img {
+  width: 22px;
+}
+
+
+/**
+ * Basic box container
+ */
+.box {
+  padding: 20px;
+  background: #f9f9f9;
+  @include border-radius(2px);
+}
+
+
+/**
+ * Basic section
+ */
+.section p, .section dd, .section li, .desc {
+  line-height: 1.3em;
+}
+
+.section p, .section dl, .section ul, .section ol {
+  margin-top: 20px;
+}
+
+.section dl dt {
+  color: #333;
+  font-size: 14px;
+}
+
+.section dl dd {
+  margin: 10px 0 18px 18px;
+}
+
+.section dl.h4s dt {
+  color: black;
+  font-size: 16px !important;
+}
+
+.section ul, .section ol {
+  margin-left: 25px;
+}
+
+.section ul {
+  list-style: square;
+}
+
+.section ul li ul {
+  margin-top: 10px;
+  list-style: circle;
+}
+
+/* Box in section */
+.section .box {
+  margin-top: 15px;
+}
+
+/* h4 in Box */
+.section .box h4 {
+  margin-top: 0 !important;
+}
+
+
+/**
+ * Navigation
+ */
+#nav {
+  ul {
+    width: 150px;
+  }
+  li {
+    border-bottom: 1px solid #ccc;
+  }
+  a {
+    text-decoration: none !important;
+    &:hover {
+      background: transparent image-path("h-arrow.png") no-repeat 95% center;
+    }
+  }
+  a, span {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    text-indent: .5em;
+  }
+  span {
+    color: #333;
+  }
+  span.active {
+    background: transparent image-path("h-arrow-gray.png") no-repeat 95% center;
+  }
+}
+
+#content-nav ul {
+  border-left: 1px solid #ccc;
+}
+
+#content-nav li {
+  float: left;
+  border-right: 1px solid #ccc;
+}
+
+#content-nav li a {
+  text-decoration: none !important;
+}
+
+#content-nav li a, #content-nav li span {
+  display: block;
+  padding: 10px 20px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+#content-nav li a:hover {
+  background-image: image-path("v-arrow-gray.png");
+}
+
+#content-nav li span.active {
+  background-image: image-path("v-arrow.png");
+  color: black;
+}
+
+#side-banner {
+  margin-top: 30px;
+}
+
+#side-banner a {
+  display: block;
+  width: 150px;
+  margin: 0 0 10px 0;
+}
+
+#notices {
+  margin-top: 10px;
+}
+
+#notices dl {
+  width: 150px;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  background: #f9f9f9;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+#notices dt {
+  margin: 0 10px 10px 10px;
+}
+
+#notices dd {
+  text-align: right;
+  margin: 0 10px;
+}
+
+#vendor-fbbox {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  @include border-radius(2px);
+  width: 150px;
+}
+
+#vendor-gplus {
+  margin-top: 10px;
+  border: 0;
+  background-color: #f9f9f9;
+  @include border-radius(2px);
+  padding: 10px 0;
+  width: 150px;
+}
+#vendor-gplus .gplus-one,
+#vendor-gplus .gplus-badge {
+  margin: 7px 0 7px 5px;
+}
+
+/**
+ * Footer contents
+ */
+#footer {
+  background: #333;
+  color: #888;
+  padding: 25px 0 10px 0;
+}
+
+#footer a {
+  color: #888;
+}
+
+#footer a:hover {
+  color: #bbb;
+}
+
+#footer dl {
+  float: left;
+  width: 320px;
+}
+
+#footer dt {
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+}
+
+#footer dt img {
+  vertical-align: middle;
+}
+
+#footer dd {
+  padding: 0 .7em 0 1em;
+  font-size: 10px;
+  line-height: 1.1em;
+  text-align: justify;
+  text-justify: auto;
+}
+
+#footer-nav {
+  float: left;
+  border-left: 1px solid #444;
+  font-size: 12px;
+  padding: .3em 0 0 1.8em;
+  margin-left: 120px;
+}
+
+#footer-nav li {
+  margin-bottom: 7px;
+}
+
+#footer-nav li a {
+  text-decoration: none !important;
+}
+
+#footer-bottom {
+  margin-top: 30px;
+  font-size: 10px;
+}
+
+#footer-bottom address {
+  font-style: normal;
+  text-align: center;
+  height: 12px;
+  font-size: 13px;
+}
+
+#poweredby {
+  font-size: 12px;
+}
+
+#poweredby a {
+  font-style: italic;
+}
+
+
+/**
+ * Common utils
+ */
+.clearfix {
+  min-height: 1px;
+  &:after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    font-size: 1px;
+    visibility: hidden;
+  }
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+.navigate-to {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.icon-ref {
+  padding-right: 14px;
+  background: transparent image-path("h-arrow.png") no-repeat 100% 60%;
+}
+
+img.small-bt {
+  width: 16px;
+  height: 16px;
+}
+
+/* Basic section for List of navigates */
+ul.navigates {
+  list-style: none;
+}
+
+ul.navigates li {
+  float: left;
+  margin-right: 10px;
+}
+
+/**
+ * Buttons of documentation
+ */
+span.doc {
+  padding-left: 3px;
+
+  a {
+    @include border-radius(2px);
+    @include inline-block;
+    border: 0;
+    margin-left: 3px;
+    background-color: #666;
+    padding: 1px 0;
+    width: 20px;
+    text-align: center;
+    font-size: 12px;
+    text-decoration: none;
+    vertical-align: baseline;
+    color: #fff;
+
+    &:hover {
+      background-color: #ddd !important;
+      color: #000 !important;
+    }
+  }
+}
+
+
+/**
+ * Marks:
+ *  - Future Plan
+ *  - Under Preparation
+ */
+em.future-plan, em.under-pre, em.since {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  border-width: 1px;
+  border-style: solid;
+  vertical-align: baseline;
+  padding: 0 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+em.future-plan {
+  color: #C61A1A;
+  border-color: #C61A1A;
+  white-space: nowrap;
+}
+
+em.under-pre {
+  color: #e46c0a;
+  border-color: #e46c0a;
+  white-space: nowrap;
+}
+
+em.ruby {
+  color: #AA3131;
+  font-style: normal;
+}
+
+em.pdf {
+  color: #BA0000;
+  font-style: normal;
+}
+
+em.since {
+  color: #fff;
+  border-color: #E05D00;
+  background: #E05D00;
+}
+
+em.out, .out {
+  font-style: normal;
+  text-decoration:line-through;
+}
+
+
+/**
+ * Top contents
+ */
+.content-top h2 {
+  border: 0 !important;
+  margin: 0 0 10px 0 !important;
+}
+
+#callout {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1em;
+}
+
+#prezi-presentation {
+  .switch-to-images {
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+  }
+}
+
+#static-presentation {
+  display: none;
+}
+
+#detail {
+  float: left;
+  width: 315px;
+  margin-top: 28px;
+  font-size: 14px;
+
+  .dw {
+    margin-top: 25px;
+    text-align: center;
+
+    a {
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      font-size: 24px;
+      @include inline-block;
+      @include border-radius(5px);
+      padding: 5px 0;
+      width: 250px;
+    }
+    p {
+      width: 250px;
+      text-align: right;
+      margin: 5px auto 0 auto;
+      font-size: 12px;
+    }
+
+    em {
+      padding-left: 0.5em;
+      color: #333;
+    }
+  }
+  .desc {
+    line-height: 1.5em;
+  }
+}
+
+#showcase {
+  float: left;
+  width: 400px;
+  margin: 0 10px 0 20px;
+}
+
+#showcase-images {
+  width: 400px;
+  height: 300px;
+}
+
+#showcase-images a {
+  display: none;
+}
+
+#showcase-nav {
+  text-align: center;
+  height: 25px;
+}
+
+#showcase-nav a {
+  display: -moz-inline-box;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  overflow: hidden;
+  background: #ddd;
+  font-size: 10px;
+  color: #ddd;
+  margin: 0 4px;
+}
+
+#showcase-nav a.activeSlide {
+  background: #666;
+  color: #666;
+}
+
+#start {
+  width: 335px;
+  float: left;
+}
+
+#start p {
+  padding-left: 18px;
+}
+
+#news {
+  width: 380px;
+  float: left;
+  margin-left: 30px;
+  position: relative;
+}
+
+#news-entries {
+  border-top: 1px solid #ccc;
+  margin-top: 25px;
+}
+
+#news-entries a {
+  display: block;
+  background-position: 98% 50%;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+  text-decoration: none !important;
+  line-height: 1.5em;
+}
+
+#news-entries a.latest {
+  background-color: #f9f9f9;
+}
+
+#news-entries a:hover {
+  background-image: image-path("h-arrow.png");
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+#news-entries .posted-at {
+  font-style: italic;
+  color: #666;
+}
+
+#news-entries a:hover .posted-at {
+  color: #666;
+}
+
+#news-entries .empty-set {
+  border-bottom: 1px solid #ccc;
+  height: 50px;
+  line-height: 50px;
+  background: transparent image-path("loading.gif") no-repeat center center;
+  color: #bbb;
+  font-style: italic;
+  text-align: center;
+}
+
+#news-entries .empty-set.no-feed {
+  background: #fff !important;
+}
+
+.content-top .resource {
+  text-align: center;
+  padding-bottom: 1em;
+  margin-top: 25px;
+
+  h3 {
+    margin: 10px 0;
+  }
+  
+  a {
+    vertical-align: top;
+    border: 1px solid #ddd;
+    padding: 5px;
+    display: inline-block;
+    width: 45%;
+    text-decoration: none !important;
+    text-align: left;
+    margin: 0 0.5em;
+    color: #666 !important;
+    line-height: 1.2em;
+  
+    &:hover {
+      border-color: #aaa !important;
+    }
+
+    img {
+      float: left;
+      margin-right: 1em;
+    }
+  }
+}
+
+
+/**
+ * Features/introduction contents
+ */
+.content-features-introduction .box.showcase img {
+  float: right;
+}
+
+.content-features-introduction .showcase-desc {
+  width: 400px;
+}
+
+/* Container for embed SlideShare */
+#rwc2010-slide {
+  margin-top: 20px;
+}
+
+/*
+ * ScreenShot styles (for jQuery ColorBox).
+ * Only for Features/editor and generator.
+ */
+.screenshots {
+  margin-top: 20px;
+}
+
+.screenshots dl {
+  width: 230px;
+  float: left;
+  margin: 0 5px 10px 0;
+}
+
+.screenshots img {
+  padding: 3px;
+  border: 1px solid #ccc;
+}
+
+.screenshots a:hover img {
+  border-color: #999;
+}
+
+.screenshots dl dd {
+  text-align: center;
+  margin-top: 5px;
+}
+
+
+/**
+ * Download contents
+ */
+#release-info dt,
+#release-info dd {
+  font-size: 24px;
+}
+
+/* Latest release informations */
+#release-info dt {
+  color: black;
+  float: left;
+}
+
+#release-info dd {
+  font-style: italic;
+  color: #aaa;
+  text-align: right;
+}
+
+/* Relative links */
+#release-info .navigates {
+  margin-top: 10px;
+}
+
+#release-files .navigates {
+  margin: 10px 0 0 25px;
+  padding-left: 10px;
+  border-left: 1px solid #ddd;
+}
+
+#release-files .navigates li {
+  border-right: 1px solid #ddd;
+  padding-right: 10px;
+}
+
+/* List of files released */
+#release-files .file-list {
+  margin: 20px 0 0 20px;
+  width: 725px;
+}
+
+#release-files .file-list th,
+#release-files .file-list td {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #ccc;
+}
+
+#release-files .file-list tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Description */
+#release-files .file-list th {
+  width: auto;
+  text-align: left;
+  text-indent: 5px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+#release-files .file-list .size {
+  text-align: right;
+  width: 50px;
+}
+
+#release-files .file-list .md5 {
+  text-indent: 5px;
+  text-align: left;
+  width: 250px;
+}
+
+#release-files .file-list .button {
+  width: 105px;
+  padding: 0 !important;
+  text-align: center;
+  vertical-align: middle;
+
+  a {
+    @include border-radius(2px);
+    @include inline-block;
+    background-color: #333;
+    color: #fff;
+    font-size: 12px;
+    width: 90px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #999 !important;
+    }
+  }
+}
+
+#release-files .file-list .button-small {
+  width: 80px;
+  padding: 0 !important;
+  text-align: right;
+  vertical-align: middle;
+}
+
+#install-generator {
+  border: 6px solid #ddd;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: #222;
+  padding: .5em 1.5em;
+  margin: 20px 0 0 20px;
+  font-family: Monaco, Consolas, "Courier New", monospace;
+}
+
+#install-generator dl {
+  margin: .5em 1.8em;
+}
+
+#install-generator dt {
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #ddd;
+}
+
+#install-generator dd {
+  font-size: 20px;
+  line-height: 1.8em;
+  color: #fff;
+}
+
+
+/**
+ * Contact contents
+ */
+.content-contact dd {
+  margin-bottom: 10px !important;
+}
+
+.content-contact .contact-email {
+  margin-top: 5px !important;
+}
+.content-contact .contact-email a {
+  font-weight: bold;
+}
+
+.content-contact dd ul {
+  margin-top: 0 !important;
+}
+
+
+/*
+ * 404 Page
+ */
+.content-404 p {
+  font-size: 16px;
+}
+
+/*
+ * Customize ColorBox Plugin.
+ */
+#cboxTitle a {
+  color: #ccc !important;
+}
+
+/**
+ * CSS for each contents
+ */
+@import 'case'
+

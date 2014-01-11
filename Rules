@@ -1,0 +1,66 @@
+#!/usr/bin/env ruby
+
+require 'compass'
+Compass.add_project_configuration 'Compass.rb'
+
+# Compilation
+
+compile '/assets/style/_*/' do
+end
+
+compile '/assets/style/*/' do
+  filter :erb
+  filter :sass, Compass.sass_engine_options
+  filter :relativize_paths, type: :css
+  filter :rainpress
+end
+
+compile '/assets/*' do
+end
+
+compile '/sitemap/' do
+  filter :erb
+end
+
+compile '/robots/' do
+  filter :erb
+end
+
+compile '/htaccess/' do
+  filter :erb
+end
+
+compile '*' do
+  filter :erb
+  filter :kramdown, auto_ids: false if item[:extension] == 'md'
+
+  layout 'default'
+end
+
+# Routing
+
+route '/assets/style/_*/' do
+  nil
+end
+
+route '/assets/style/*/' do
+  '/assets/style.css'
+end
+
+route '/assets/*' do
+  "/assets#{item.identifier[7..-2]}"
+end
+
+route '*' do
+  case
+  when item.binary?
+    "#{item.identifier.chop}.#{item[:extension]}"
+  when item[:path]
+    item[:path]
+  else
+    "#{item.identifier}index.html"
+  end
+end
+
+layout '*', :erb
+

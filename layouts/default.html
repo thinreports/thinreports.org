@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title><%= @item[:title] %> | ThinReports<%= ' - 帳票ソリューション for Ruby and Rails' unless @item[:id] == 'top' %></title>
+    <link rel="alternate" type="application/atom+xml" title="Atom" href="<%= feed_url %>">
+    <link rel="publisher" href="https://plus.google.com/114713031849115840244/">
+    <%= content_for(@item, :head_ogp) || render('common/head_ogp') %>
+    <link rel="stylesheet" type="text/css" href="/assets/style.css" media="all">
+    <%= content_for(@item, :css) %>
+    <script type="text/javascript" src="/assets/javascript/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19321975-2']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div id="container" class="container">
+      <div id="header">
+        <%= render 'common/header' %>
+      </div>
+      <div id="tools">
+        <%= render 'common/tools' %>
+      </div>
+      <div id="main" class="clearfix">
+        <div id="side">
+          <div id="nav">
+            <%= render 'common/nav' %>
+          </div>
+          <div id="side-banner">
+            <%= link_to '<img src="/assets/images/support-banner.png" title="Technical Support Service by Matsukei Co.,Ltd" alt="Technical Support Service by Matsukei Co.,Ltd">', 'http://www.matsukei.co.jp/service/thinreports-support/' %>
+          </div>
+          <div id="notices">
+            <%= render 'common/notice' %>
+          </div>
+          <div id="vendor-fbbox">
+            <%= render 'common/vendor_fbbox' %>
+          </div>
+          <div id="vendor-gplus">
+            <div class="gplus-badge">
+              <a href="https://plus.google.com/114713031849115840244/?prsrc=3" style="text-decoration: none; color: #333;"><div style="display: inline-block;"><span style="float: left; font: bold 13px/16px arial,sans-serif; margin-right: 4px; margin-top: 7px;">ThinReports</span><span style="float: left; font: 13px/16px arial,sans-serif; margin-right: 11px; margin-top: 7px;">on</span><div style="float: left;"><img src="https://ssl.gstatic.com/images/icons/gplus-32.png" width="32" height="32" style="border: 0;"></div><div style="clear: both"></div></div></a>
+            </div>
+            <div class="gplus-one">
+              <g:plusone href="http://www.thinreports.org/"></g:plusone>
+            </div>
+          </div>
+        </div>
+        <div id="content" class="content-<%= @item[:id] %>">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <%= render 'common/footer' %>
+    </div>
+    <%#= render 'common/message' %>
+  </body>
+</html>
+

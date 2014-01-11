@@ -1,0 +1,40 @@
+---
+id: support
+title: Support
+---
+
+<h2><%= @item[:title] %></h2>
+
+<div id="community-support" class="section">
+  <h3>Community Support</h3>
+  <dl class="h4s">
+    <dt><%= link_project_to 'Issue Tracker', 'issues', :class => 'navigate' %></dt>
+    <dd>
+      プロジェクトサイト上で、ThinReports のバグや機能の対応状況を公開しています。
+      また、 Matsukei Open Source Center のアカウント登録を行うことで <%= link_project_to '問題の報告', 'issues/new' %> も可能です。
+      バグ報告はもちろん、改善提案、機能提案をお待ちしています。
+    </dd>
+    <dt><%= link_project_to 'Open Forum', 'boards', :class => 'navigate' %></dt>
+    <dd>
+      <ul>
+        <li><%= link_project_to 'Open Discussion Forum', 'boards/3' %></li>
+        <li><%= link_project_to 'Help Forum', 'boards/4' %></li>
+      </ul>
+    </dd>
+    <dd>
+      なお、フォーラムはどなたでも閲覧できますが、投稿するには <strong>プロジェクトサイトへのサインアップが必要です</strong>。<br/>
+      サインアップの方法については <%= link_project_wiki_to 'How to join', 'How_to_join', :project => 'mosc' %> をご覧ください。
+    </dd>
+  </dl>
+</div>
+
+<div id="subscriptions" class="section">
+  <h3>Subscription Support</h3>
+  <dl class="h4s">
+    <dt><%= link_to 'ThinReports 技術サポートサービス', 'http://www.matsukei.co.jp/service/thinreports-support/', :class => 'navigate' %></dt>
+    <dd>
+      開発元である <%= link_to '株式会社マツケイ', 'http://www.matsukei.co.jp/', :class => 'external' %> が提供する ThinReports 技術サポートサービスの詳細ページです。
+    </dd>
+  </dl>
+</div>
+

@@ -1,0 +1,124 @@
+---
+id: case-detail
+title: 事例 › 学校向け備品管理システムの台帳、ラベル印刷に by ティーエスケイ情報システム
+kind: article
+created_at: 2013-6-23
+case_id: 2
+case_title: 学校向け備品管理システムの台帳、ラベル印刷に
+case_user_name: ティーエスケイ情報システム
+case_user_url: http://www.tskis.jp
+case_description: 理振対応の学校向け備品管理システム。各種備品の登録・検索・廃棄・印刷処理を行います。出雲市教育委員会様にご利用頂いています。
+case_comment: 日本語ドキュメントも充実していたので、スムーズに開発することができた。
+case_type: システム
+---
+
+<%= render 'case/head' %>
+
+<h2>Case</h2>
+
+<%= render 'case/nav' %>
+
+<div class="case-title clearfix">
+  <h2><%= @item[:case_title] %></h2>
+  <%= link_to %{<img src="/assets/images/case/#{@item[:case_id]}/logo.png" alt="#{@item[:case_user_name]}">}, @item[:case_user_url], target: '_blank' %>
+</div>
+
+<div class="section about-system clearfix">
+  <h3><span>Q. <%= @item[:case_type] %>について教えて下さい</span></h3>
+  <div class="box system-info">
+    <dl>
+      <dt>エンドユーザ</dt>
+      <dd>出雲市教育委員会</dd>
+      <dt>開発会社</dt>
+      <dd>
+        <%= @item[:case_user_name] %><br>
+        <%= link_to @item[:case_user_url], @item[:case_user_url], class: 'external', target: '_blank' %>
+      </dd>
+      <dt>実行環境</dt>
+      <dd>
+        <ul>
+          <li>Windows Server 2008R2</li>
+          <li>Ruby 1.9.2</li>
+          <li>Ruby on Rails 3.2.3</li>
+          <li>ThinReports 0.7.5</li>
+        </ul>
+      </dd>
+    </dl>
+  </div>
+  <p>
+    <%= @item[:case_description] %>
+  </p>
+  <p>
+    <img src="/assets/images/case/<%= @item[:case_id] %>/screenshot.png" alt="スクリーンショット">
+  </p>
+</div>
+
+<div class="section how-to-use">
+  <h3><span>Q. どのように活用されていますか？</span></h3>
+  <p>
+    伝票・帳票一覧表・県提出用理振帳票・台帳・ラベル印刷などで利用。
+  </p>
+  <div class="box clearfix">
+    <dl>
+      <dt>帳票 (PDF) の種類</dt>
+      <dd>
+        <ul>
+          <li>備品データの管理台帳</li>
+          <li>備品に貼るラベルシール</li>
+          <li>教育委員会へ提出する廃棄備品申請書</li>
+        </ul>
+        <p>その他、全 20 種類</p>
+      </dd>
+    </dl>
+    <dl>
+      <dt>平均出力ページ数</dt>
+      <dd>
+        <p>10 ページ以上</p>
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<div class="section">
+  <h3><span>Q. 採用した理由を教えてください</span></h3>
+  <p>
+    ThinReporstの講習会及びHPのサンプルプログラムなどで挙動を確認し、導入予定の帳票の要件を十分に満たせると判断したためです。
+  </p>
+</div>
+
+<div class="section">
+  <h3><span>Q. 採用による効果やメリットを教えてください</span></h3>
+  <p>
+    Editor + Generator という構造でサンプルPGなども分かり易くすぐに使うことができました。またサポートページもあるなど、日本語のドキュメントも充実していたので当モジュール関係の開発で行き詰まることはありませんでした。
+  </p>
+</div>
+
+<div class="section">
+  <h3><span>Q. イマイチなところやご要望があれば教えてください</span></h3>
+  <p>
+    全体的なエディタの使い勝手です。Header、Detail などの領域境目にある線を掴むのに領域の範囲を広げなければならない。一覧表はよく作られると思いますので、Header～Footerを含めて幅の設定が 一括で行えるなど、もう少し簡単にできれば良かったです。
+  </p>
+</div>
+
+<div class="section">
+  <h3><span>Q. ThinReports Project に今後期待することをどうぞ</span></h3>
+  <p>
+    エディタの使い勝手の向上、描画ツールの充実など。
+  </p>
+</div>
+
+<div class="section message">
+  <h3>ありがとうございました。最後に一言お願いします。</h3>
+  <p>
+    各業種の業務システムを今後も開発していく予定です。 今年度開発する他の案件として、 
+  </p>
+  <ul>
+    <li>自治体向け大規模文書管理システム（AFK 対応）</li>
+    <li>イベント受付管理システム などがあります。</li>
+  </ul>
+  <p>Ruby &amp; ThinReports のペアで今後も開発を進めていきます。</p>
+</div>
+
+<div class="section caution">
+  <p>本事例に記載の内容は <%= @item[:created_at].strftime('%Y 年 %m 月') %>に取材したものであり、現在と異なる可能性があります。</p>
+</div>

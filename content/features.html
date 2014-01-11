@@ -1,0 +1,131 @@
+---
+id: features-introduction
+title: "Features › Introduction"
+---
+
+<h2>Features</h2>
+
+<%= render 'features/nav' %>
+
+<div class="section">
+  <h2 class="sub">Introduction</h2>
+  <p>
+    ThinReports は <em class="ruby">Ruby</em> はもちろん、 <em class="ruby">Ruby on Rails</em> のような Ruby 製のフレームワークで利用可能な帳票機能と、
+    それを実現する上で必要なさまざまなツールを提供するオープンソースソフトウェアです。
+  </p>
+</div>
+
+<div class="section">
+  <h3>Supported Format</h3>
+  <p>
+    ThinReports は、以下の帳票出力形式に対応しています。
+  </p>
+  
+  <div class="box showcase clearfix">
+    <img src="/assets/images/fet/introduction/pdf-format.png" alt="PDF Format">
+    <div class="showcase-desc">
+      <h4><em class="pdf">PDF</em></h4>
+      <p>
+        電子文書のデファクトスタンダードと言っても過言でないほど、世界中に普及している文書フォーマットです。
+        ThinReports がビルトインしている <%= external_link_to 'IPA Font', 'http://ossipedia.ipa.go.jp/ipafont/index.html' %> と
+        Sans-Serif/Serif/Monospace の各指定欧文フォントを使用することにより、日本語を含めたテキストを正確に出力することができます。また、PDFのセキュリティ設定も可能です。
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Tools</h3>
+  <p>
+    ThinReports は、GUI上で帳票レイアウトを作成・編集できる 専用レイアウトエディタ <strong>ThinReports Editor</strong> と
+    Ruby プログラムからレイアウトを操作する 専用ライブラリ <strong>ThinReports Generator</strong> を提供します。
+  </p>  
+  
+  <div class="box showcase clearfix">
+    <%= link_to '<img src="/assets/images/fet/introduction/editor.png" alt="ThinReports Editor">', 'editor/' %>
+    <div class="showcase-desc">
+      <h4>ThinReports Editor</h4>
+      <p>
+        ThinReports Editor は ThinReports で扱う帳票レイアウトを編集する専用の GUI ツールです。
+        ThinReports Editor を使うことで、業務システムで求められるような複雑なレイアウトも、マウスやキーボード操作によって直感的に作成・編集できます。
+      </p>
+      <div class="navigate-to">
+        <%= link_to 'Learn More', 'editor/', :class => 'navigate' %>
+      </div>
+    </div>
+  </div>
+  
+  <div class="box showcase clearfix">
+    <%= link_to '<img src="/assets/images/fet/introduction/generator.png" alt="ThinReports Generator for Ruby">', 'generator/' %>
+    <div class="showcase-desc">
+      <h4>ThinReports Generator for Ruby</h4>
+      <p>
+        ThinReports Generator は ThinReports Editor で作成したレイアウトを読み込み、
+        動的データの埋め込みやレイアウトのダイナミックな操作、そして最終的な帳票出力を行う RubyGems です。
+        現時点では <em class="pdf">PDF</em> 形式のみ対応しています。
+      </p>
+      <div class="navigate-to">
+        <%= link_to 'Learn More', 'generator/', :class => 'navigate' %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Mechanism</h3>
+  <p>
+    ThinReports による帳票機能は、以下のような仕組みで動作します （ <em class="ruby">Rails</em> 等を使ったWebアプリケーションの場合）
+  </p>
+  <p>
+    <img src="/assets/images/fet/introduction/mechanism.png" alt="Mechanism of ThinReports">
+  </p>
+  <ol>
+    <li>
+      Editor で帳票レイアウトを作成し、アプリケーションが動作するサーバ上の任意の場所へ配置</li>
+    <li>
+      アプリケーションへ Generator を使った帳票出力プログラムを記述。
+      この時 Generator から作成したレイアウトを読み込み、DB等の動的データを埋め込んだり、
+      レイアウトのスタイルを編集するプログラムを記述。
+    </li>
+    <li>
+      クライアントから帳票の要求があると、上記処理が実行され <em class="pdf">PDF</em> 形式の帳票ファイルが返却される。
+      帳票ファイルを返却せず、サーバ上にファイルを生成することも可能。
+    </li>
+  </ol>
+</div>
+
+<div class="section" id="why-use-thinreports">
+  <h3>Why use ThinReports?</h3>
+  <p>
+    Webアプリケーションにおける帳票開発は、多くの課題を抱えています。<br/>
+    ThinReports は、その中でも特に Ruby における帳票開発の課題を解決するために開発されました。
+  </p>
+  <p>
+    Ruby on Rails 等によるWebアプリケーションの帳票開発を考えた場合、以下のような問題が挙げられます。<br/>
+    そして ThinReports は、<strong>これらの問題を解決するソリューション</strong>です。
+  </p>
+  <dl>
+    <dt>No solution</dt>
+    <dd>
+      そもそも Ruby で利用でき、かつ業務システムへの適用にも耐えうる帳票ソリューションは非常に少ない状況です。
+      さらに Pure Ruby で考えると皆無と言わざるを得ません。これは、帳票を必要とするシーンへの Ruby 適用を妨げる一因になっています。
+      ThinReports は帳票出力形式のデファクトスタンダードとも言える <em class="pdf">PDF</em> 出力に対応し、より一層 Ruby による帳票開発適用を促進します。
+    </dd>
+    <dt>Not simple</dt>
+    <dd>
+      Pure Ruby にこだわらなければ、Ruby で利用可能なソリューションはいくつかあります。
+      しかし、開発プロセスの中で利用するツールや技術は最小限であるべきです。そしてそれは、さまざまなアドバンテージを享受してくれることは言うまでもありません。
+    </dd>
+    <dt>Not free</dt>
+    <dd>
+      ここでいう「自由 - free -」とは「プログラマがプログラムを通して、自由に、そしてダイナミックに帳票レイアウトに対する変更を加えられること」を指しています。
+      帳票ソリューションの中には CSV や XML, JSON などで帳票データを作成し、それをスタティックなプログラムに渡し帳票生成を行うものがあります。
+      しかしこれは、データを渡した時点でダイナミックなプログラムのスコープを抜けてしまうことになり「ダイナミック」に相当する処理は、帳票レイアウト上で記述する他ありません。
+    </dd>
+    <dd>
+      当然、上記のような仕組みの方が優れているシーンも多くありますが、ThinReports Generator では、あくまでもダイナミックなプログラムによる
+      ダイナミックな帳票生成インターフェースを提供します。そして、上記のような仕組みが必要な場合は、それを行うインターフェースをプログラマが自由に作るべきと考えています。
+    </dd>
+  </dl>
+</div>
+

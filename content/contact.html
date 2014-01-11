@@ -1,0 +1,35 @@
+---
+id: contact
+title: Contact
+---
+
+<h2><%= @item[:title] %></h2>
+
+<div class="section">
+  <dl class="h4s">
+    <dt>Twitter</dt>
+    <dd>
+      <a href="https://twitter.com/intent/tweet?screen_name=thinreports_org" class="twitter-mention-button" data-related="thinreports_org">Tweet to @thinreports_org</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </dd>
+    <dt>Community</dt>
+    <dd>
+      <%= link_project_to 'Open Forum (Help/Discussion)', 'boards', :class => 'navigate' %>
+    </dd>
+  </dl>
+  <h4>About us</h4>
+  <div class="section">
+    <p>株式会社マツケイ</p>
+    <p>
+      690-0046 島根県松江市乃木福富町735番地211<br/>
+      Tel 0852-32-1616<br/>
+      <script type="text/javascript">
+        (function(){
+          var m = ['thinreports@', 'matsukei', '.co', '.jp'];
+          document.write('<p class="contact-email"><a href="mailto:' + m.join('') + '" alt="">' + m.join('') + '</a></p>');
+        })();
+      </script>
+    </p>
+  </div>
+</div>
+

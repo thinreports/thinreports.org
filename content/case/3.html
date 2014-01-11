@@ -1,0 +1,122 @@
+---
+id: case-detail
+title: 事例 › 領収書作成サービス「Misoca の Web領収書」by スタンドファーム株式会社
+kind: article
+created_at: 2013-10-4
+case_id: 3
+case_title: 領収書作成サービス「Misoca の Web領収書」
+case_user_name: スタンドファーム株式会社
+case_user_url: http://standfirm.jp/
+case_description: オンラインで簡単に領収書や領収書のひな形を作成したい人向けのサービスです。領収書の情報を入力してボタンを押すだけで、領収書のPDFをすぐにダウンロードできます。個別作成・ひな形作成・Excel一括作成と利用状況に合わせて作成方法を選択できます。ブラウザで完結し、入力データはサーバに保存されないので、セキュリティ的にも安心です。
+case_comment: PDF生成が簡単なため、開発時間を短縮できた。
+case_type: サービス
+---
+
+<%= render 'case/head' %>
+
+<h2>Case</h2>
+
+<%= render 'case/nav' %>
+
+<div class="case-title clearfix">
+  <h2><%= @item[:case_title] %></h2>
+  <%= link_to %{<img src="/assets/images/case/#{@item[:case_id]}/logo.png" alt="#{@item[:case_user_name]}">}, 'http://www.misoca.jp/', target: '_blank' %>
+</div>
+
+<div class="section about-system clearfix">
+  <h3><span>Q. <%= @item[:case_type] %>について教えて下さい</span></h3>
+  <div class="box system-info">
+    <dl>
+      <dt>エンドユーザ</dt>
+      <dd>自社サービス</dd>
+      <dt>サービス</dt>
+      <dd>
+        Misoca の Web領収書<br>
+        <%= link_to 'https://領収書.net', 'https://xn--lorw95b519a.net/', class: 'external', target: '_blank' %>
+      <dt>開発会社</dt>
+      <dd>
+        <%= @item[:case_user_name] %><br>
+        <%= link_to @item[:case_user_url], @item[:case_user_url], class: 'external', target: '_blank' %>
+      </dd>
+      <dt>実行環境</dt>
+      <dd>
+        <ul>
+          <li><a href="https://www.heroku.com/" target="_blank" class="external">Heroku</a></li>
+          <li>Ruby 2.0.0</li>
+          <li>Ruby on Rails 3.2.13</li>
+          <li>ThinReports 0.7.6</li>
+        </ul>
+      </dd>
+    </dl>
+  </div>
+  <p>
+    <%= @item[:case_description] %>
+  </p>
+  <p>
+    <img src="/assets/images/case/<%= @item[:case_id] %>/screenshot.png" alt="スクリーンショット">
+  </p>
+</div>
+
+<div class="section how-to-use">
+  <h3><span>Q. どのように活用されていますか？</span></h3>
+  <p>
+    領収書 PDF の生成
+  </p>
+  <div class="box clearfix">
+    <dl>
+      <dt>帳票 (PDF) の種類</dt>
+      <dd>
+        <ul>
+          <li>領収書</li>
+        </ul>
+        <p>その他、全 2 種類</p>
+      </dd>
+    </dl>
+    <dl>
+      <dt>平均出力ページ数</dt>
+      <dd>
+        <p>1 ページ</p>
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<div class="section">
+  <h3><span>Q. 採用した理由を教えてください</span></h3>
+  <p>GUIでテンプレートファイルを作成でき、PDF生成も簡単なため。</p>
+</div>
+
+<div class="section">
+  <h3><span>Q. 採用による効果やメリットを教えてください</span></h3>
+  <p>PDF生成が簡単なため、開発時間を短縮できた。</p>
+</div>
+
+<div class="section">
+  <h3><span>Q. イマイチなところやご要望があれば教えてください</span></h3>
+  <p>
+    あえて要望をいうのであればMac版のエディタはオブジェクトの選択などがしにくいときがある。
+  </p>
+</div>
+
+<div class="section">
+  <h3><span>Q. ThinReports Project に今後期待することをどうぞ</span></h3>
+  <p>
+    以下のURLに記載されたページヘッダーの実装<br>
+    <a href="http://osc.matsukei.net/boards/4/topics/172" target="_blank" class="external">http://osc.matsukei.net/boards/4/topics/172</a>
+  </p>
+</div>
+
+<div class="section message">
+  <h3>ありがとうございました。最後に一言お願いします。</h3>
+  <p>
+    弊社では <a href="http://www.misoca.jp/" target="_blank" class="external">Misoca</a> というクラウド請求書管理サービスを運営しております。
+    このサービス構築時には ThinReports は公開されていなかったため PDF 作成に ThinReports を使っていないのですが
+    次の関連サービスでは ThinReports を採用が決まっており開発を進めています。
+    弊社も帳票関連サービスを運営する会社として、今後 ThinReports の活動にもフィードバックや直接的なコミットという形で貢献できればと思っています。
+  </p>
+</div>
+
+<div class="section caution">
+  <p>本事例に記載の内容は <%= @item[:created_at].strftime('%Y 年 %m 月') %>に取材したものであり、現在と異なる可能性があります。</p>
+</div>
+

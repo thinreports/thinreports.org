@@ -1,0 +1,124 @@
+---
+id: case-detail
+title: 事例 › 小売業向け販売管理システムの各種伝票印刷に by ネットワーク応用通信研究所
+kind: article
+created_at: 2013-6-24
+case_id: 1
+case_title: 小売業向け販売管理システムの各種伝票印刷に
+case_user_name: ネットワーク応用通信研究所
+case_user_url: http://www.netlab.jp
+case_description: 小売業を営む販売店様で利用する販売管理システム。Ruby on Railsで開発し、主に見積から請求、締日業務、給与管理などの機能を 提供。ThinReportsはチェーンストア統一伝票などの各種伝票や、一覧表、給与明細の 出力で利用。
+case_comment: 以前利用していた帳票ツールに比べ、開発コストが削減できた。システムの構成もシンプルに。
+case_type: システム
+---
+
+<%= render 'case/head' %>
+
+<h2>Case</h2>
+
+<%= render 'case/nav' %>
+
+<div class="case-title clearfix">
+  <h2><%= @item[:case_title] %></h2>
+  <%= link_to %{<img src="/assets/images/case/#{@item[:case_id]}/logo.png" alt="#{@item[:case_user_name]}">}, @item[:case_user_url], target: '_blank' %>
+</div>
+
+<div class="section about-system clearfix">
+  <h3><span>Q. <%= @item[:case_type] %>について教えて下さい</span></h3>
+  <div class="box system-info">
+    <dl>
+      <dt>エンドユーザ</dt>
+      <dd>小売業を営む販売店</dd>
+      <dt>開発会社</dt>
+      <dd>
+        <%= @item[:case_user_name] %><br>
+        <%= link_to @item[:case_user_url], @item[:case_user_url], class: 'external', target: '_blank' %>
+      </dd>
+      <dt>実行環境</dt>
+      <dd>
+        <ul>
+          <li>Debian GNU/Linux 6</li>
+          <li>Ruby 1.9.3</li>
+          <li>Ruby on Rails 3.1.3</li>
+          <li>ThinReports 0.7.6</li>
+        </ul>
+      </dd>
+    </dl>
+  </div>
+  <p>
+    <%= @item[:case_description] %>
+  </p>
+  <p>
+    <img src="/assets/images/case/<%= @item[:case_id] %>/screenshot.png" alt="スクリーンショット">
+  </p>
+</div>
+
+<div class="section how-to-use">
+  <h3><span>Q. どのように活用されていますか？</span></h3>
+  <p>
+    各種伝票や一覧表などの帳票出力機能として利用。
+  </p>
+  <div class="box clearfix">
+    <dl>
+      <dt>帳票 (PDF) の種類</dt>
+      <dd>
+        <ul>
+          <li>納品伝票</li>
+          <li>請求書</li>
+          <li>売上一覧表</li>
+        </ul>
+        <p>その他、全 16 種類</p>
+      </dd>
+    </dl>
+    <dl>
+      <dt>平均出力ページ数</dt>
+      <dd>
+        <p>1 ページ</p>
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<div class="section">
+  <h3><span>Q. 採用した理由を教えてください</span></h3>
+  <ul>
+    <li>簡易に帳票テンプレートの作成が可能なエディタが提供されていること</li>
+    <li>帳票にデータを入れて確認する際に、Rubyでスクリプトを書くだけで 出力を試すことが出来、確認が容易なこと</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h3><span>Q. 採用による効果やメリットを教えてください</span></h3>
+  <ul>
+    <li>以前利用していた帳票ツールより開発コストを削減することが出来た</li>
+    <li>システムの構成がシンプルになった</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h3><span>Q. イマイチなところやご要望があれば教えてください</span></h3>
+  <ul>
+    <li>繰り返しによるリスト表示を行う際、行毎に高さを変更出来ないこと</li>
+    <li>Macでエディタを利用している際、ラインを選択しづらい点</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h3><span>Q. ThinReports Project に今後期待することをどうぞ</span></h3>
+  <p>
+    いつも利用させて頂いております、ありがとうございます。 <br>
+    期待する事としては、上記要望の御対応と、これからも継続的に 開発を続けて頂ければと思います。
+  </p>
+</div>
+
+<div class="section message">
+  <h3>ありがとうございました。最後に一言お願いします。</h3>
+  <p>
+    弊社では「協調と革新」を心がけ、オープンソースソフトウェアの可能性を最大限活かすよう努めています。常に革新的な技術の研究開発と、お客様そしてコミュニティとの協調により築かれた信頼関係に基づき、最適なソリューションを提供することで、お客様のニーズに応えていきます。
+  </p>
+</div>
+
+<div class="section caution">
+  <p>本事例に記載の内容は <%= @item[:created_at].strftime('%Y 年 %m 月') %>に取材したものであり、現在と異なる可能性があります。</p>
+</div>
+

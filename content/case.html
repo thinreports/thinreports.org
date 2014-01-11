@@ -1,0 +1,59 @@
+---
+id: case
+title: 事例
+---
+
+<h2>Case</h2>
+
+<%= render 'case/share' %>
+
+<div class="section">
+  <p>
+    ThinReports をもっと多くの方に知って頂くため、使って頂くためにみなさんの事例をたくさん紹介したいと思います。
+    事例のある方は <a href="#how-to-send">みんなの事例を送るには？</a> を <strong>必ず</strong> お読み頂き thinreports(at)gmail.com までメールにてお寄せ下さい。頂いた事例は内容を確認し <%= link_to '@ThinReportsCase', 'https://twitter.com/ThinReportsCase', class: 'external', target: '_blank' %> アカウントから Twitter に投稿します。お待ちしてます！
+  </p>
+  <p>インタビューへの掲載をご希望の場合も、 thinreports(at)gmail.com までどうぞ。</p>
+</div>
+
+<div class="section case-list">
+  <div class="interview">
+    <h3>インタビュー</h3>
+  <% sorted_articles.each do |item| %>
+    <a href="<%= item.path %>" title="<%= item[:case_title] %>">
+      <div class="case-content">
+        <h4><%= item[:case_title] %></h4>
+        <p class="description">
+          <img src="/assets/images/case/<%= item[:case_id] %>/screenshot-thumb.png" alt="">
+          <%= excerptize(item[:case_description], length: 60) %>
+        </p>
+        <div class="short-message">
+          <img src="/assets/images/case/<%= item[:case_id] %>/logo.png" alt="<%= item[:case_user_name] %>">
+          <div class="box comment"><%= item[:case_comment] %></div>
+        </div>
+      </div>
+    </a>
+  <% end %>
+  </div>
+  <div class="everyone">
+    <h3>みんなの事例</h3>
+    <a class="twitter-timeline" width="378" href="https://twitter.com/ThinReportsCase" data-widget-id="380965596231258112" data-chrome="noheader nofooter">@ThinReportsCase からのツイート</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  </div>
+</div>
+
+<div class="section">
+  <h3 id="how-to-send">みんなの事例を送るには？</h3>
+  <p>
+    以下の内容・ファイルを含むメールを thinreports(at)gmail.com まで送ってください。
+  </p>
+  <ol>
+    <li>活用サービス・製品・システム（プロジェクト）名</li>
+    <li>上記の簡単な説明（90文字程度）</li>
+    <li>活用サービスの URL or スクリーンキャプチャ or 帳票 PDFのいずれか</li>
+  </ol>
+  <p>
+    <strong>上記 (3) が無い場合は、みんなの事例に掲載することができませんのでご注意ください。</strong>
+    また (2) についても、説明の文字数が多い場合は、こちらで要約する場合がありますので予めご了承下さい。
+  </p>
+</div>
+
