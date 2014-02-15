@@ -1,6 +1,7 @@
 Capfile
 Gemfile.lock
 .ruby-version
+crash.log
 
 .sass-cache/
 output/
