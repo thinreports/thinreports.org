@@ -28,7 +28,7 @@ title: Download
         <th><%= f['desc'] %></th>
         <td class="md5"><%= f['md5'] %></td>
         <td class="size"><%= f['size'] %></td>
-        <td class="button"><%= link_download_mirror_file_to 'DOWNLOAD', f['name'] %></td>
+        <td class="button"><%= link_download_mirror_file_to 'DOWNLOAD', f['name'], f['version'] %></td>
       </tr>
     <% end %>
     </tbody>

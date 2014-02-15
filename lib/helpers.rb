@@ -84,8 +84,8 @@ def link_download_file_to(text, fid, fname, attributes = {})
           attributes.merge(:title => fname)
 end
 
-def link_download_mirror_file_to(text, fname)
-  link_to text, "http://sourceforge.net/projects/thinreports/files/#{version_number}/#{fname}/download",
+def link_download_mirror_file_to(text, fname, extra_version = nil)
+  link_to text, "http://sourceforge.net/projects/thinreports/files/#{extra_version || version_number}/#{fname}/download",
           :title => "Download #{fname} from ThinReports Project in SourceForge.net"
 end
 

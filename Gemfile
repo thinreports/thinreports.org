@@ -10,9 +10,9 @@ gem 'rainpress'
 gem 'guard-nanoc'
 
 group :deployment do
-  gem 'capistrano'
-  gem 'capistrano_colors'
-  gem 'railsless-deploy'
+  gem 'capistrano', '~> 2.15'
+  gem 'capistrano_colors', '~> 0.5'
+  gem 'railsless-deploy', '~> 1.1'
 end
 
 group :test do
