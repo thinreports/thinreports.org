@@ -128,7 +128,7 @@ def colorbox_image_tag(img, caption, options = {})
 end
 
 def site_data
-  @site_data ||= YAML.load_file('lib/site.yml')
+  @site_data ||= YAML.load_file('config/site.yml')
 end
 
 def version_data(key)

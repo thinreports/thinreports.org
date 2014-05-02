@@ -1,0 +1,32 @@
+# ThinReports Site Configuration
+---
+version:
+  number: "0.7.7.1"
+  released_at: "2014-05-03"
+  announce_id: 56
+
+latest_files:
+  editor:
+    - name: "ThinReportsEditor-0.7.7.1-mswin.exe"
+      desc: "for Windows XP/7/8/8.1"
+      size: "34.1 MB"
+      md5:  87c4bfb274e02d97aaafd1f092297b94
+    - name: "ThinReportsEditor-0.7.7.1-macosx.dmg"
+      desc: "for Mac OS X 10.7/10.8/10.9"
+      size: "47.9 MB"
+      md5:  2dec3890b196320eeb95ed8bf81f6d8b
+    - name: "ThinReportsEditor-0.7.7.1-linux-x86.tar.gz"
+      desc: "for Linux 32bit (Tested with Ubuntu 14.04)"
+      size: "53.2 MB"
+      md5:  76ceee250afaee3fe79f87a5bd0a96d6
+    - name: "ThinReportsEditor-0.7.7.1-linux-x64.tar.gz"
+      desc: "for Linux 64bit (Tested with Ubuntu 14.04)"
+      size: "53.0 MB"
+      md5:  38635a8e14b80dbaed4fab3601ae203b
+  generator:
+    name: "thinreports-0.7.7.gem"
+    desc: "RubyGems Package"
+    size: "20.1 MB"
+    md5: 5fc443b2455ef9576e9f4e051532a0c1
+    version: 0.7.7
+
