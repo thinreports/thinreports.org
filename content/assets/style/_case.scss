@@ -1,6 +1,10 @@
 .content-case {
   .share {
     text-align: right;
+
+    iframe {
+      vertical-align: bottom;
+    }
   }
   .case-list {
     @extend .clearfix;
@@ -81,6 +85,10 @@
     }
     .share {
       float: right;
+
+      iframe {
+        vertical-align: bottom;
+      }
     }
   }
 
