@@ -3,7 +3,8 @@
 
 guard 'nanoc' do
   watch('config.yaml') # Change this to config.yaml if you use the old config file name
+  watch('lib/site.yml')
   watch('Rules')
-  watch(%r{^(content|layouts|lib)/.*$})
+  watch(%r!^(content|layouts|lib)/.+!)
 end
 

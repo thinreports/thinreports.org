@@ -15,7 +15,3 @@ group :deployment do
   gem 'railsless-deploy', '~> 1.1'
 end
 
-group :test do
-  gem 'nokogiri'
-end
-
