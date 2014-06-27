@@ -1,9 +1,11 @@
 # ThinReports Site Configuration
 ---
 version:
-  number: "0.7.7.1"
+  number: 0.7.7.1
   released_at: "2014-05-03"
   announce_id: 56
+  editor: 0.7.7.1
+  generator: 0.7.7
 
 latest_files:
   editor:

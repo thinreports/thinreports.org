@@ -135,8 +135,8 @@ def version_data(key)
   site_data['version'][key.to_s]
 end
 
-def version_number
-  version_data :number
+def version_number(options = {})
+  version_data options[:of] || :number
 end
 
 def version_released_at

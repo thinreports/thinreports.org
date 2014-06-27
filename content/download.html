@@ -20,7 +20,7 @@ title: Download
 <div id="release-files">
   <h3>Latest Release</h3>
 
-  <h4>ThinReports Editor</h4>
+  <h4>ThinReports Editor <%= version_number of: :editor %></h4>
   <table class="file-list">
     <tbody>
     <% file_data(:editor).each do |f| %>
@@ -39,7 +39,7 @@ title: Download
     <li><%= link_to 'Installation Guide', project_wiki_url_for('Installing Editor') %></li>
   </ul>
   
-  <h4>ThinReports Generator for Ruby</h4>
+  <h4>ThinReports Generator for Ruby <%= version_number of: :generator %></h4>
   <div id="install-generator">
     <dl>
       <dt>INSTALL USING RubyGems :</dt>
