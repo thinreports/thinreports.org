@@ -337,7 +337,7 @@ table, th, td {
 }
 
 #side-banner {
-  margin-top: 10px;
+  margin-top: 15px;
   a {
     display: block;
     width: 150px;
@@ -345,27 +345,34 @@ table, th, td {
   }
 }
 
-#notices {
-  margin-top: 10px;
-}
+#side {
+  #links {
+    margin-top: 15px;
 
-#notices dl {
-  width: 150px;
-  margin-bottom: 10px;
-  padding: 10px 0;
-  background: #f9f9f9;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
+    ul {
+      width: 150px;
+    }
 
-#notices dt {
-  margin: 0 10px 10px 10px;
-}
+    li {
+      list-style: none;
+      line-height: 1.7em;
+      padding-left: 5px;
 
-#notices dd {
-  text-align: right;
-  margin: 0 10px;
+      a {
+        display: block;
+        text-decoration: none;
+        font-weight: 400;
+
+        &:hover {
+          text-decoration: underline !important;
+        }
+      }
+
+      .pending {
+        color: #999 !important;
+      }
+    }
+  }
 }
 
 #vendor-fbbox {
@@ -961,25 +968,6 @@ em.out, .out {
   font-size: 20px;
   line-height: 1.8em;
   color: #fff;
-}
-
-
-/**
- * Contact contents
- */
-.content-contact dd {
-  margin-bottom: 10px !important;
-}
-
-.content-contact .contact-email {
-  margin-top: 5px !important;
-}
-.content-contact .contact-email a {
-  font-weight: bold;
-}
-
-.content-contact dd ul {
-  margin-top: 0 !important;
 }
 
 
