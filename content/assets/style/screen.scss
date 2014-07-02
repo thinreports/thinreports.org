@@ -337,13 +337,12 @@ table, th, td {
 }
 
 #side-banner {
-  margin-top: 30px;
-}
-
-#side-banner a {
-  display: block;
-  width: 150px;
-  margin: 0 0 10px 0;
+  margin-top: 10px;
+  a {
+    display: block;
+    width: 150px;
+    margin: 0 0 10px 0;
+  }
 }
 
 #notices {
@@ -370,7 +369,7 @@ table, th, td {
 }
 
 #vendor-fbbox {
-  margin-top: 20px;
+  margin-top: 10px;
   background-color: #f9f9f9;
   @include border-radius(2px);
   width: 150px;
