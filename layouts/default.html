@@ -43,8 +43,8 @@
           <div id="nav">
             <%= render 'common/nav' %>
           </div>
-          <div id="notices">
-            <%= render 'common/notice' %>
+          <div id="links">
+            <%= render 'common/links' %>
           </div>
           <div id="side-banner">
             <%= link_to '<img src="/assets/images/support-banner.png" title="Technical Support Service by Matsukei Co.,Ltd" alt="Technical Support Service by Matsukei Co.,Ltd">', 'http://www.matsukei.co.jp/service/thinreports-support/' %>
@@ -53,12 +53,7 @@
             <%= render 'common/vendor_fbbox' %>
           </div>
           <div id="vendor-gplus">
-            <div class="gplus-badge">
-              <a href="https://plus.google.com/114713031849115840244/?prsrc=3" style="text-decoration: none; color: #333;"><div style="display: inline-block;"><span style="float: left; font: bold 13px/16px arial,sans-serif; margin-right: 4px; margin-top: 7px;">ThinReports</span><span style="float: left; font: 13px/16px arial,sans-serif; margin-right: 11px; margin-top: 7px;">on</span><div style="float: left;"><img src="https://ssl.gstatic.com/images/icons/gplus-32.png" width="32" height="32" style="border: 0;"></div><div style="clear: both"></div></div></a>
-            </div>
-            <div class="gplus-one">
-              <g:plusone href="http://www.thinreports.org/"></g:plusone>
-            </div>
+            <%= render 'common/vendor_gplus' %>
           </div>
         </div>
         <div id="content" class="content-<%= @item[:id] %>">

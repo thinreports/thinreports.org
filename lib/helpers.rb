@@ -15,9 +15,19 @@ def link_to_twitter(text, attributes = {})
   link_to text, 'http://twtr.jp/user/thinreports_org/follow', attributes
 end
 
-def link_to_github(text, attributes = {})
-  attributes.update title: 'Fork me', class: 'github-tool-icon'
-  link_to text, 'https://github.com/thinreports', attributes
+def link_to_github(text, repository = nil, attributes = {})
+  repo = if repository
+    case repository
+    when :editor then '/thinreports-editor'
+    when :generator then '/thinreports-generator'
+    end
+  end
+  link_to text, "https://github.com/thinreports#{repo}", attributes
+end
+
+def link_to_discussion_group(text, attributes = {})
+  attributes.update title: 'Discussion group'
+  link_to text, 'https://groups.google.com/forum/#!forum/thinreports', attributes
 end
 
 def feed_url
