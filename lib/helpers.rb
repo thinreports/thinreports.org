@@ -110,7 +110,7 @@ end
 # Customize to nanoc#link_to_unless_current
 def link_to_unless_current(text, target, attributes={})
   allow_recursive = !!attributes.delete(:allow_recursive)
-  
+
   # Find path
   path = target.is_a?(String) ? target : target.path
 
@@ -135,6 +135,19 @@ def colorbox_image_tag(img, caption, options = {})
   thumb = img.sub /(\.[a-z]+$)/, '-t\1'
   link_to %!<img src="#{thumb}" alt="#{caption}">!, img,
           {:title => caption, :rel => group}.merge(options)
+end
+
+def sorted_articles_for(article_type)
+  article_type = article_type.to_s
+  sorted_articles.select {|article| article[:article_type] == article_type }
+end
+
+def sorted_case_details
+  sorted_articles_for :case
+end
+
+def sorted_news_entries
+  sorted_articles_for :news
 end
 
 def site_data
@@ -164,4 +177,3 @@ end
 def item_url(item)
   site_url_for(item.path)
 end
-

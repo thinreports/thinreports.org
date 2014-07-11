@@ -39,6 +39,11 @@ end
 
 # Routing
 
+route '/news/*' do
+  t = attribute_to_time(item[:created_at])
+  "/news/%s/%s/%s/index.html" % [t.year, t.month, item.identifier[6..-2]]
+end
+
 route '/assets/style/_*/' do
   nil
 end
@@ -63,4 +68,3 @@ route '*' do
 end
 
 layout '*', :erb
-
