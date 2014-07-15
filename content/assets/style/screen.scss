@@ -27,8 +27,8 @@ body {
   @include base-font-style;
   font-size: $base-font-size;
   background: #fff;
-  margin: 100px 0 0 0;
-  padding: 0;
+  margin: 0;
+  padding: 100px 0 0 0;
 }
 
 a {
@@ -345,10 +345,11 @@ table, th, td {
   #social {
     width: 150px;
     border-top: 1px dashed #ccc;
-    margin-top: 30px;
+    margin-top: 20px;
+    padding: 15px 0 0 0;
 
     dl {
-      margin: 10px 0 0 5px;
+      margin: 0 0 0 5px;
     }
 
     dt {
@@ -357,6 +358,24 @@ table, th, td {
 
     dd {
       margin-bottom: 5px;
+    }
+  }
+
+  #translater {
+    width: 150px;
+    @include border-radius(2px);
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #eee;
+    box-sizing: border-box;
+    text-align: center;
+
+    .goog-te-gadget-simple {
+      border-color: transparent !important;
+    }
+
+    .goog-te-menu-value span {
+      border: 0 !important;
     }
   }
 }
@@ -662,7 +681,7 @@ em.out, .out {
       background-position: 98% 50%;
       background-repeat: no-repeat;
       border-bottom: 1px solid #ccc;
-      padding: 8px 5px;
+      padding: 15px 10px;
       text-decoration: none !important;
 
       &.latest {
@@ -708,7 +727,11 @@ em.out, .out {
 .content-top .resource {
   .section {
     float: left;
-    width: 50%;
+    width: 49%;
+
+    &:first-child {
+      margin-right: 10px;
+    }
 
     a {
       text-decoration: none;
