@@ -9,15 +9,15 @@ def news_feed_url
   '/news/feed.xml'
 end
 
-def link_to_twitter(text, attributes = {})
-  attributes.update :title => 'Follow me'
-  link_to text, 'http://twtr.jp/user/thinreports_org/follow', attributes
+def external_link_to(text, target, attributes = {})
+  attributes[:class] = build_css_class('external', attributes[:class])
+  link_to text, target, attributes
 end
 
 def link_to_github(text, repository = nil, attributes = {})
   repo = if repository
     case repository
-    when :editor then '/thinreports-editor'
+    when :editor    then '/thinreports-editor'
     when :generator then '/thinreports-generator'
     end
   end
@@ -42,18 +42,13 @@ def project_wiki_url_for(relative_path = nil, options = {})
   project_url_for("wiki/#{relative_path}", options)
 end
 
-def external_link_to(text, target, attributes = {})
-  attributes[:class] = build_css_class('external', attributes[:class])
-  link_to text, target, attributes
-end
-
 def link_news_to(text, news_id, attributes = {})
   link_to text, mosc_url_for("news/#{news_id}"), attributes
 end
 
 def link_project_to(text, relative_path = nil, attributes = {})
   attributes[:class] ||= 'external'
-  link_to text, project_url_for(relative_path, :project => attributes.delete(:project)), attributes
+  link_to text, project_url_for(relative_path, project: attributes.delete(:project)), attributes
 end
 
 def link_project_wiki_to(text, relative_path = nil, attributes = {})
@@ -82,12 +77,12 @@ end
 
 def link_download_file_to(text, fid, fname, attributes = {})
   link_to text, mosc_url_for("attachments/download/#{fid}/#{fname}"),
-          attributes.merge(:title => fname)
+          attributes.merge(title: fname)
 end
 
 def link_download_mirror_file_to(text, fname, extra_version = nil)
   link_to text, "http://sourceforge.net/projects/thinreports/files/#{extra_version || version_number}/#{fname}/download",
-          :title => "Download #{fname} from ThinReports Project in SourceForge.net"
+          title: "Download #{fname} from ThinReports Project in SourceForge.net"
 end
 
 def file_data(type)
@@ -125,7 +120,7 @@ def colorbox_image_tag(img, caption, options = {})
   group = options.delete(:group) || 'scg'
   thumb = img.sub /(\.[a-z]+$)/, '-t\1'
   link_to %!<img src="#{thumb}" alt="#{caption}">!, img,
-          {:title => caption, :rel => group}.merge(options)
+          {title: caption, rel: group}.merge(options)
 end
 
 def sorted_articles_for(article_type)
@@ -139,6 +134,18 @@ end
 
 def sorted_news_posts
   @news_posts ||= sorted_articles_for :news
+end
+
+def latest_news
+  @latest_news ||= sorted_news_posts.first
+end
+
+def summarize_news(news)
+  "<span>#{attribute_to_time(news[:created_at]).strftime('%Y.%m.%d')}</span> #{news[:title]}"
+end
+
+def summarize_news_for_share(news)
+  "News - #{news[:title]} | ThinReports"
 end
 
 def site_data

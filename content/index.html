@@ -15,16 +15,16 @@ title: 帳票ソリューション for Ruby and Rails
       Ruby製のフレームワークを使った帳票開発の負担を軽減 - thin - することを目指します。
     </p>
     <div class="navigate-to">
-      <%= link_to 'more', '/features/', :class => 'navigate' %>
+      <%= link_to 'More', '/features/', class: 'navigate' %>
     </div>
     <div class="dw">
-      <%= link_to 'Download Now', '/download/', :title => 'Download Now' %>
+      <%= link_to 'Download Now', '/download/', title: 'Download Now' %>
       <p>Latest release:<%= version_number %></p>
     </div>
   </div>
   <div id="showcase">
     <div id="prezi-presentation">
-      <iframe src="http://prezi.com/embed/hbts1q3y8zhd/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=1&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined" width="400" height="300" frameBorder="0"></iframe>
+      <iframe src="http://prezi.com/embed/hbts1q3y8zhd/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined" width="400" height="300" frameBorder="0"></iframe>
       <div class="switch-to-images">
         <a href="#"><strong>Switch</strong> to static presentation if you can't play this.</a>
       </div>
@@ -32,11 +32,11 @@ title: 帳票ソリューション for Ruby and Rails
     <div id="static-presentation">
       <div id="showcase-images">
         <%= link_to '<img src="/assets/images/top/sc-3.png" alt="Show and print reports as PDF">', '/features/', 
-                    :title => 'Show and print reports as PDF' %>
+                    title: 'Show and print reports as PDF' %>
         <%= link_to '<img src="/assets/images/top/sc-1.png" alt="ThinReports Editor">', '/features/editor/',
-                    :title => 'ThinReports Editor' %>
+                    title: 'ThinReports Editor' %>
         <%= link_to '<img src="/assets/images/top/sc-2.png" alt="ThinReports Generator for Ruby">', '/features/generator/', 
-                    :title => 'ThinReports Generator' %>
+                    title: 'ThinReports Generator' %>
       </div>
       <div id="showcase-nav"></div>
     </div>
@@ -56,14 +56,14 @@ title: 帳票ソリューション for Ruby and Rails
 </script>
 
 <div id="news">
-  <h3>News <%= link_to '<img src="/assets/images/bt/feed.png" alt="Feed" class="small-bt">', news_feed_url %></h3>
+  <h3>News</h3>
 
   <div id="news-entries">
   <% if sorted_news_posts.any? %>
   <% sorted_news_posts[0, 5].each do |news| %>
     <a href="<%= news.path %>" title="<%= news[:title] %>">
       <p class="title">
-        <strong><%= news[:title] %></strong>
+        <%= news[:title] %>
         - <%= attribute_to_time(news[:created_at]).strftime('%Y.%m.%d') %>
       </p>
       <p class="summary"><%= excerptize(strip_html(news.compiled_content), length: 80) %></p>
@@ -82,24 +82,20 @@ title: 帳票ソリューション for Ruby and Rails
 <link rel="stylesheet" type="text/css" href="/assets/vendor/colorbox/colorbox.css" media="all" />
 <% end %>
 
-<div class="resource">
-  <div class="section clearfix">
+<div class="resource clearfix">
+  <div class="section">
     <h3>Award</h3>
-    <a href="http://www.slideshare.net/thinreports/fukuoka-ruby-award-2012" id="award-slide" title="FUKUOKA Ruby Award 2012 Presentation">
-      <img src="/assets/images/top/award-slide-thumb.png" alt="Slide">第4回フクオカRuby大賞の受賞式で発表した際のスライドです。
-    </a>
-    <a href="http://www.facebook.com/photo.php?fbid=337731029611996&set=s.310476205678238&type=1&theater" id="award-trophy" title="FUKUOKA Ruby Award 2012 Trophy">
-      <img src="/assets/images/top/award-trophy-thumb.jpg" alt="Trophy">授賞式で頂いた賞状とトロフィーです。
-    </a>
+    <ul>
+      <li><%= link_to 'Fukuoka Ruby Award 2012 大賞受賞', 'http://www.digitalfukuoka.jp/event_reports/7?locale=ja', class: 'navigate' %></li>
+      <li><%= link_to 'Fukuoka Ruby Award 2012 受賞者発表資料 (日本語)', 'http://www.slideshare.net/thinreports/fukuoka-ruby-award-2012', class: 'navigate' %></li>
+    </ul>
   </div>
-  <div class="section clearfix">
+  <div class="section">
     <h3>Learn</h3>
-    <a href="http://www.slideshare.net/thinreports/thinreports-osc2011shimane" id="res-slide" title="Ruby向け帳票ソリューション「ThinReports」の開発で知るOSSの威力 via SlideShare">
-      <img src="/assets/images/top/res-slide-thumb.png" alt="Slide">ThinReportsの開発経緯から0.7の機能と今後、そしてThinReportsを支えるOSSや技術を紹介したスライドです。
-    </a>
-    <a href="http://www.ustream.tv/recorded/18492103" id="res-video" title="In OSC2011 Shimane via Ustream">
-      <img src="/assets/images/top/res-video-thumb.png" alt="Video">2011/11/12に島根県松江市で開催された「OSC2011 Shimane」で発表した際の動画です。
-    </a>
+    <ul>
+      <li><%= link_to 'Open Source Conference 2010 発表資料 (日本語)', 'http://www.slideshare.net/thinreports/thinreports-osc2011shimane', class: 'navigate' %></li>
+      <li><%= link_to 'Open Source Conference 2010 発表動画 (日本語)', 'http://www.ustream.tv/recorded/18492103', class: 'navigate' %></li>
+    </ul>
   </div>
 </div>
 

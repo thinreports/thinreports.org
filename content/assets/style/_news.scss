@@ -8,6 +8,13 @@
     text-align: right;
   }
 
+  .share {
+    margin-top: 40px;
+    @include border-radius(2px);
+    background-color: #f8f8f8;
+    padding: 1em;
+  }
+
   h2 {
     font-size: 32px;
     line-height: 1.2em;

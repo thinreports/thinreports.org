@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <title><%= @item[:title] %> | ThinReports<%= ' - 帳票ソリューション for Ruby and Rails' unless @item[:id] == 'top' %></title>
     <link rel="alternate" type="application/atom+xml" title="Atom" href="/news/feed.xml">
-    <link rel="publisher" href="https://plus.google.com/114713031849115840244/">
     <%= content_for(@item, :head_ogp) || render('common/head_ogp') %>
     <link rel="stylesheet" type="text/css" href="/assets/style.css" media="all">
     <%= content_for(@item, :css) %>
-    <script type="text/javascript" src="/assets/javascript/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="/assets/javascript/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -27,16 +26,16 @@
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=224790820998167&version=v2.0";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 
     <div id="container" class="container">
+      <div id="github-ribbon">
+        <%= render 'common/github_ribbon' %>
+      </div>
       <div id="header">
         <%= render 'common/header' %>
-      </div>
-      <div id="tools">
-        <%= render 'common/tools' %>
       </div>
       <div id="main" class="clearfix">
         <div id="side">
@@ -46,14 +45,8 @@
           <div id="links">
             <%= render 'common/links' %>
           </div>
-          <div id="side-banner">
-            <%= link_to '<img src="/assets/images/support-banner.png" title="Technical Support Service by Matsukei Co.,Ltd" alt="Technical Support Service by Matsukei Co.,Ltd">', 'http://www.matsukei.co.jp/service/thinreports-support/' %>
-          </div>
-          <div id="vendor-fbbox">
-            <%= render 'common/vendor_fbbox' %>
-          </div>
-          <div id="vendor-gplus">
-            <%= render 'common/vendor_gplus' %>
+          <div id="social">
+            <%= render 'common/social' %>
           </div>
         </div>
         <div id="content" class="content-<%= @item[:id] %>">
@@ -70,7 +63,7 @@
     <div id="footer">
       <%= render 'common/footer' %>
     </div>
-    <%= render 'common/message' %>
+    <%= render 'common/information' %>
   </body>
 </html>
 

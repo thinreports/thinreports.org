@@ -145,19 +145,8 @@ table, th, td {
   margin-right: auto;
 }
 
-#container {
-  position: relative;
-}
-
 #header {
   height: 180px;
-}
-
-#tools {
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  white-space: nowrap;
 }
 
 #side {
@@ -174,50 +163,36 @@ table, th, td {
   width: 745px;
 }
 
-#message {
+#info-bar {
   position: absolute;
   top: 0px;
   left: 0px;
   width: 100%;
   text-align: center;
+  background-color: rgba(200, 200, 200, 0.3);
+  z-index: 99;
 
-  #message-container {
-    width: 960px;
-    margin: 0 auto;
+  a {
+    text-decoration: none;
+    line-height: 2.1em;
+    color: #666;
 
-    a {
-      display: block;
-      text-align: left;
-      width: 400px;
-      height: 40px;
-      margin-left: auto;
-      padding: 6px 50px 8px 8px;
-      text-decoration: none !important;
-      @include border-radius(0px 0 8px 8px);
-      background: #f5f5f5 image-path("message-arrow.png") no-repeat 98% center;
+    span {
+      padding: 0 5px 0 10px;
+    }
 
-      span {
-        @include inline-block;
-        color: #666;
-        background: transparent image-path("message-icon.png") no-repeat 10px center;
-        padding-left: 50px;
-      }
-
-      &:hover {
-        background-color: #eee !important;
-      }
+    &:hover {
+      color: #111;
     }
   }
 }
 
-
 /**
- * GitHub icon
+ * GitHub Ribbon
  */
-.github-tool-icon img {
-  width: 22px;
+#github-ribbon img {
+  z-index: 100;
 }
-
 
 /**
  * Basic box container
@@ -338,15 +313,6 @@ table, th, td {
   color: black;
 }
 
-#side-banner {
-  margin-top: 15px;
-  a {
-    display: block;
-    width: 150px;
-    margin: 0 0 10px 0;
-  }
-}
-
 #side {
   #links {
     margin-top: 15px;
@@ -373,6 +339,24 @@ table, th, td {
       .pending {
         color: #999 !important;
       }
+    }
+  }
+
+  #social {
+    width: 150px;
+    border-top: 1px dashed #ccc;
+    margin-top: 30px;
+
+    dl {
+      margin: 10px 0 0 5px;
+    }
+
+    dt {
+      margin-bottom: 3px;
+    }
+
+    dd {
+      margin-bottom: 5px;
     }
   }
 }
@@ -402,77 +386,47 @@ table, th, td {
  */
 #footer {
   background: #333;
-  color: #888;
-  padding: 25px 0 10px 0;
-}
+  padding: 25px 0 30px 0;
+  border-top: 1px solid #111;
 
-#footer a {
-  color: #888;
-}
+  a {
+    color: inherit;
+  }
 
-#footer a:hover {
-  color: #bbb;
-}
+  .links {
+    color: #bbb;
+    padding-bottom: 1.5em;
 
-#footer dl {
-  float: left;
-  width: 320px;
-}
+    ul {
+      margin: 0;
 
-#footer dt {
-  height: 80px;
-  text-align: center;
-  line-height: 80px;
-}
+      li {
+        @include inline-block;
 
-#footer dt img {
-  vertical-align: middle;
-}
+        a, span {
+          text-decoration: none;
+          @include border-radius(2px);
+          line-height: 30px;
+          padding: 3px 5px;
+        }
 
-#footer dd {
-  padding: 0 .7em 0 1em;
-  font-size: 10px;
-  line-height: 1.1em;
-  text-align: justify;
-  text-justify: auto;
-}
+        span.active, a:hover {
+          background-color: #555;
+        }
+      }
+    }
+  }
 
-#footer-nav {
-  float: left;
-  border-left: 1px solid #444;
-  font-size: 12px;
-  padding: .3em 0 0 1.8em;
-  margin-left: 120px;
-}
+  .bottom {
+    color: #888;
+    font-size: 12px;
 
-#footer-nav li {
-  margin-bottom: 7px;
+    address {
+      display: inline;
+      font-style: normal;
+    }
+  }
 }
-
-#footer-nav li a {
-  text-decoration: none !important;
-}
-
-#footer-bottom {
-  margin-top: 30px;
-  font-size: 10px;
-}
-
-#footer-bottom address {
-  font-style: normal;
-  text-align: center;
-  height: 12px;
-  font-size: 13px;
-}
-
-#poweredby {
-  font-size: 12px;
-}
-
-#poweredby a {
-  font-style: italic;
-}
-
 
 /**
  * Common utils
@@ -718,11 +672,11 @@ em.out, .out {
       &:hover {
         background-image: image-path("h-arrow.png");
         background-color: #f9f9f9;
-        color: #333;
       }
 
       .title {
-        font-size: 15px;
+        font-size: 14px;
+        color: #333;
       }
 
       .summary {
@@ -731,6 +685,7 @@ em.out, .out {
         overflow: hidden;
         text-overflow: ellipsis;
         margin-right: 35px;
+        font-size: 12px;
       }
     }
 
@@ -751,34 +706,30 @@ em.out, .out {
 }
 
 .content-top .resource {
-  text-align: center;
-  padding-bottom: 1em;
-  margin-top: 25px;
+  .section {
+    float: left;
+    width: 50%;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin-left: 0;
+
+      li {
+        line-height: 1.5em;
+      }
+    }
+  }
 
   h3 {
     margin: 10px 0;
-  }
-  
-  a {
-    vertical-align: top;
-    border: 1px solid #ddd;
-    padding: 5px;
-    display: inline-block;
-    width: 45%;
-    text-decoration: none !important;
-    text-align: left;
-    margin: 0 0.5em;
-    color: #666 !important;
-    line-height: 1.2em;
-  
-    &:hover {
-      border-color: #aaa !important;
-    }
-
-    img {
-      float: left;
-      margin-right: 1em;
-    }
   }
 }
 

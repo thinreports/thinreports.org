@@ -9,11 +9,11 @@ title: Support
 
   <h3>Community Support</h3>
   <dl class="h4s">
-    <dt><%= link_to_discussion_group 'Discussion Group', :class => 'navigate' %></dt>
+    <dt><%= link_to_discussion_group 'Discussion Group', class: 'navigate' %></dt>
     <dd>
       ThinReports はユーザ同士の助け合いの場として Google Groups に Discussion Group を持っています。また、<%= link_project_to '旧フォーラムの投稿', 'boards' %> も参考にして下さい。
     </dd>
-    <dt><%= link_project_to 'Issue Tracker', 'issues', :class => 'navigate' %></dt>
+    <dt><%= link_project_to 'Issue Tracker', 'issues', class: 'navigate' %></dt>
     <dd>
       プロジェクトサイト上で ThinReports のバグや機能の対応状況を公開しています。
       近く GitHub Issues へ移行するため閲覧のみ可能です。
@@ -24,9 +24,9 @@ title: Support
 <div id="subscriptions" class="section">
   <h3>Vendor Support</h3>
   <dl class="h4s">
-    <dt><%= link_to 'ThinReports 技術サポートサービス', 'http://www.matsukei.co.jp/service/thinreports-support/', :class => 'navigate' %></dt>
+    <dt><%= link_to 'ThinReports 技術サポートサービス', 'http://www.matsukei.co.jp/service/thinreports-support/', class: 'navigate' %></dt>
     <dd>
-      開発元である <%= link_to '株式会社マツケイ', 'http://www.matsukei.co.jp/', :class => 'external' %> が提供する ThinReports 技術サポートサービスの詳細ページです。
+      <%= link_to '株式会社マツケイ', 'http://www.matsukei.co.jp/', class: 'external' %> が提供する ThinReports 技術サポートサービスの詳細ページです。
     </dd>
   </dl>
 </div>
