@@ -55,45 +55,28 @@ title: 帳票ソリューション for Ruby and Rails
   });
 </script>
 
-<div class="clearfix">
-  <div id="start" class="section">
-    <h3>Get Start</h3>
-    <h4><%= link_to 'What is ThinReports?', '/features/', :class => 'navigate' %></h4>
-    <p>
-      ThinReports の概要と仕組み、そして ThinReports が提供する Editor/Generator それぞれについて
-      詳しく説明しています。まずは、こちらから ThinReports に触れてください。
-    </p>
-    <h4><%= link_to 'Get ThinReports', '/download/', :class => 'navigate' %></h4>
-    <p>
-      ThinReports が提供するツールの最新版がダウンロードできます。ThinReports に少しでも興味を持って頂けたら
-      ぜひこちらからダウンロードしてください！
-    </p>
-    <h4><%= link_to 'Get Documentations', '/documentation/', :class => 'navigate' %></h4>
-    <p>
-      ThinReports を利用する上で役に立つさまざまなドキュメントを紹介しています。
-      ThinReports をこれから始める方はまずこちらを参考にしてください。
-    </p>
-    <h4><%= link_to 'Get Help', '/support/', :class => 'navigate' %></h4>
-    <p>
-      Project Site 上に設置された、誰でも利用できる Open Forum や、
-      将来提供予定の Subscription Support (有償サポート) について説明しています。
-      ThinReports の使い方で助けが必要な方はこちらへ。
-    </p>
+<div id="news">
+  <h3>News <%= link_to '<img src="/assets/images/bt/feed.png" alt="Feed" class="small-bt">', news_feed_url %></h3>
+
+  <div id="news-entries">
+  <% if sorted_news_posts.any? %>
+  <% sorted_news_posts[0, 5].each do |news| %>
+    <a href="<%= news.path %>" title="<%= news[:title] %>">
+      <p class="title">
+        <strong><%= news[:title] %></strong>
+        - <%= attribute_to_time(news[:created_at]).strftime('%Y.%m.%d') %>
+      </p>
+      <p class="summary"><%= excerptize(strip_html(news.compiled_content), length: 80) %></p>
+    </a>
+  <% end %>
+  <% else %>
+    <div class="empty-set"></div>
+  <% end %>
   </div>
-  <div id="news">
-    <h3>News <%= link_to_feed '<img src="/assets/images/bt/feed.png" alt="Feed" class="small-bt">' %></h3>
-    <div id="news-entries">
-      <div class="empty-set"></div>
-    </div>
-    <div class="navigate-to">
-      <%= link_project_to 'more', 'news', :class => 'navigate' %>
-    </div>
+  <div class="navigate-to">
+    <%= link_to 'All News', '/news/', class: 'navigate' %>
   </div>
 </div>
-
-<script type="text/javascript" src="/assets/javascript/jquery.jgfeed.min.js"></script>
-<script type="text/javascript" src="/assets/javascript/utils.js"></script>
-<script type="text/javascript"> $.showFeeds('#news-entries', '<%= original_feed_url %>', 5); </script>
 
 <% content_for :css do %>
 <link rel="stylesheet" type="text/css" href="/assets/vendor/colorbox/colorbox.css" media="all" />

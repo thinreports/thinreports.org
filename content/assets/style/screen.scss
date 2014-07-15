@@ -21,9 +21,11 @@ is_hidden: true
   color: #333;
 }
 
+$base-font-size: 13px;
+
 body {
   @include base-font-style;
-  font-size: 10pt;
+  font-size: $base-font-size;
   background: #fff;
   margin: 100px 0 0 0;
   padding: 0;
@@ -695,68 +697,57 @@ em.out, .out {
   color: #666;
 }
 
-#start {
-  width: 335px;
-  float: left;
-}
-
-#start p {
-  padding-left: 18px;
-}
-
 #news {
-  width: 380px;
-  float: left;
-  margin-left: 30px;
-  position: relative;
-}
+  #news-entries {
+    border-top: 1px solid #ccc;
+    margin-top: 25px;
 
-#news-entries {
-  border-top: 1px solid #ccc;
-  margin-top: 25px;
-}
+    a {
+      color: #666;
+      display: block;
+      background-position: 98% 50%;
+      background-repeat: no-repeat;
+      border-bottom: 1px solid #ccc;
+      padding: 8px 5px;
+      text-decoration: none !important;
 
-#news-entries a {
-  display: block;
-  background-position: 98% 50%;
-  background-repeat: no-repeat;
-  border-bottom: 1px solid #ccc;
-  padding: 5px;
-  text-decoration: none !important;
-  line-height: 1.5em;
-}
+      &.latest {
+        background-color: #f9f9f9;
+      }
 
-#news-entries a.latest {
-  background-color: #f9f9f9;
-}
+      &:hover {
+        background-image: image-path("h-arrow.png");
+        background-color: #f9f9f9;
+        color: #333;
+      }
 
-#news-entries a:hover {
-  background-image: image-path("h-arrow.png");
-  background-color: #f9f9f9;
-  color: #333;
-}
+      .title {
+        font-size: 15px;
+      }
 
-#news-entries .posted-at {
-  font-style: italic;
-  color: #666;
-}
+      .summary {
+        color: #888;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-right: 35px;
+      }
+    }
 
-#news-entries a:hover .posted-at {
-  color: #666;
-}
+    .empty-set {
+      border-bottom: 1px solid #ccc;
+      height: 50px;
+      line-height: 50px;
+      background: transparent image-path("loading.gif") no-repeat center center;
+      color: #bbb;
+      font-style: italic;
+      text-align: center;
 
-#news-entries .empty-set {
-  border-bottom: 1px solid #ccc;
-  height: 50px;
-  line-height: 50px;
-  background: transparent image-path("loading.gif") no-repeat center center;
-  color: #bbb;
-  font-style: italic;
-  text-align: center;
-}
-
-#news-entries .empty-set.no-feed {
-  background: #fff !important;
+      &.no-feed {
+        background: #fff !important;
+      }
+    }
+  }
 }
 
 .content-top .resource {
@@ -979,14 +970,20 @@ em.out, .out {
 }
 
 /*
- * Customize ColorBox Plugin.
+ * Customize ColorBox Plugin
  */
 #cboxTitle a {
   color: #ccc !important;
 }
 
+/*
+ * Color for Code Syntax
+ */
+@import 'coderay';
+
 /**
  * CSS for each contents
  */
-@import 'case'
+@import 'case';
+@import 'news';
 

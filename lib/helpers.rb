@@ -5,9 +5,8 @@ include Nanoc3::Helpers::Capturing
 include Nanoc3::Helpers::XMLSitemap
 include Nanoc3::Helpers::Text
 
-def link_to_feed(text, attributes = {})
-  attributes.update :title => 'Subscribe'
-  link_to text, feed_url, attributes
+def news_feed_url
+  '/news/feed.xml'
 end
 
 def link_to_twitter(text, attributes = {})
@@ -28,14 +27,6 @@ end
 def link_to_discussion_group(text, attributes = {})
   attributes.update title: 'Discussion group'
   link_to text, 'https://groups.google.com/forum/#!forum/thinreports', attributes
-end
-
-def feed_url
-  'http://feeds.feedburner.com/Thinreports'
-end
-
-def original_feed_url
-  project_url_for('news.atom')
 end
 
 def mosc_url_for(relative_path = nil)
@@ -146,8 +137,8 @@ def sorted_case_details
   sorted_articles_for :case
 end
 
-def sorted_news_entries
-  sorted_articles_for :news
+def sorted_news_posts
+  @news_posts ||= sorted_articles_for :news
 end
 
 def site_data

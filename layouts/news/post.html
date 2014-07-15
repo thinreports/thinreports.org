@@ -1,0 +1,12 @@
+<div class="breadcrumbs">
+  <%= link_to 'News', '/news/' %>
+  <span class="separator">&#187;</span>
+</div>
+
+<h2><%= @item[:title] %></h2>
+
+<div class="posted-at">
+  <%= attribute_to_time(@item[:created_at]).strftime('%Y.%m.%d') %>
+</div>
+
+<%= yield %>

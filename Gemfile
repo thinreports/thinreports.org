@@ -8,6 +8,8 @@ gem 'kramdown'
 gem 'compass'
 gem 'rainpress'
 gem 'guard-nanoc'
+gem 'coderay'
+gem 'nokogiri'
 
 group :deployment do
   gem 'capistrano', '~> 2.15'

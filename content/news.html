@@ -1,0 +1,27 @@
+---
+id: news
+title: News
+---
+
+<h2>News</h2>
+
+<div class="section news-list">
+<% if sorted_news_posts.any? %>
+  <ul>
+  <% sorted_news_posts.each do |news| %>
+    <li>
+      <label><%= attribute_to_time(news[:created_at]).strftime('%Y.%m.%d') %></label>
+      <%= link_to news[:title], news.path, title: news[:title] %>
+    </li>
+  <% end %>
+  </ul>
+<% else %>
+  <p class="no-data">No news</p>
+<% end %>
+</div>
+
+<div class="section old-news">
+  <p>
+    <%= link_to '旧サイトのニュース一覧', project_url_for('news'), class: 'navigate' %>
+  </p>
+</div>

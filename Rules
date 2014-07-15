@@ -22,6 +22,10 @@ compile '/sitemap/' do
   filter :erb
 end
 
+compile '/news/feed/' do
+  filter :erb
+end
+
 compile '/robots/' do
   filter :erb
 end
@@ -32,16 +36,25 @@ end
 
 compile '*' do
   filter :erb
-  filter :kramdown, auto_ids: false if item[:extension] == 'md'
+  if item[:extension] == 'md'
+    filter :kramdown, auto_ids: false, enable_coderay: false
+  end
+  filter :colorize_syntax
 
   layout 'default'
 end
 
 # Routing
 
-route '/news/*' do
-  t = attribute_to_time(item[:created_at])
-  "/news/%s/%s/%s/index.html" % [t.year, t.month, item.identifier[6..-2]]
+route '/news/feed/' do
+  '/news/feed.xml'
+end
+
+route %r|/news/\d{4}\-\d{2}\-\d{2}-.+| do
+  identifier = item.identifier.split('/').last
+  year, month, day, identifier = identifier.split('-', 4)
+
+  "/news/#{year}/#{month}/#{identifier}/index.html"
 end
 
 route '/assets/style/_*/' do

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title><%= @item[:title] %> | ThinReports<%= ' - 帳票ソリューション for Ruby and Rails' unless @item[:id] == 'top' %></title>
-    <link rel="alternate" type="application/atom+xml" title="Atom" href="<%= feed_url %>">
+    <link rel="alternate" type="application/atom+xml" title="Atom" href="/news/feed.xml">
     <link rel="publisher" href="https://plus.google.com/114713031849115840244/">
     <%= content_for(@item, :head_ogp) || render('common/head_ogp') %>
     <link rel="stylesheet" type="text/css" href="/assets/style.css" media="all">
@@ -57,7 +57,13 @@
           </div>
         </div>
         <div id="content" class="content-<%= @item[:id] %>">
+        <% if @item[:id] == 'news-post' %>
+          <% render 'news/post' do %>
+            <%= yield %>
+          <% end %>
+        <% else %>
           <%= yield %>
+        <% end %>
         </div>
       </div>
     </div>

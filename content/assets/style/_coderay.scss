@@ -1,0 +1,107 @@
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
+
+.CodeRay {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  padding: 1em 0px 1em 1em;
+  margin-top: 20px;
+  @include border-radius(2px);
+
+  pre, code {
+    font-family: "Inconsolata", Consolas, Inconsolata, Monaco, monospace;
+    font-size: $base-font-size + 2px;
+    color: #000;
+    line-height: 1.1em;
+  }
+
+  pre {
+    margin: 0px;
+  }
+
+  .code {
+    width: 100%;
+
+    pre {
+      overflow-x: auto;
+    }
+  }
+
+  .attribute-name {
+    color: #f08;
+  }
+
+  .comment {
+    color: #998;
+    font-style: italic;
+  }
+
+  .class {
+    color: #458;
+    font-weight: bold;
+  }
+
+  .constant {
+    color: teal;
+  }
+
+  .function {
+    color: #900;
+    font-weight: bold;
+  }
+
+  .integer {
+    color: #099;
+  }
+
+  .instance-variable {
+    color: teal;
+  }
+
+  .local-variable {
+    color: #963;
+  }
+
+  .predefined-constant {
+    font-weight: bold;
+  }
+
+  .predefined {
+    color: #369;
+    font-weight: bold;
+  }
+
+  .reserved {
+    color: #000;
+    font-weight: bold;
+  }
+
+  .keyword {
+    color: #000;
+    font-weight: bold;
+  }
+
+  .key {
+    color: #808;
+  }
+
+  .value {
+    color: #088;
+  }
+
+  .regexp {
+    background-color: #fff0ff;
+    color: #808;
+  }
+
+  .string {
+    color: #D20;
+  }
+
+  .symbol {
+    color: #990073;
+  }
+
+  .tag {
+    color: #070;
+  }
+}
