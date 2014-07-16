@@ -49,10 +49,10 @@ title: Download
   <table class="file-list">
     <tbody>
       <tr>
-        <th><%= file_data(:generator)['desc'] %></th>
-        <td class="md5"><%= file_data(:generator)['md5'] %></td>
-        <td class="size"><%= file_data(:generator)['size'] %></td>
-        <td class="button"><%= link_download_mirror_file_to 'DOWNLOAD', file_data(:generator)['name'] %></td>
+        <th><%= file_data(:generator, :desc) %></th>
+        <td class="md5"><%= file_data(:generator, :md5) %></td>
+        <td class="size"><%= file_data(:generator, :size) %></td>
+        <td class="button"><%= link_download_mirror_file_to 'DOWNLOAD', file_data(:generator, :name) %></td>
       </tr>
     </tbody>
   </table>
