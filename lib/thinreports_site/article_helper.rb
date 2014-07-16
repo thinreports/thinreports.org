@@ -16,8 +16,9 @@ module ThinreportsSite
     @latest_news ||= sorted_news_posts.first
   end
 
-  def summarize_news(news)
-    "<span>#{attribute_to_time(news[:created_at]).strftime('%Y.%m.%d')}</span> #{news[:title]}"
+  def summarize_news(news, plain: false)
+    summary = "<span>#{attribute_to_time(news[:created_at]).strftime('%Y.%m.%d')}</span> #{news[:title]}"
+    plain ? strip_html(summary) : summary
   end
 
   def summarize_news_for_share(news)
