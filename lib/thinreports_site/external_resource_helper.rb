@@ -1,4 +1,8 @@
 module ThinreportsSite
+  def link_to_changelog_for(tool, label, attributes = {})
+    link_to label, "#{site_related_url['github'][tool.to_s]}/blob/master/CHANGELOG.md", attributes
+  end
+
   def document_name(name, lang)
     lang == :en ? "En_#{name}" : name
   end

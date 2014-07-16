@@ -4,7 +4,7 @@ index_filenames: [ 'index.html' ]
 enable_output_diff: false
 
 prune:
-  auto_prune: false
+  auto_prune: true
   exclude: ['.git', '.hg', '.svn']
 
 data_sources:

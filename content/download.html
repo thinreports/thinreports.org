@@ -11,7 +11,12 @@ title: Download
     <dd><%= version_released_at %></dd>
   </dl>
   <ul class="navigates clearfix">
-    <li><%= link_project_wiki_to 'ChangeLog', 'Changelog', class: 'navigate' %></li>
+    <li>
+      <span class="navigate">Changelog:
+        <%= link_to_changelog_for :editor, 'Editor' %> /
+        <%= link_to_changelog_for :generator, 'Generator' %>
+      </span>
+    </li>
     <li><%= link_news_to 'Announce', version_data('announce_id'), class: 'navigate' %></li>
     <li><%= link_project_wiki_to 'Getting Started', 'Getting Started', class: 'navigate' %></li>
   </ul>
@@ -49,10 +54,12 @@ title: Download
   <table class="file-list">
     <tbody>
       <tr>
-        <th><%= file_data(:generator, :desc) %></th>
-        <td class="md5"><%= file_data(:generator, :md5) %></td>
-        <td class="size"><%= file_data(:generator, :size) %></td>
-        <td class="button"><%= link_download_mirror_file_to 'DOWNLOAD', file_data(:generator, :name) %></td>
+      <% file_data(:generator).tap do |g| %>
+        <th><%= g['desc'] %></th>
+        <td class="md5"><%= g['md5'] %></td>
+        <td class="size"><%= g['size'] %></td>
+        <td class="button"><%= link_download_mirror_file_to 'DOWNLOAD', g['name'], version_number(of: :generator) %></td>
+      <% end %>
       </tr>
     </tbody>
   </table>
