@@ -3,7 +3,7 @@
 version:
   number: 0.7.7.1
   released_at: "2014-05-03"
-  announce_id: 56
+  announce_id: 57
   editor: 0.7.7.1
   generator: 0.7.7
 
@@ -31,4 +31,3 @@ latest_files:
     size: "20.1 MB"
     md5: 5fc443b2455ef9576e9f4e051532a0c1
     version: 0.7.7
-
