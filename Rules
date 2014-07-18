@@ -58,7 +58,7 @@ route %r|^/news/\d{4}\-\d{2}\-\d{2}-.+?/| do
   news_identifier = item_paths[2]
   year, month, day, summary = news_identifier.split('-', 4)
 
-  "/news/#{year}/#{month}/#{news_identifier}" + if item.binary?
+  "/news/#{year}/#{month}/#{summary}" + if item.binary?
     filename = item_paths.last
     "/images/#{filename}.#{item[:extension]}"
   else

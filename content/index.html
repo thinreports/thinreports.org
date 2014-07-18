@@ -61,7 +61,7 @@ title: 帳票ソリューション for Ruby and Rails
   <div id="news-entries">
   <% if sorted_news_posts.any? %>
   <% sorted_news_posts[0, 5].each do |news| %>
-    <a href="<%= news.path %>" title="<%= news[:title] %>">
+    <a href="<%= news.path %>" title="<%= summarize_news(news, plain: true) %>">
       <p class="title">
         <%= attribute_to_time(news[:created_at]).strftime('%Y.%m.%d') %>
         - <%= news[:title] %>
