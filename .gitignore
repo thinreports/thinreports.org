@@ -3,6 +3,7 @@ Gemfile.lock
 .ruby-version
 crash.log
 
+.bundle/
 .sass-cache/
 output/
 tmp/
