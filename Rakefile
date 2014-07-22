@@ -3,7 +3,7 @@ require 'nanoc3/tasks'
 
 # Automatic deployment to Github-Pages by TravisCI
 namespace :travis do
-  REPOSITORY = 'https://github.com/thinreports/thinreports.github.io.git'.freeze
+  REPOSITORY = 'https://$GH_TOKEN@github.com/thinreports/thinreports.github.io.git'
 
   task deploy: [:_setup, :_build, :_publish]
 
