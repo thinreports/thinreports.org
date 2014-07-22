@@ -10,6 +10,7 @@ gem 'rainpress'
 gem 'guard-nanoc'
 gem 'coderay'
 gem 'nokogiri'
+gem 'rake'
 
 group :deployment do
   gem 'capistrano', '~> 2.15'
