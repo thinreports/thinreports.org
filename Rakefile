@@ -20,9 +20,9 @@ namespace :travis do
     message.gsub! "'", ''
 
     cd 'output' do
-      sh 'git', 'add -A'
-      sh 'git', "commit -m '#{message}'"
-      sh 'git', "push --quiet #{REPOSITORY} master 2> /dev/null"
+      sh 'git add -A'
+      sh "git commit -m '#{message}'"
+      sh "git push --quiet #{REPOSITORY} master 2> /dev/null"
     end
   end
 end
