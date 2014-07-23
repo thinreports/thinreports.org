@@ -1,6 +1,6 @@
 language: ruby
 rvm: 2.1
-bundler_args: "--without deployment development"
+bundler_args: --without deployment development
 script: rake travis:deploy
 env:
   global:

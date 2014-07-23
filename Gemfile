@@ -14,10 +14,3 @@ gem 'rake'
 group :development do
   gem 'guard-nanoc'
 end
-
-# deprecated
-group :deployment do
-  gem 'capistrano', '~> 2.15'
-  gem 'capistrano_colors', '~> 0.5'
-  gem 'railsless-deploy', '~> 1.1'
-end

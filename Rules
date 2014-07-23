@@ -30,10 +30,6 @@ compile '/robots/' do
   filter :erb
 end
 
-compile '/htaccess/' do
-  filter :erb
-end
-
 compile '*' do
   next if item.binary?
 
@@ -64,10 +60,6 @@ route %r|^/news/\d{4}\-\d{2}\-\d{2}-.+?/| do
   else
     '/index.html'
   end
-end
-
-route '/news/*/images/*' do
-  nil
 end
 
 route '/assets/style/_*/' do
