@@ -24,7 +24,7 @@ title: 帳票ソリューション for Ruby and Rails
   </div>
   <div id="showcase">
     <div id="prezi-presentation">
-      <iframe src="http://prezi.com/embed/hbts1q3y8zhd/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined" width="400" height="300" frameBorder="0"></iframe>
+      <iframe src="http://prezi.com/embed/hbts1q3y8zhd/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined" width="400" height="300" frameBorder="0" webkitAllowFullScreen mozAllowFullscreen allowfullscreen></iframe>
       <div class="switch-to-images">
         <a href="#"><strong>Switch</strong> to static presentation if you can't play this.</a>
       </div>
@@ -42,8 +42,8 @@ title: 帳票ソリューション for Ruby and Rails
     </div>
   </div>
 </div>
-<script type="text/javascript" src="/assets/javascript/jquery.cycle.min.js"></script>
-<script type="text/javascript">
+<script src="/assets/javascript/jquery.cycle.min.js"></script>
+<script>
   $('.switch-to-images a').click(function(e) {
     $('#prezi-presentation, #static-presentation').toggle();
     $('#showcase-images').cycle({
@@ -79,7 +79,7 @@ title: 帳票ソリューション for Ruby and Rails
 </div>
 
 <% content_for :css do %>
-<link rel="stylesheet" type="text/css" href="/assets/vendor/colorbox/colorbox.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/assets/vendor/colorbox/colorbox.css" media="all">
 <% end %>
 
 <div class="resource clearfix">
@@ -99,8 +99,8 @@ title: 帳票ソリューション for Ruby and Rails
   </div>
 </div>
 
-<script type="text/javascript" src="/assets/vendor/colorbox/jquery.colorbox.min.js"></script>
-<script type="text/javascript">
+<script src="/assets/vendor/colorbox/jquery.colorbox.min.js"></script>
+<script>
   var createTitle_ = function() {
     return "<a href=" + $(this).attr('href') +">" + $(this).attr('title') + "</a>";
   };
