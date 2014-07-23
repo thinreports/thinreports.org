@@ -1,12 +1,7 @@
 language: ruby
 rvm: 2.1
-before_script: rake setup
-script: rake build
-after_script: rake publish
+bundler_args: --without deployment development
+script: rake travis:deploy
 env:
   global:
     - secure: "U9i5kZ4OV0l1MdS0J3FMqceI7AWrHJvB5by+Mlnkt+kJnT/D1ou/qlAg2Un4vRCdKj0/c3QhlMe5Rhk3WeVtTQ7IHTRnWQhjdeJbZFiKEg4RMsnQfO5rTE4kMacBLxg3/7vYeZ2FAJT/C2g3IlrkxAPXDdQyWLUUC1ijwC+YtE4="
-    - GIT_COMMITER_NAME="TravisCI (hidakatsuya)"
-    - GIT_COMMITER_EMAIL="hidakatsuya@gmail.com"
-    - GIT_AUTHOR_NAME="TravisCI (hidakatsuya)"
-    - GIT_AUTHOR_EMAIL="hidakatsuya@gmail.com"

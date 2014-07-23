@@ -7,11 +7,15 @@ gem 'builder'
 gem 'kramdown'
 gem 'compass'
 gem 'rainpress'
-gem 'guard-nanoc'
 gem 'coderay'
 gem 'nokogiri'
 gem 'rake'
 
+group :development do
+  gem 'guard-nanoc'
+end
+
+# deprecated
 group :deployment do
   gem 'capistrano', '~> 2.15'
   gem 'capistrano_colors', '~> 0.5'
