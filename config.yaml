@@ -17,4 +17,4 @@ data_sources:
     items_root: /assets/
 
 base_url: http://www.thinreports.org
-
+domain_name: www.thinreports.org

@@ -18,6 +18,10 @@ end
 compile '/assets/*' do
 end
 
+compile '/CNAME/' do
+  filter :erb
+end
+
 compile '/sitemap/' do
   filter :erb
 end
