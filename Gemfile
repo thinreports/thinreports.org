@@ -21,4 +21,3 @@ group :deployment do
   gem 'capistrano_colors', '~> 0.5'
   gem 'railsless-deploy', '~> 1.1'
 end
-
