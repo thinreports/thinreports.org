@@ -39,7 +39,7 @@ namespace :travis do
   end
 
   def maintenance_commit?(message)
-    message =~ /\A\[maint]/
+    message =~ /\A\[maint\]/
   end
 
   def content_changed?
