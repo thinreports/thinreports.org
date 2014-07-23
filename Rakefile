@@ -46,3 +46,41 @@ namespace :travis do
     !`git status -s`.rstrip.empty?
   end
 end
+
+namespace :site do
+  task :news do
+    require 'date'
+    require 'fileutils'
+
+    print 'title: '
+    title = STDIN.gets.strip
+
+    if title.empty?
+      raise 'Title is required!'
+    else
+      title.gsub! /[^a-zA-Z0-9]/, '-'
+    end
+
+    entry_dir = File.join('content', 'news', "#{Date.today}-#{title}")
+    if Dir.exists?(entry_dir)
+      raise "#{entry_dir} is already exists!"
+    end
+
+    FileUtils.mkdir_p File.join(entry_dir, 'images')
+    File.write(File.join(entry_dir, 'article.md'), <<-EOF)
+---
+id: news-post
+kind: article
+article_type: news
+
+title: Summary here!
+created_at: #{Time.now.strftime('%Y-%m-%dT%H:%M')}
+---
+EOF
+
+    puts "Done! Let's edit #{File.join(entry_dir, 'article.md')}."
+  end
+end
+
+desc 'Scaffold a news entry'
+task news: [:'site:news']
