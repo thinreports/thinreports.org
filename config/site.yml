@@ -41,4 +41,5 @@ related_url:
     top: https://github.com/thinreports
     editor: https://github.com/thinreports/thinreports-editor
     generator: https://github.com/thinreports/thinreports-generator
-    thinreports_org: https://github.com/thinreports/thinreports.org
+    site: https://github.com/thinreports/thinreports.org
+    site_source: https://github.com/thinreports/thinreports.github.io
