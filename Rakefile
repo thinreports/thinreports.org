@@ -3,9 +3,9 @@ require 'nanoc3/tasks'
 
 # Automatic deployment to Github-Pages by TravisCI
 namespace :travis do
-  REPOSITORY = 'https://$GH_TOKEN@github.com/thinreports/thinreports.github.io.git'
-  GIT_AUTHOR_NAME = 'TravisCI'
-  GIT_AUTHOR_EMAIL = 'hidakatsuya@gmail.com'
+  REPOSITORY        = 'https://$GH_TOKEN@github.com/thinreports/thinreports.github.io.git'
+  GIT_AUTHOR_NAME   = 'TravisCI'
+  GIT_AUTHOR_EMAIL  = 'hidakatsuya@gmail.com'
 
   task deploy: [:_setup, :_build, :_publish]
 
