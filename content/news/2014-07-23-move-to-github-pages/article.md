@@ -1,0 +1,20 @@
+---
+id: news-post
+kind: article
+article_type: news
+
+title: 公式サイトを GitHub Pages へ移行しました
+created_at: 2014-07-23T21:59
+---
+
+公式サイト www.thinreports.org を GitHub Pages へ完全に移行しました。  
+
+移行した理由は以下の通りです。
+
+  1. デプロイを自動化し <%= twitter :hidakatsuya %> のような特定のユーザだけでなく、コミュニティによる更新が可能な環境へ
+  2. 旧ホスティングサーバのメンテナンス業からの解放
+
+www.thinreports.org は、 Ruby 製静的サイトジェネレーター [nanoc](http://nanoc.ws/) によって管理されており、
+そのソースコードは [GitHub](<%= site_related_url['github']['site'] %>) にて公開しています。サイトのリンク切れや間違いを見つけたら [こちら](<%= site_related_url['github']['site'] %>/issues/new) よりご報告いただけると嬉しいです。もちろん Pull Request もお待ちしております（近く、ローカル環境でのサイト開発、確認方法を含めた Pull Request 手順をまとめます）
+
+また、サイトのソースコードや更新履歴は [thinreports.github.io](<%= site_related_url['github']['site_source'] %>) にて確認できます。

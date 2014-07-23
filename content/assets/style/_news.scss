@@ -39,9 +39,16 @@
     border: 5px solid #eee;
   }
 
+  ul, ol {
+    margin: 20px 0 0 25px;
+  }
+
   ul {
     list-style: square;
-    margin: 10px 0 0 25px;
+  }
+
+  li {
+    margin-bottom: 0 !important;
   }
 
   .comments {
