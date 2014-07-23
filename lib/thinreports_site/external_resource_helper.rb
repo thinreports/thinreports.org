@@ -21,13 +21,11 @@ module ThinreportsSite
             title: "Download #{fname} from ThinReports Project in Sourceforge.net"
   end
 
-  def link_to_github(text, repository = nil, attributes = {})
-    type = case repository
-    when :editor    then 'editor'
-    when :generator then 'generator'
-    when nil        then 'top'
-    end
-    link_to text, site_related_url['github'][type], attributes
+  def link_to_github(text, repository, path = nil, attributes = {})
+    url  = site_related_url['github'][repository]
+    url += "/#{path}" if path
+
+    link_to text, url, attributes
   end
 
   def link_to_discussion_group(text, attributes = {})

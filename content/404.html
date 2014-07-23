@@ -1,13 +1,20 @@
 ---
 id: 404
-title: "Page Not Found"
+title: "Page not found"
 is_hidden: true
 path: "/404.html"
 ---
 
 <h2><%= @item[:title] %></h2>
 
-<p>
-  Sorry, This page was not found.
-</p>
+<div class="section">
+  <p>
+    ページが見つかりません。サイトの問題を発見された方は、
+    <%= link_to_github 'こちら', 'thinreports_org', 'issues/new' %> から問題のご報告をお願いします。
+  </p>
+  <p>
+    This page was not found. If you find an issue of this site,
+    please report from <%= link_to_github 'here', 'thinreports_org', 'issues/new' %>.
+  </p>
+</div>
 
