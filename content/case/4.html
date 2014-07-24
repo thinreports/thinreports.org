@@ -29,13 +29,13 @@ case_type: システム
   <div class="box system-info">
     <dl>
       <dt>エンドユーザ</dt>
-      <dd><%= link_to '日本長期住宅メンテナンス有限責任事業組合', 'http://www.house-maintenance.org/', class: 'external-base', target: '_blank' %></dd>
+      <dd><%= link_to '日本長期住宅メンテナンス有限責任事業組合', 'http://www.house-maintenance.org/', target: '_blank' %></dd>
       <dt>システム</dt>
       <dd>組合案件管理システム</dd>
       <dt>開発会社</dt>
       <dd>
         <%= @item[:case_user_name] %><br>
-        <%= link_to @item[:case_user_url], @item[:case_user_url], class: 'external', target: '_blank' %>
+        <%= link_to @item[:case_user_url], @item[:case_user_url], target: '_blank' %>
       </dd>
       <dt>実行環境</dt>
       <dd>
