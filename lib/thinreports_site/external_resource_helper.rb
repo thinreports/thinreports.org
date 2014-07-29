@@ -55,7 +55,6 @@ module ThinreportsSite
   end
 
   def link_project_to(text, relative_path = nil, attributes = {})
-    attributes[:class] ||= 'external'
     link_to text, project_url_for(relative_path, project: attributes.delete(:project)), attributes
   end
 

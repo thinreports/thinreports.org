@@ -1,0 +1,41 @@
+---
+id: community
+title: Community
+---
+
+<h2><%= @item[:title] %></h2>
+
+<div class="section">
+  <h3>Discussion Group</h3>
+  <p>
+    ThinReports は Google Groups 上に公式 <%= link_to_discussion_group 'Discussion Group' %> を用意しています。
+    もしあなたが ThinReports に関する疑問や問題を持っているなら、このグループでヒントや解決策を得ることができるかもしれません。
+    そうでないなら、グループに参加してあなたの問題を投稿してみて下さい。
+  </p>
+  <p>
+    また、<%= link_project_to '旧フォーラムの投稿', 'boards' %> も参考になるかもしれません（閲覧のみ）
+  </p>
+  <p>
+    <%= link_to_discussion_group 'Discussion Group', class: 'r-navigate' %>
+  </p>
+</div>
+
+<div class="section">
+  <h3>Contributing</h3>
+
+  <h4>Reporting bugs</h4>
+  <p>
+    ThinReports の問題を発見したら、ぜひ以下の Issue Tracker から報告して下さい。
+    もし Editor と Generator のどちらの問題か分からない場合は、あなたの好きな方に投稿して下さい。
+  </p>
+  <dl>
+    <dt><%= link_to_github 'Issue Tracker for Editor', 'generator', 'issues', class: 'navigate' %></dt>
+    <dd>
+      ThinReports Editor の Issue Tracker
+    </dd>
+    <dt><%= link_to_github 'Issue Tracker for Generator', 'generator', 'issues', class: 'navigate' %></dt>
+    <dd>
+      ThinReports Generator for Ruby の Issue Tracker
+    </dd>
+  </dl>
+</div>

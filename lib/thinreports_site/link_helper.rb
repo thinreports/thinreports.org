@@ -21,9 +21,4 @@ module ThinreportsSite
       link_to(text, target, attributes)
     end
   end
-
-  def external_link_to(text, target, attributes = {})
-    attributes[:class] = build_css_class('external', attributes[:class])
-    link_to text, target, attributes
-  end
 end
