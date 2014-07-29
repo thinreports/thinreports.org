@@ -1,6 +1,11 @@
 .content-news-post {
-  .breadcrumbs {
+  .back-to-all-news {
     margin-bottom: 10px;
+
+    a {
+      background: transparent image-path("circle-arrow-left-white.png") no-repeat left center;
+      padding-left: 20px;
+    }
   }
 
   .posted-at {
