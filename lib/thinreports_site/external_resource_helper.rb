@@ -1,7 +1,8 @@
 module ThinreportsSite
   def twitter(account)
-    link_to "@#{account}", "https://twitter.com/#{account}"
+    link_to "@#{account}", "https://twitter.com/#{account}", class: 'twitter'
   end
+  alias_method :tw, :twitter
 
   def link_to_changelog_for(tool, label, attributes = {})
     link_to label, "#{site_related_url['github'][tool.to_s]}/blob/master/CHANGELOG.md", attributes

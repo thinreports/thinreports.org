@@ -35,11 +35,19 @@ a {
   text-decoration: underline;
   color: #333;
   outline: none;
-}
 
-a:hover {
-  color: #333;
-  text-decoration: none;
+  &:hover {
+    color: #333;
+    text-decoration: none;
+  }
+
+  &.twitter {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 a.external {
@@ -961,4 +969,3 @@ em.out, .out {
  */
 @import 'case';
 @import 'news';
-
