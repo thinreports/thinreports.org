@@ -5,6 +5,7 @@ article_type: news
 
 title: 公式メーリングリストを作成しました
 created_at: 2014-7-2T16:16
+written_by: hidakatsuya
 ---
 
 ThinReports の公式フォーラムを廃止し、公式メーリングリストを作成しました。

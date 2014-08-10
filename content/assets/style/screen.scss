@@ -95,7 +95,7 @@ img {
   outline: none;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   @include subject-font-style;
   margin: 0;
   padding: 0;
@@ -127,6 +127,11 @@ h4 {
   margin-top: 25px;
 }
 
+h5 {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
 ul, ol, li, dl, dt, dd, p {
   margin: 0;
   padding: 0;
@@ -141,6 +146,14 @@ table, th, td {
   border-collapse: collapse;
   padding: 0;
   margin: 0;
+}
+
+code {
+  padding: 0.2em 0.5em;
+  font-size: 90%;
+  background-color: #eee;
+  @include border-radius(2px);
+  color: #333;
 }
 
 #nav ul, #footer-nav ul, #content-nav ul {
