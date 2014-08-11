@@ -41,7 +41,7 @@ PullRequest や Issues によって誰でもサイト更新に関わることが
 
 #### Google Groups に Discussion Group を作成、旧フォーラムを廃止
 
-これも <%= link_to '2014-07-02: 公式メーリングリストを作成しました', '/news/2014/07/02/official-mailing-list-now-ready/' %>
+これも <%= link_to '2014-07-02: 公式メーリングリストを作成しました', '/news/2014/07/official-mailing-list-now-ready/' %>
 でアナウンスした通り既に完了しています。旧フォーラムに登録されていた方々には移行をお願いすることとなりご迷惑をおかけしました。
 
 今回の移行は、旧フォーラムのあったプロジェクトサイト [osc.matsukei.net](http://osc.matsukei.net) の
