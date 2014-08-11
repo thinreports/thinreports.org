@@ -119,6 +119,16 @@ Generator については、Generator の API 設計にも問題があります�
 (6) の Generator API については、個人的には [Discussion Group](https://groups.google.com/forum/#!forum/thinreports) で
 どうあるべきかについて、ユーザの皆さんの意見を貰ったり議論できないかな、と思ってたりします（たぶんやります）
 
+##### Ruby 1.8.7 がサポート対象外へ
+
+<div class="ps">
+  <span>2014/08/11 追記 by <%=tw :hidakatsuya %></span>
+</div>
+
+現在の Generator は Ruby 1.8.7, 1.9.3, 2.0, 2.1 に対応しています。
+v1.0.0 では、内部ライブラリ prawn を最新版にアップデートするため、必然的に 1.8.7 がサポート対象から外れます。
+また、JRuby についても 1.8 モードが非サポートとなり、逆に現在サポートしていない 1.9 モードをサポートすることになります。
+
 ##### Editor のプラットフォームに ChromeApp を採用
 
 現在の Editor は Qt の QWebkit によるシンプルなブラウザ上で JavaScript/CSS3/HTML5 による Editor アプリを動作させるという仕組みになっています。

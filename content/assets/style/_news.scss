@@ -24,6 +24,22 @@
     padding: 1em;
   }
 
+  .ps {
+    font-size: 11px;
+    margin-top: 10px;
+
+    span {
+      color: #fff;
+      background-color: #E05D00;
+      padding: 0.2em 0.4em;
+      @include border-radius(2px);
+
+      a {
+        color: inherit;
+      }
+    }
+  }
+
   h2 {
     line-height: 1em;
     margin-bottom: 10px;
