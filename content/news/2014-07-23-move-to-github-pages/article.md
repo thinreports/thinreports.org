@@ -5,6 +5,7 @@ article_type: news
 
 title: 公式サイトを GitHub Pages へ移行しました
 created_at: 2014-07-23T21:59
+written_by: hidakatsuya
 ---
 
 公式サイト www.thinreports.org を GitHub Pages へ完全に移行しました。  

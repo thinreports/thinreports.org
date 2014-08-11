@@ -5,6 +5,7 @@ article_type: news
 
 title: 公式サイトが多言語に対応しました
 created_at: 2014-7-15T01:30
+written_by: hidakatsuya
 ---
 
 公式サイト www.thinreports.org の利用者のうち、約 30% が日本語以外の環境を使っています。
