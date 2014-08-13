@@ -10,7 +10,7 @@ created_at: 2014-08-13T18:46
 
 ThinReports Editor 0.7.7.2 をリリースしました。
 
-3 件のバグを修正しています。
+Editor の 3 件のバグを修正しています。Generator のリリースはありません。
 
   * [#7](https://github.com/thinreports/thinreports-editor/issues/7) 用紙のサイズで `user` を使用して作成した `.tlf` が使用できない
   * [#8](https://github.com/thinreports/thinreports-editor/issues/8) The format of the PageNumber tool is not copied
