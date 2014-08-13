@@ -53,15 +53,22 @@ namespace :site do
     require 'fileutils'
 
     print 'title: '
+
     title = STDIN.gets.strip
+    raise 'Title is required!' if title.empty?
 
-    if title.empty?
-      raise 'Title is required!'
-    else
-      title.gsub! /[^a-zA-Z0-9]/, '-'
-    end
+    print 'writer name (twitter account): '
 
-    entry_dir = File.join('content', 'news', "#{Date.today}-#{title}")
+    writer_name = STDIN.gets.strip
+    raise 'Writer Name is required!' if writer_name.empty?
+
+    dirname = title.dup
+    dirname.downcase!
+    dirname.gsub! /\./, '_'
+    dirname.gsub! /\s/, '-'
+    dirname.gsub! /[^a-zA-Z0-9_\-]/, ''
+
+    entry_dir = File.join('content', 'news', "#{Date.today}-#{dirname}")
     if Dir.exists?(entry_dir)
       raise "#{entry_dir} is already exists!"
     end
@@ -73,7 +80,8 @@ id: news-post
 kind: article
 article_type: news
 
-title: Summary here!
+title: #{title}
+written_by: #{writer_name.sub(/^@/, '')}
 created_at: #{Time.now.strftime('%Y-%m-%dT%H:%M')}
 ---
 EOF
