@@ -51,10 +51,6 @@ module ThinreportsSite
     project_url_for("wiki/#{relative_path}", options)
   end
 
-  def link_news_to(text, news_id, attributes = {})
-    link_to text, mosc_url_for("news/#{news_id}"), attributes
-  end
-
   def link_project_to(text, relative_path = nil, attributes = {})
     link_to text, project_url_for(relative_path, project: attributes.delete(:project)), attributes
   end
