@@ -1,30 +1,30 @@
 # ThinReports Site Configuration
 ---
 version:
-  number: 0.7.7.1
-  editor: 0.7.7.1
+  number: 0.7.7.2
+  editor: 0.7.7.2
   generator: 0.7.7
-  released_at: "2014-05-03"
-  announce_id: 57
+  released_at: "2014-08-13"
+  news: /news/2014/08/editor-0_7_7_2-released/
 
 latest_files:
   editor:
-    - name: ThinReportsEditor-0.7.7.1-mswin.exe
+    - name: ThinReportsEditor-0.7.7.2-mswin.exe
       desc: for Windows XP/7/8/8.1
       size: 34.1 MB
-      md5:  87c4bfb274e02d97aaafd1f092297b94
-    - name: ThinReportsEditor-0.7.7.1-macosx.dmg
+      md5:  b0667e4fb47f8ead4e35bb6dcf9d0618
+    - name: ThinReportsEditor-0.7.7.2-macosx.dmg
       desc: for Mac OS X 10.7/10.8/10.9
-      size: 47.9 MB
-      md5:  2dec3890b196320eeb95ed8bf81f6d8b
-    - name: ThinReportsEditor-0.7.7.1-linux-x86.tar.gz
+      size: 49.7 MB
+      md5:  1b8905b0448793c6ccd95bc48083602f
+    - name: ThinReportsEditor-0.7.7.2-linux-x86.tar.gz
       desc: for Linux 32bit (Tested with Ubuntu 14.04)
-      size: 53.2 MB
-      md5:  76ceee250afaee3fe79f87a5bd0a96d6
-    - name: ThinReportsEditor-0.7.7.1-linux-x64.tar.gz
+      size: 53.3 MB
+      md5:  07c6fcc7155b2f3571cbce49e0fc6c7c
+    - name: ThinReportsEditor-0.7.7.2-linux-x64.tar.gz
       desc: for Linux 64bit (Tested with Ubuntu 14.04)
       size: 53.0 MB
-      md5:  38635a8e14b80dbaed4fab3601ae203b
+      md5:  cc351bd1be7f9c60d3e14d33cf442996
   generator:
     name: thinreports-0.7.7.gem
     desc: RubyGems Package
