@@ -407,6 +407,26 @@ code {
       border: 0 !important;
     }
   }
+
+  #feature-of-thinreports {
+    @include border-radius(4px);
+    border-bottom: 1px dashed #ccc;
+    width: 150px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+
+    a {
+      background: transparent image-path("rocket.png") no-repeat 50% 2%;
+      padding-top: 30px;
+      text-decoration: none;
+      @include inline-block;
+
+      &:hover {
+        background-position: 52% 0%;
+      }
+    }
+  }
 }
 
 #vendor-fbbox {
