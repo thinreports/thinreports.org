@@ -26,9 +26,13 @@ Install runtime dependencies:
 
     $ bundle install
 
-Fix mistakes or improve. Then compile:
+Fix mistakes or improve, then compile:
 
     $ bundle exec nanoc compile
+
+And start the web server:
+
+    $ bundle exec nanoc view
 
 Open http://localhost:3000 in your browser, and make sure your changes.  
 Then commit:
