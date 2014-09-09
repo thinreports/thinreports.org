@@ -17,7 +17,7 @@ Editor の 3 件のバグを修正しています。Generator のリリースは
   * [#9](https://github.com/thinreports/thinreports-editor/issues/9) When paper type is `user`, paper orientation is not applied
 
 用紙サイズが `user` のとき PDF 生成時にエラーが発生するバグ `#7` については、
-レイアウトファイルを `0.7.7.2` で開き、保存しなおすことで解決できます。
+レイアウトファイルを 0.7.7.2 で開き、保存しなおすことで解決できます。
 
 **関連リンク:**
 
