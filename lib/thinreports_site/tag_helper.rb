@@ -8,15 +8,11 @@ module ThinreportsSite
   end
 
   def em_tag(type:, label:)
-    "<em#{tag_attrs(class: type, title: label)}>#{label}</em>"
+    "<em#{tag_attrs(class: type.to_s + ' notranslate', title: label)}>#{label}</em>"
   end
 
-  def em_for_future_plan
-    em_tag type: 'future-plan', label: 'Future Plan'
-  end
-
-  def em_for_under_pre
-    em_tag type: 'under-pre', label: 'Comming Soon'
+  def since(version)
+    em_tag type: :since, label: "Since #{version}"
   end
 
   def colorbox_image_tag(img, caption, options = {})

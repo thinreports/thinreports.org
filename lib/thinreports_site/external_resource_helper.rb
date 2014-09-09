@@ -1,6 +1,6 @@
 module ThinreportsSite
   def twitter(account)
-    link_to "@#{account}", "https://twitter.com/#{account}", class: 'twitter'
+    link_to "@#{account}", "https://twitter.com/#{account}", class: 'twitter notranslate'
   end
   alias_method :tw, :twitter
 
