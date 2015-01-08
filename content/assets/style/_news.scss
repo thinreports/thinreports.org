@@ -8,10 +8,7 @@
     }
   }
 
-  .posted-at {
-    @include border-radius(2px);
-    background-color: #f8f8f8;
-    padding: 0.5em 1em;
+  .meta {
     font-size: 12px;
     margin: 5px 0 38px 0;
     text-align: right;
@@ -43,7 +40,7 @@
   h2 {
     line-height: 1em;
     margin-bottom: 10px;
-    border: 0 !important;
+    padding-bottom: 10px;
     font-size: 46px;
   }
 
