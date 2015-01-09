@@ -11,7 +11,7 @@ title: News
   <% sorted_news_posts.each do |news| %>
     <li>
       <label class="notranslate"><%= attribute_to_time(news[:created_at]).strftime('%Y.%m.%d') %></label>
-      <%= link_to news[:title], news.path, title: news[:title], class: 'navigate' %>
+      <%= link_to news[:title], news.path, title: news[:title] %>
     </li>
   <% end %>
   </ul>
