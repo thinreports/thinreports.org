@@ -39,6 +39,9 @@
       </div>
       <div id="main" class="clearfix">
         <div id="side">
+          <div id="translater" class="notranslate">
+            <%= render 'common/translater' %>
+          </div>
           <div id="feature-of-thinreports">
             <%= link_to 'ThinReports の今後', '/news/2014/08/future-of-thinreports/' %>
           </div>
@@ -50,9 +53,6 @@
           </div>
           <div id="social" class="notranslate">
             <%= render 'common/social' %>
-          </div>
-          <div id="translater" class="notranslate">
-            <%= render 'common/translater' %>
           </div>
         </div>
         <div id="content" class="content-<%= @item[:id] %>">
@@ -72,4 +72,3 @@
     <%= render 'common/information' %>
   </body>
 </html>
-
