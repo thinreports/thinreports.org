@@ -8,19 +8,6 @@ module ThinreportsSite
     link_to label, "#{site_related_url['github'][tool.to_s]}/blob/master/CHANGELOG.md", attributes
   end
 
-  def document_name(name, lang)
-    lang == :en ? "En_#{name}" : name
-  end
-
-  def link_document_to_lang(lang, name)
-    link_project_to lang.to_s, "wiki/#{document_name(name, lang)}", class: "doc doc-#{lang}"
-  end
-
-  def link_download_file_to(text, fid, fname, attributes = {})
-    link_to text, mosc_url_for("attachments/download/#{fid}/#{fname}"),
-            attributes.merge(title: fname)
-  end
-
   def link_download_mirror_file_to(text, fname, extra_version = nil)
     link_to text, "#{site_related_url['sourceforge']}/files/#{extra_version || version_number}/#{fname}/download",
             title: "Download #{fname} from ThinReports Project in Sourceforge.net"
@@ -47,10 +34,6 @@ module ThinreportsSite
     mosc_url_for("projects/#{project}/#{relative_path}")
   end
 
-  def project_wiki_url_for(relative_path = nil, options = {})
-    project_url_for("wiki/#{relative_path}", options)
-  end
-
   def link_project_to(text, relative_path = nil, attributes = {})
     link_to text, project_url_for(relative_path, project: attributes.delete(:project)), attributes
   end
@@ -58,16 +41,5 @@ module ThinreportsSite
   def link_project_wiki_to(text, relative_path = nil, attributes = {})
     relative_path.gsub! /\s/, '_'
     link_project_to text, "wiki/#{relative_path}", attributes
-  end
-
-  def link_document_to(text, name, default_lang: :en, attrs: {})
-    name.gsub! /\s/, '_'
-    ''.tap {|html|
-      html << link_project_wiki_to(text, document_name(name, default_lang), class: 'navigate')
-      html << '<span class="doc">'
-      html << link_document_to_lang(:ja, name)
-      html << link_document_to_lang(:en, name)
-      html << '</span>'
-    }
   end
 end

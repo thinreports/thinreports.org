@@ -532,34 +532,6 @@ ul.navigates li {
 }
 
 /**
- * Buttons of documentation
- */
-span.doc {
-  padding-left: 3px;
-
-  a {
-    @include border-radius(2px);
-    @include inline-block;
-    border: 0;
-    margin-left: 3px;
-    background-color: #666;
-    padding: 1px 0;
-    width: 20px;
-    text-align: center;
-    font-size: 12px;
-    text-decoration: none;
-    vertical-align: baseline;
-    color: #fff;
-
-    &:hover {
-      background-color: #ddd !important;
-      color: #000 !important;
-    }
-  }
-}
-
-
-/**
  * Marks:
  *  - Future Plan
  *  - Under Preparation
