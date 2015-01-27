@@ -5,7 +5,11 @@ module ThinreportsSite
   alias_method :tw, :twitter
 
   def link_to_changelog_for(tool, label, attributes = {})
-    link_to label, "#{site_related_url['github'][tool.to_s]}/blob/master/CHANGELOG.md", attributes
+    changelog = case tool
+    when :editor    then '/blob/master/doc/CHANGELOG.md'
+    when :generator then '/blob/master/CHANGELOG.md'
+    end
+    link_to label, "#{site_related_url['github'][tool.to_s]}#{changelog}", attributes
   end
 
   def link_download_mirror_file_to(text, fname, extra_version = nil)
