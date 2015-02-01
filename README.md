@@ -1,4 +1,4 @@
-# ThinReports Official Web Site
+# Thinreports Official Web Site
 
 [![Build Status](http://img.shields.io/travis/thinreports/thinreports.org.svg?style=flat)](https://travis-ci.org/thinreports/thinreports.org) [![Dependency Status](http://img.shields.io/gemnasium/thinreports/thinreports.org.svg?style=flat)](https://gemnasium.com/thinreports/thinreports.org)
 
