@@ -3,19 +3,19 @@ id: news-post
 kind: article
 article_type: news
 
-title: ThinReports の今後
+title: Thinreports の今後
 created_at: 2014-08-10T10:13
 written_by: hidakatsuya
 ---
 
-ThinReports の今後についてまとめておきたいと思います。
+Thinreports の今後についてまとめておきたいと思います。
 
 ### コミュニティ主導へ
 
-これまで ThinReports ユーザの皆さんからたくさんの要望やバグ報告、そして中には PullRequest もいただきました。
-そのおかげで、少しずつではありますが ThinReports も前に進むことができていると思います。ありがとうございます。
+これまで Thinreports ユーザの皆さんからたくさんの要望やバグ報告、そして中には PullRequest もいただきました。
+そのおかげで、少しずつではありますが Thinreports も前に進むことができていると思います。ありがとうございます。
 
-しかし、皆さんからいただいたたくさんの要望やご意見によって ThinReports に足りない機能や
+しかし、皆さんからいただいたたくさんの要望やご意見によって Thinreports に足りない機能や
 改善が必要なところがはっきりしているにも関わらず、その開発が全く進んでいないという現状があります。
 
 その主な原因を以下の通りと考えています。
@@ -45,12 +45,12 @@ PullRequest や Issues によって誰でもサイト更新に関わることが
 でアナウンスした通り既に完了しています。旧フォーラムに登録されていた方々には移行をお願いすることとなりご迷惑をおかけしました。
 
 今回の移行は、旧フォーラムのあったプロジェクトサイト [osc.matsukei.net](http://osc.matsukei.net) の
-閉鎖へ向けた対応の一つですが、もっと気軽に、もっとオープンに ThinReports に関するディスカッションができる場を作りたかったこと、
+閉鎖へ向けた対応の一つですが、もっと気軽に、もっとオープンに Thinreports に関するディスカッションができる場を作りたかったこと、
 旧フォーラムではユーザの投稿したメッセージが他のユーザに通知されないなど改善が必要だったことが主な理由です。
 
 #### ドキュメントサイトの GitHub Pages への移行と充実
 
-ThinReports のドキュメントはプロジェクトサイト上で [日本語版](http://osc.matsukei.net/projects/thinreports/wiki) と [英語版](http://osc.matsukei.net/projects/thinreports/wiki/En_Overview)（by Pawit Khid-arn さん）を公開しています。
+Thinreports のドキュメントはプロジェクトサイト上で [日本語版](http://osc.matsukei.net/projects/thinreports/wiki) と [英語版](http://osc.matsukei.net/projects/thinreports/wiki/En_Overview)（by Pawit Khid-arn さん）を公開しています。
 ただ、現在のドキュメントには二つの問題があると思っています。
 
 一つ目は、 **ユーザがドキュメントを編集する簡単な手段がない** ことです。
@@ -63,7 +63,7 @@ ThinReports のドキュメントはプロジェクトサイト上で [日本語
 
 二つ目は、 **ドキュメントが貧弱すぎる点** です。
 
-ThinReports で PDF を作成するためには、
+Thinreports で PDF を作成するためには、
 Editor で作成したレイアウトを読み込み、値を埋め込んだり一覧表を作成するためのコードを書く必要があります。
 しかし、現在のドキュメントには Generator の各 API の説明やサンプルコード、Tips がほとんどなく、
 ちょっと複雑なことをしようとすると壁にぶち当たってしまうことが多いようです。
@@ -76,15 +76,15 @@ Editor で作成したレイアウトを読み込み、値を埋め込んだり�
 [Issues for Generator](https://github.com/thinreports/thinreports-generator/issues)
 それぞれで開発タスクやロードマップの管理をゆるく行います。バグ報告や機能の提案等はこちらからお願いします。
 
-また、後述する ThinReports の内部仕様など、開発に関するドキュメントは
-ThinReports のルートプロジェクト [github.com/thinreports/thinreports](https://github.com/thinreports/thinreports) の Wiki に集めます。
+また、後述する Thinreports の内部仕様など、開発に関するドキュメントは
+Thinreports のルートプロジェクト [github.com/thinreports/thinreports](https://github.com/thinreports/thinreports) の Wiki に集めます。
 
 #### 内部仕様の公開
 
 内部仕様というよりも、 `.tlf` ファイルのスキーマと言った方が良いかもしれませんが、
-現在このレイアウトファイルの仕様を公開する準備を進めています。仕様は [ThinReports のルートプロジェクト](https://github.com/thinreports/thinreports)
-の Wiki にまとめる予定です。仕様を知ることで ThinReports の仕組みを理解することができ、
-コミュニティによる開発の促進や ThinReports を使った新たな OSS が生まれることを期待しています。
+現在このレイアウトファイルの仕様を公開する準備を進めています。仕様は [Thinreports のルートプロジェクト](https://github.com/thinreports/thinreports)
+の Wiki にまとめる予定です。仕様を知ることで Thinreports の仕組みを理解することができ、
+コミュニティによる開発の促進や Thinreports を使った新たな OSS が生まれることを期待しています。
 
 ### ざっくりしたロードマップと今後
 
@@ -95,10 +95,10 @@ ThinReports のルートプロジェクト [github.com/thinreports/thinreports](
 
 ##### カスタムフォント
 
-各方面より最も多くいただいている機能です。この機能によりビルトインフォント以外のフォントを ThinReports で利用することができるようになります。
+各方面より最も多くいただいている機能です。この機能によりビルトインフォント以外のフォントを Thinreports で利用することができるようになります。
 ただ、内部ライブラリの制約により、利用できるフォントは TrueTypeFont `.ttf` に限られる予定ですが、
 なんとか [Noto Sans CJK](http://www.google.com/get/noto/#/family/noto-sans-jpan) を
-ThinReports で簡単に利用できるような仕組みも考えたいと強く思っています（ Nato Sans CJK は OpenTypeFont `.otf` 形式）
+Thinreports で簡単に利用できるような仕組みも考えたいと強く思っています（ Nato Sans CJK は OpenTypeFont `.otf` 形式）
 
 ##### リスト機能の改善
 
@@ -140,10 +140,10 @@ v1.0.0 では、内部ライブラリ prawn を最新版にアップデートす
 そこで v1.0.0 では [ChromeApp](https://developer.chrome.com/apps/about_apps) ベースの Editor をリリースします。
 というのも、Editor の [master](https://github.com/thinreports/thinreports-editor) では既に ChromeApp への移行を完了しています
 （ただ、現状は ChromeApp 上で動くようにしただけの状態でまだまだ開発が必要な状態です）
-これによって ChromeApp が動作するプラットフォームであればどれでも利用できるようになりますし、リソースの削減やアプリ自体がシンプルになるなど、
+これによって ChromeApp が動���するプラットフォームであればどれでも利用できるようになりますし、リソースの削減やアプリ自体がシンプルになるなど、
 さまざまな問題を解決できるのではと考えています。
 
-#### ThinReports Generator for PHP
+#### Thinreports Generator for PHP
 
 リリース当初から "PHP 版ないの?" という要望をいただいていることもあり、今年の秋を目処に PHP 版 Generator の開発着手を予定しています。
 
@@ -157,7 +157,7 @@ v1.0.0 では、内部ライブラリ prawn を最新版にアップデートす
 
 #### レイアウトファイルの共有
 
-これは ThinReports そのものの話ではないのですが、 API 経由で ThinReports を利用できる [REPOTEN-API](http://repoten-api.net/) で
+これは Thinreports そのものの話ではないのですが、 API 経由で Thinreports を利用できる [REPOTEN-API](http://repoten-api.net/) で
 テンプレートをシェアできる機能を構築する予定があるようです。
 イメージ的には、各ユーザが公開しているテンプレートをショーケースのように閲覧できて、
 ダウンロードしたり API から使ってみることができるような感じでしょうか。

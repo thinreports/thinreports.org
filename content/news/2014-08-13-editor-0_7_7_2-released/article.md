@@ -8,7 +8,7 @@ written_by: hidakatsuya
 created_at: 2014-08-13T18:46
 ---
 
-ThinReports Editor 0.7.7.2 をリリースしました。
+Thinreports Editor 0.7.7.2 をリリースしました。
 
 Editor の 3 件のバグを修正しています。Generator のリリースはありません。
 

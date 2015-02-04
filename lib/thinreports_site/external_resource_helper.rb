@@ -14,7 +14,7 @@ module ThinreportsSite
 
   def link_download_mirror_file_to(text, fname, extra_version = nil)
     link_to text, "#{site_related_url['sourceforge']}/files/#{extra_version || version_number}/#{fname}/download",
-            title: "Download #{fname} from ThinReports Project in Sourceforge.net"
+            title: "Download #{fname} from Thinreports Project in Sourceforge.net"
   end
 
   def link_to_github(text, repository, path = nil, attributes = {})

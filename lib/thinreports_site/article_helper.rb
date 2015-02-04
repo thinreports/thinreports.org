@@ -22,6 +22,6 @@ module ThinreportsSite
   end
 
   def summarize_news_for_share(news)
-    "News - #{news[:title]} | ThinReports"
+    "News - #{news[:title]} | Thinreports"
   end
 end
