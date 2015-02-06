@@ -201,10 +201,10 @@ code {
 }
 
 /**
- * GitHub Ribbon
+ * Set background-color of GitHub Ribbon
  */
-#github-ribbon img {
-  z-index: 100;
+.github-fork-ribbon {
+  background-color: #000 !important;
 }
 
 /**

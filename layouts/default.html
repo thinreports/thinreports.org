@@ -7,6 +7,8 @@
     <%= content_for(@item, :head_ogp) || render('common/head_ogp') %>
     <link rel="stylesheet" type="text/css" href="/assets/style.css" media="all">
     <%= content_for(@item, :css) %>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.ie.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css">
     <script src="/assets/javascript/modernizr.svg.min.js"></script>
     <script src="/assets/javascript/jquery-2.1.1.min.js"></script>
     <script>
@@ -29,11 +31,8 @@
       js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=224790820998167&version=v2.0";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-
+    <%= render 'common/github_ribbon' %>
     <div id="container" class="container">
-      <div id="github-ribbon">
-        <%= render 'common/github_ribbon' %>
-      </div>
       <div id="header">
         <%= render 'common/header' %>
       </div>
