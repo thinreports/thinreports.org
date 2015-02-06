@@ -1,2 +1,9 @@
-<h1><%= link_to '<img src="/assets/images/thinreports-logo.png" alt="Open Source Reporting Solution - Thinreports">', '/' %></h1>
-
+<h1><%= link_to '<img src="/assets/logos/thinreports-logo.svg" width="524" id="logo" alt="Open Source Reporting Solution - Thinreports">', '/' %></h1>
+<script>
+  (function() {
+    if (!Modernizr.svg) {
+      var logo = $('#logo');
+      logo.attr('src', logo.attr('src').replace('.svg', '.png'));
+    }
+  })();
+</script>
