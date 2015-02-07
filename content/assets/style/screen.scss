@@ -97,6 +97,7 @@ h2 {
   font-size: 48px;
   border-bottom: 1px solid #ccc;
   margin-bottom: 30px;
+  padding-bottom: 5px;
 }
 
 /* 2th h2 behaves like h3 */
@@ -925,3 +926,4 @@ em.out, .out {
  */
 @import 'case';
 @import 'news';
+@import 'logo';

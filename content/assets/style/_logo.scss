@@ -1,0 +1,53 @@
+.section.logos {
+  ul {
+    list-style-type: none;
+    margin-left: 0;
+
+    li {
+      margin-bottom: 10px;
+
+      &.logo > a {
+        border: 1px solid #ccc;
+        background-color: #fff;
+      }
+
+      &.logo-black > a {
+        border: 0;
+        background-color: #000;
+      }
+
+      &> a {
+        @include border-radius(3px);
+        @include inline-block;
+        padding: 15px;
+        box-sizing: border-box;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      p {
+        text-align: right;
+        margin: 3px 0 0 0;
+      }
+    }
+
+    &.horizontal-logos li {
+      width: 600px;
+    }
+
+    &.vertical-logos {
+      @extend .clearfix;
+
+      li {
+        float: left;
+        width: 300px;
+
+        &:last-child {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

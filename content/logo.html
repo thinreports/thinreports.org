@@ -1,0 +1,42 @@
+---
+id: logo
+title: Logo
+---
+
+<h2><%= item[:title] %></h2>
+
+<div class="section">
+  <h3>License</h3>
+  <p>
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a>
+    でご利用可能です。原著作者の表記は「Thinreports.org」としてください。
+  </p>
+</div>
+
+<div class="section logos">
+  <h3>Horizontal Type</h3>
+  <ul class="horizontal-logos">
+  <% %w( logo logo-black ).each do |logoname| %>
+    <li class="<%= logoname %>">
+      <a href="/assets/logos/thinreports-<%= logoname %>.png">
+        <img src="/assets/logos/thinreports-<%= logoname %>.png">
+      </a>
+      <p><a href="/assets/logos/thinreports-<%= logoname %>.svg">SVG バージョン</a></p>
+    </li>
+  <% end %>
+  </ul>
+</div>
+
+<div class="section logos">
+  <h3>Vertical Type</h3>
+  <ul class="vertical-logos">
+  <% %w( logo logo-black ).each do |logoname| %>
+    <li class="<%= logoname %>">
+      <a href="/assets/logos/thinreports-<%= logoname %>-v.png">
+        <img src="/assets/logos/thinreports-<%= logoname %>-v.png">
+      </a>
+      <p><a href="/assets/logos/thinreports-<%= logoname %>-v.svg">SVG バージョン</a></p>
+    </li>
+  <% end %>
+  </ul>
+</div>
