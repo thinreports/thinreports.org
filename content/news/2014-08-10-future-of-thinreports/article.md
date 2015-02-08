@@ -140,7 +140,7 @@ v1.0.0 では、内部ライブラリ prawn を最新版にアップデートす
 そこで v1.0.0 では [ChromeApp](https://developer.chrome.com/apps/about_apps) ベースの Editor をリリースします。
 というのも、Editor の [master](https://github.com/thinreports/thinreports-editor) では既に ChromeApp への移行を完了しています
 （ただ、現状は ChromeApp 上で動くようにしただけの状態でまだまだ開発が必要な状態です）
-これによって ChromeApp が動���するプラットフォームであればどれでも利用できるようになりますし、リソースの削減やアプリ自体がシンプルになるなど、
+これによって ChromeApp が動作するプラットフォームであればどれでも利用できるようになりますし、リソースの削減やアプリ自体がシンプルになるなど、
 さまざまな問題を解決できるのではと考えています。
 
 #### Thinreports Generator for PHP
