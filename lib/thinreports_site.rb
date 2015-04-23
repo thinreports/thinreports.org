@@ -1,3 +1,5 @@
+require 'pathname'
+
 include Nanoc::Helpers::Rendering
 include Nanoc::Helpers::LinkTo
 include Nanoc::Helpers::Blogging
@@ -5,26 +7,22 @@ include Nanoc::Helpers::Capturing
 include Nanoc::Helpers::XMLSitemap
 include Nanoc::Helpers::Text
 
-module ThinreportsSite
-  def site_data
-    @site_data ||= YAML.load_file('config/site.yml')
-  end
+Dir[Pathname.pwd.join('lib', 'thinreports_site', '*.rb')].each {|f| require f }
 
-  def site_related_url
-    site_data['related_url']
-  end
+include ThinreportsSite::ArticleHelper
+include ThinreportsSite::ExternalResourceHelper
+include ThinreportsSite::LinkHelper
+include ThinreportsSite::TagHelper
+include ThinreportsSite::VersionHelper
 
-  def news_feed_path
-    '/news/feed.xml'
-  end
+def site_data
+  @site_data ||= YAML.load_file('config/site.yml')
 end
 
-$:.unshift File.expand_path(File.dirname(__FILE__) + '/thinreports_site')
+def site_related_url
+  site_data['related_url']
+end
 
-require 'version_helper'
-require 'article_helper'
-require 'external_resource_helper'
-require 'link_helper'
-require 'tag_helper'
-
-include ThinreportsSite
+def news_feed_path
+  '/news/feed.xml'
+end

@@ -32,8 +32,6 @@ latest_files:
     md5: 5fc443b2455ef9576e9f4e051532a0c1
 
 related_url:
-  # deprecated
-  matsukei_osc: http://osc.matsukei.net
   discussion_group: "https://groups.google.com/forum/#!forum/thinreports"
   sourceforge: http://sourceforge.net/projects/thinreports
   github:

@@ -718,39 +718,6 @@ em.out, .out {
   }
 }
 
-.content-top .resource {
-  .section {
-    float: left;
-    width: 49%;
-
-    &:first-child {
-      margin-right: 10px;
-    }
-
-    a {
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-    ul {
-      list-style: none;
-      margin-left: 0;
-
-      li {
-        line-height: 1.5em;
-      }
-    }
-  }
-
-  h3 {
-    margin: 10px 0;
-  }
-}
-
-
 /**
  * Features/introduction contents
  */
