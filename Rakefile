@@ -1,4 +1,3 @@
-# encoding: utf-8
 require 'nanoc3/tasks'
 
 # Automatic deployment to Github-Pages by TravisCI.
