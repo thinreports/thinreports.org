@@ -1,4 +1,3 @@
 <div id="info-bar">
-  <%= link_to 'NEWS ' + summarize_news(latest_news), latest_news.path, title: strip_html(summarize_news(latest_news)) %>
+  <%= link_to summarize_news(latest_news), latest_news.path, title: strip_html(summarize_news(latest_news)) %>
 </div>
-

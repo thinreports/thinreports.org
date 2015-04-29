@@ -1,0 +1,25 @@
+/**
+ * Features/introduction contents
+ */
+.content-features-introduction {
+  .tools .tool {
+    @extend .clearfix;
+
+    .tool-desc {
+      width: 400px;
+    }
+
+    .tool-image {
+      @include inline-block;
+      @include border-radius(3px);
+      width: 280px;
+      max-height: 160px;
+      float: right;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -20,7 +20,7 @@
         @include border-radius(3px);
         @include inline-block;
         padding: 15px;
-        box-sizing: border-box;
+        @include box-sizing(border-box);
 
         img {
           width: 100%;

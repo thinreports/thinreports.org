@@ -81,7 +81,13 @@
 .content-case-detail {
   .navbar {
     .back-to-cases {
-      background: transparent image-path("circle-arrow-left-white.png") no-repeat left center;
+      background: {
+        color: transparent;
+        image: icon-path("arrow-circle-left.svg");
+        repeat: no-repeat;
+        position: left center;
+      };
+      @include background-size(14px);
       padding-left: 20px;
     }
     .share {
@@ -114,12 +120,7 @@
 
   h3 {
     font-size: 22px !important;
-    background: transparent image-path("case/q-border.png") repeat-x left center;
-    span {
-      font-size: inherit;
-      background-color: #fff;
-      padding-right: 1em;
-    }
+    margin-top: 45px;
   }
 
   .about-system {
@@ -161,13 +162,13 @@
 
   .message {
     h3 {
-      margin-top: 60px;
+      margin-top: 70px;
       background-image: none !important;
     }
   }
 
   .caution {
-    margin-top: 100px; 
+    margin-top: 100px;
     p {
       font-weight: bold;
       text-align: right;

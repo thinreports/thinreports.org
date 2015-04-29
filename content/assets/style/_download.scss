@@ -1,0 +1,105 @@
+// Styles for download page
+.content-download {
+  #release-info dt,
+  #release-info dd {
+    font-size: 24px;
+  }
+
+  /* Latest release informations */
+  #release-info dt {
+    color: black;
+    float: left;
+  }
+
+  #release-info dd {
+    font-style: italic;
+    color: #aaa;
+    text-align: right;
+  }
+
+  /* Relative links */
+  #release-info .navigates {
+    margin-top: 10px;
+  }
+
+  #release-files .navigates {
+    margin: 10px 0 0 25px;
+    padding-left: 10px;
+    border-left: 1px solid #ddd;
+  }
+
+  #release-files .navigates li {
+    border-right: 1px solid #ddd;
+    padding-right: 10px;
+  }
+
+  /* List of files released */
+  #release-files .file-list {
+    margin: 20px 0 0 20px;
+    width: 725px;
+  }
+
+  #release-files .file-list th,
+  #release-files .file-list td {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: #ccc;
+  }
+
+  #release-files .file-list tr:hover {
+    background-color: #f9f9f9;
+  }
+
+  /* Description */
+  #release-files .file-list th {
+    width: auto;
+    text-align: left;
+    text-indent: 5px;
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  #release-files .file-list .size {
+    text-align: right;
+    width: 50px;
+  }
+
+  #release-files .file-list .md5 {
+    text-indent: 5px;
+    text-align: left;
+    width: 250px;
+  }
+
+  #release-files .file-list .button {
+    width: 105px;
+    padding: 0 !important;
+    text-align: center;
+    vertical-align: middle;
+
+    a {
+      @include border-radius(2px);
+      @include inline-block;
+      background-color: #333;
+      color: #fff;
+      font-size: 12px;
+      width: 90px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #999 !important;
+      }
+    }
+  }
+
+  #release-files .file-list .button-small {
+    width: 80px;
+    padding: 0 !important;
+    text-align: right;
+    vertical-align: middle;
+  }
+}

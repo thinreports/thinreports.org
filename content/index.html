@@ -3,63 +3,48 @@ id: top
 title: 帳票ソリューション for Ruby and Rails
 ---
 
-<h2><img src="/assets/images/top/h2.png" alt="帳票ソリューション for Ruby and Rails"></h2>
-
 <div id="callout" class="clearfix">
-  <div id="detail">
-    <p class="desc">
-      <em>Thinreports</em> は <em class="pdf">PDF</em> 形式の帳票生成を
-      <em class="ruby">Ruby</em> によって実現するシンプルで新しいソリューションです。
-      Thinreports が提供する専用レイアウトエディタ <em>Thinreports Editor</em> と
-      専用ライブラリ <em>Thinreports Generator</em> によって、Ruby や <em class="ruby">Ruby on Rails</em> のような
-      Ruby製のフレームワークを使った帳票開発の負担を軽減 - thin - することを目指します。
-    </p>
-    <div class="navigate-to">
-      <%= link_to 'More', '/features/', class: 'navigate' %>
-    </div>
-    <div class="dw">
-      <%= link_to 'Download Now', '/download/', title: 'Download Now' %>
-      <p>Latest release:<%= version_number %></p>
+  <div class="showcase">
+    <div class="slides active-1">
+      <a class="slide-1" href="https://rubygems.org/gems/thinreports" target="_blank">
+        <img alt="Thinreports Generator" src="/assets/images/slides/slide-thinreports-gem.png" class="slide-1">
+      </a>
+      <a class="slide-2" href="https://chrome.google.com/webstore/detail/thinreports-editor/fbfgmkbpgehcabmdmdoikecbmkppimhj" target="_blank">
+        <img alt="Thinreports Editor" src="/assets/images/slides/slide-thinreports-editor.png">
+      </a>
+      <a class="slide-3" href="https://github.com/thinreports" target="_blank">
+        <img alt="GitHub" src="/assets/images/slides/slide-thinreports-github.png">
+      </a>
     </div>
   </div>
-  <div id="showcase">
-    <div id="prezi-presentation">
-      <iframe src="http://prezi.com/embed/hbts1q3y8zhd/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined" width="400" height="300" frameBorder="0" webkitAllowFullScreen mozAllowFullscreen allowfullscreen></iframe>
-      <div class="switch-to-images">
-        <a href="#"><strong>Switch</strong> to static presentation if you can't play this.</a>
-      </div>
-    </div>
-    <div id="static-presentation">
-      <div id="showcase-images">
-        <%= link_to '<img src="/assets/images/top/sc-3.png" alt="Show and print reports as PDF">', '/features/',
-                    title: 'Show and print reports as PDF' %>
-        <%= link_to '<img src="/assets/images/top/sc-1.png" alt="Thinreports Editor">', '/features/editor/',
-                    title: 'Thinreports Editor' %>
-        <%= link_to '<img src="/assets/images/top/sc-2.png" alt="Thinreports Generator for Ruby">', '/features/generator/',
-                    title: 'Thinreports Generator' %>
-      </div>
-      <div id="showcase-nav"></div>
+  <script>
+    (function() {
+      var slides = $('.showcase .slides');
+      var slideNo = 1;
+      setInterval(function() {
+        slideNo = slideNo == 3 ? 1 : (slideNo + 1);
+        slides.attr('class', 'slides active-' + slideNo);
+      }, 5000);
+    })();
+  </script>
+  <div class="aboutme">
+    <h2><img src="/assets/images/callout.png" alt="An open source reporting tolls for Ruby - オープンソース帳票ツール"></h2>
+    <p class="introduction">
+      Thinreports は PDF 形式の帳票を生成する Ruby 向けのオープンソースソフトウェアです。
+      専用のレポートデザイナ Thinreports Editor と PDF ジェネレータ Thinreports Generator によって
+      Ruby や Ruby on Rails を使った帳票開発の負担を軽減 - thin - することを目指します。
+    </p>
+    <div class="download">
+      <a href="/download/">GET NOW</a>
+      <p>Current Release:<span class="version">0.7.7.2</span></p>
     </div>
   </div>
 </div>
-<script src="/assets/javascript/jquery.cycle.min.js"></script>
-<script>
-  $('.switch-to-images a').click(function(e) {
-    $('#prezi-presentation, #static-presentation').toggle();
-    $('#showcase-images').cycle({
-      fx: 'fade',
-      timeout: 8000,
-      pager: '#showcase-nav'
-    });
-    e.preventDefault();
-  });
-</script>
 
 <div id="news">
   <h3>News</h3>
 
   <div id="news-entries">
-  <% if sorted_news_posts.any? %>
   <% sorted_news_posts[0, 5].each do |news| %>
     <a href="<%= news.path %>" title="<%= summarize_news(news, plain: true) %>">
       <p class="title">
@@ -68,9 +53,6 @@ title: 帳票ソリューション for Ruby and Rails
       </p>
       <p class="summary"><%= excerptize(strip_html(news.compiled_content), length: 80) %></p>
     </a>
-  <% end %>
-  <% else %>
-    <div class="empty-set"></div>
   <% end %>
   </div>
   <div class="navigate-to">

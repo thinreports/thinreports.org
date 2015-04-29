@@ -1,4 +1,4 @@
---- 
+---
 id: features-generator
 title: "Features › Thinreports Generator for Ruby"
 ---
@@ -8,7 +8,13 @@ title: "Features › Thinreports Generator for Ruby"
 <%= render 'features/nav' %>
 
 <div class="section">
-  <h2 class="sub">Thinreports Generator for Ruby</h2>
+  <h2 class="sub">
+    Thinreports Generator for Ruby
+    <label>Report Generator for Ruby</label>
+  </h2>
+  <p class="screen-image">
+    <img src="/assets/images/slides/slide-thinreports-gem.png" alt="Thinreports Generator">
+  </p>
   <p>
     Thinreports Generator は Thinreports Editor で作成されたレイアウトを読み込み
     帳票生成を行う Ruby 向け専用ライブラリです。 RubyGems として提供しているため Ruby on Rails のような Ruby 製フレームワークでも利用可能です。
@@ -42,26 +48,9 @@ title: "Features › Thinreports Generator for Ruby"
 </div>
 
 <div class="section">
-  <h3>Screen Shots</h3>
+  <h3>Source Code</h3>
+  <p>
+    <%= link_to 'github.com/thinreports/thinreports-generator',
+                'https://github.com/thinreports/thinreports-generator' %>
+  </p>
 </div>
-
-<div class="box screenshots clearfix" id="screenshots">
-  <dl>
-    <dt><%= colorbox_image_tag '/assets/images/fet/generator/sc1.png', 'Thinreports Generator at RubyGems.org' %></dt>
-    <dd class="desc">Thinreports Generator at RubyGems.org</dd>
-  </dl>
-  <dl>
-    <dt><%= colorbox_image_tag '/assets/images/fet/generator/sc2.png', 'Generate PDF reports' %></dt>
-    <dd class="desc">Generate <em class="pdf">PDF</em> reports</dd>
-  </dl>
-</div>
-
-<script src="/assets/vendor/colorbox/jquery.colorbox.min.js"></script>
-<script>
-  $('#screenshots a').colorbox();
-</script>
-
-<% content_for :css do %>
-<link rel="stylesheet" type="text/css" href="/assets/vendor/colorbox/colorbox.css" media="all">
-<% end %>
-

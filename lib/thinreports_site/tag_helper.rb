@@ -8,12 +8,9 @@ module ThinreportsSite
       args.compact.join(' ')
     end
 
-    def em_tag(type:, label:)
-      "<em#{tag_attrs(class: type.to_s + ' notranslate', title: label)}>#{label}</em>"
-    end
-
     def since(version)
-      em_tag type: :since, label: "Since #{version}"
+      label = "Since #{version}"
+      "<em#{tag_attrs(class: 'since' + ' notranslate', title: label)}>#{label}</em>"
     end
 
     def colorbox_image_tag(img, caption, options = {})
