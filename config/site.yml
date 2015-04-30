@@ -4,11 +4,11 @@ version:
   number: 0.8.0
   editor: 0.8.0
   generator: 0.8.0
-  released_at: "2015-05-01"
-  announcement: /news/2014/08/editor-0_7_7_2-released/
+  released_at: "2015-04-30"
+  announcement: /news/2015/04/thinreports-0_8_0-released/
 
 related_url:
-  chrome_web_store: https://chrome.google.com/webstore/detail/thinreports-editor/fbfgmkbpgehcabmdmdoikecbmkppimhj
+  chrome_web_store: https://chrome.google.com/webstore/detail/thinreports-editor/cdlcnnandndjkbbdcbpnjoimphmifkfn
   rubygems: https://rubygems.org/gems/thinreports
   discussion_group: "https://groups.google.com/forum/#!forum/thinreports"
   sourceforge: http://sourceforge.net/projects/thinreports/files
