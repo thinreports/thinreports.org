@@ -1,20 +1,15 @@
 module ThinreportsSite
   module VersionHelper
-    def version_data(key)
+    def version_config(key)
       site_data['version'][key.to_s]
     end
 
-    def version_number(options = {})
-      version_data options[:of] || :number
+    def version_number(of: nil)
+      version_config of || :number
     end
 
     def version_released_at
-      Date.parse(version_data(:released_at)).strftime('%Y.%m.%d')
-    end
-
-    def file_data(type, extra_key = nil)
-      files = site_data['latest_files'][type.to_s]
-      extra_key ? files[extra_key.to_s] : files
+      Date.parse(version_config(:released_at)).strftime('%Y.%m.%d')
     end
   end
 end

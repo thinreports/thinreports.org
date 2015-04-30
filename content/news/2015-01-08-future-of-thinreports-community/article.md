@@ -53,7 +53,7 @@ Thinreports の開発を行うための環境を整える手順を作成して�
 #### メーリングリストへの移行
 
 これも [このエントリー](/news/2014/08/future-of-thinreports/) で説明している通りですでに完了しています。
-メーリングリストは [こちら](<%= site_related_url['discussion_group'] %>) です。ぜひ登録を！
+メーリングリストは [こちら](https://groups.google.com/forum/#!forum/thinreports) です。ぜひ登録を！
 
 #### ロゴデータの公開
 

@@ -1,43 +1,14 @@
 # Thinreports Site Configuration
 ---
 version:
-  number: 0.7.7.2
-  editor: 0.7.7.2
-  generator: 0.7.7
-  released_at: "2014-08-13"
-  news: /news/2014/08/editor-0_7_7_2-released/
-
-latest_files:
-  editor:
-    - name: ThinReportsEditor-0.7.7.2-mswin.exe
-      desc: for Windows XP/7/8/8.1
-      size: 34.1 MB
-      md5:  b0667e4fb47f8ead4e35bb6dcf9d0618
-    - name: ThinReportsEditor-0.7.7.2-macosx.dmg
-      desc: for Mac OS X 10.7/10.8/10.9
-      size: 49.7 MB
-      md5:  1b8905b0448793c6ccd95bc48083602f
-    - name: ThinReportsEditor-0.7.7.2-linux-x86.tar.gz
-      desc: for Linux 32bit (Tested with Ubuntu 14.04)
-      size: 53.3 MB
-      md5:  07c6fcc7155b2f3571cbce49e0fc6c7c
-    - name: ThinReportsEditor-0.7.7.2-linux-x64.tar.gz
-      desc: for Linux 64bit (Tested with Ubuntu 14.04)
-      size: 53.0 MB
-      md5:  cc351bd1be7f9c60d3e14d33cf442996
-  generator:
-    name: thinreports-0.7.7.gem
-    desc: RubyGems Package
-    size: 20.1 MB
-    md5: 5fc443b2455ef9576e9f4e051532a0c1
+  number: 0.8.0
+  editor: 0.8.0
+  generator: 0.8.0
+  released_at: "2015-05-01"
+  announcement: /news/2014/08/editor-0_7_7_2-released/
 
 related_url:
+  chrome_web_store: https://chrome.google.com/webstore/detail/thinreports-editor/fbfgmkbpgehcabmdmdoikecbmkppimhj
+  rubygems: https://rubygems.org/gems/thinreports
   discussion_group: "https://groups.google.com/forum/#!forum/thinreports"
-  sourceforge: http://sourceforge.net/projects/thinreports
-  github:
-    top: https://github.com/thinreports
-    editor: https://github.com/thinreports/thinreports-editor
-    generator: https://github.com/thinreports/thinreports-generator
-    site: https://github.com/thinreports/thinreports.org
-    site_source: https://github.com/thinreports/thinreports.github.io
-    examples: https://github.com/thinreports/thinreports-examples
+  sourceforge: http://sourceforge.net/projects/thinreports/files

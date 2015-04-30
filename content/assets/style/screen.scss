@@ -521,7 +521,9 @@ code {
 
 /* Basic section for List of navigates */
 ul.navigates {
+  @extend .clearfix;
   list-style: none;
+  margin-left: 0;
 
   li {
     float: left;

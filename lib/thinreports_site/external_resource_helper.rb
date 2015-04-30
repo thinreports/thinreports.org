@@ -5,29 +5,18 @@ module ThinreportsSite
     end
     alias_method :tw, :twitter
 
+    def link_to_related_url(url_name, label, attributes = {})
+      link_to label, site_related_url[url_name.to_s], attributes
+    end
+
     def link_to_changelog_for(tool, label, attributes = {})
       changelog = case tool
-      when :editor    then '/blob/master/doc/CHANGELOG.md'
-      when :generator then '/blob/master/CHANGELOG.md'
+      when :editor
+        'https://github.com/thinreports/thinreports-editor/blob/master/doc/CHANGELOG.md'
+      when :generator
+        'https://github.com/thinreports/thinreports-generator/blob/master/CHANGELOG.md'
       end
-      link_to label, "#{site_related_url['github'][tool.to_s]}#{changelog}", attributes
-    end
-
-    def link_download_mirror_file_to(text, fname, extra_version = nil)
-      link_to text, "#{site_related_url['sourceforge']}/files/#{extra_version || version_number}/#{fname}/download",
-              title: "Download #{fname} from Thinreports Project in Sourceforge.net"
-    end
-
-    def link_to_github(text, repository, path = nil, attributes = {})
-      url  = site_related_url['github'][repository]
-      url += "/#{path}" if path
-
-      link_to text, url, attributes
-    end
-
-    def link_to_discussion_group(text, attributes = {})
-      attributes.update title: 'Discussion group'
-      link_to text, site_related_url['discussion_group'], attributes
+      link_to label, changelog, attributes
     end
   end
 end

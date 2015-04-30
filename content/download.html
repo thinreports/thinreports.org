@@ -10,64 +10,51 @@ title: Download
     <dt>Latest release <%= version_number %></dt>
     <dd><%= version_released_at %></dd>
   </dl>
-  <ul class="navigates clearfix">
-    <li>
-      <span class="navigate">Changelog:
-        <%= link_to_changelog_for :editor, 'Editor' %> /
-        <%= link_to_changelog_for :generator, 'Generator' %>
-      </span>
-    </li>
-    <li><%= link_to 'Announce', version_data('news'), class: 'navigate' %></li>
-    <li><%= link_to 'Getting Started', '/documentation/ja/getting-started/', class: 'navigate' %></li>
+  <ul class="navigates">
+    <li><%= link_to 'Release Announcement', version_config(:announcement), class: 'navigate' %></li>
   </ul>
 </div>
 
-<div id="release-files">
-  <h3>Latest Release</h3>
-
-  <h4>Thinreports Editor <%= version_number of: :editor %></h4>
-  <table class="file-list">
-    <tbody>
-    <% file_data(:editor).each do |f| %>
-      <tr>
-        <th><%= f['desc'] %></th>
-        <td class="md5"><%= f['md5'] %></td>
-        <td class="size"><%= f['size'] %></td>
-        <td class="button"><%= link_download_mirror_file_to 'DOWNLOAD', f['name'], f['version'] %></td>
-      </tr>
-    <% end %>
-    </tbody>
-  </table>
-  <ul class="navigates clearfix">
-    <li><%= link_to 'Features', '/features/editor/' %></li>
-    <li><%= link_to 'Documents', '/documentation/ja/' %></li>
-    <li><%= link_to 'Installation Guide', '/documentation/ja/getting-started/installation.html' %></li>
+<div class="editor section">
+  <h3>Thinreports Editor <%= version_number of: :editor %></h3>
+  <p>
+    <%= link_to_related_url :chrome_web_store,
+                '<img src="/assets/images/download/chrome-web-store-badge-v2.png" alt="Chrome Web Store">',
+                class: 'badge', target: '_blank' %>
+    Thinreports Editor は Chrome アプリケーションです。<%= link_to_related_url :chrome_web_store, 'Chrome Web Store', target: '_blank' %> よりインストールできます。
+    利用するためには Chrome ブラウザが必要です。利用可能な OS や必要なソフトウェア、
+    インストール手順については <%= link_to 'Installation Guide', '/documentation/ja/getting-started/installation.html' %> を確認してください。
+  </p>
+  <ul class="navigates">
+    <li><%= link_to_changelog_for :editor, 'Changelog', class: 'navigate' %></li>
+    <li><%= link_to_related_url :chrome_web_store, 'Chrome Web Store', class: 'navigate' %></li>
+    <li><%= link_to 'Installation Guide', '/documentation/ja/getting-started/installation.html', class: 'navigate' %></li>
   </ul>
+</div>
 
-  <h4>Thinreports Generator for Ruby <%= version_number of: :generator %></h4>
-  <table class="file-list">
-    <tbody>
-      <tr>
-      <% file_data(:generator).tap do |g| %>
-        <th><%= g['desc'] %></th>
-        <td class="md5"><%= g['md5'] %></td>
-        <td class="size"><%= g['size'] %></td>
-        <td class="button"><%= link_download_mirror_file_to 'DOWNLOAD', g['name'], version_number(of: :generator) %></td>
-      <% end %>
-      </tr>
-    </tbody>
-  </table>
-  <ul class="navigates clearfix">
-    <li><%= link_to 'Features', '/features/generator/' %></li>
-    <li><%= link_to 'Documents', '/documentation/ja/' %></li>
-    <li><%= link_to 'Installation Guide', '/documentation/ja/getting-started/installation.html' %></li>
-    <li><a href="http://badge.fury.io/rb/thinreports"><img src="https://badge.fury.io/rb/thinreports@2x.png" alt="Gem Version" height="18"></a></li>
+<div class="generator section">
+  <h3>Thinreports Generator for Ruby <%= version_number of: :generator %></h3>
+  <p>
+    <%= link_to '<img src="/assets/images/slides/slide-thinreports-gem.png" alt="RubyGems.org">',
+                'https://rubygems.org/gems/thinreports', class: 'badge', target: '_blank' %>
+    Generator for Ruby は RubyGems です。インストールは基本的に <code>gem</code> コマンドで行いますが、
+    <%= link_to_related_url :rubygems, 'rubygems.org/thinreports', target: '_blank' %> より
+    パッケージファイルをダウンロードすることも可能です。詳細については
+    <%= link_to 'Installation Guide', '/documentation/ja/getting-started/installation.html?#toc-11' %> をご覧ください。
+  </p>
+  <ul class="navigates">
+    <li><%= link_to_changelog_for :generator, 'Changelog', class: 'navigate' %></li>
+    <li><%= link_to 'RubyGems.org', 'https://rubygems.org/gems/thinreports', class: 'navigate' %></li>
+    <li><%= link_to 'Installation Guide', '/documentation/ja/getting-started/installation.html', class: 'navigate' %></li>
   </ul>
 </div>
 
 <div class="section">
   <h3>Previous Releases</h3>
   <p>
-    <%= link_to 'All releases on SourceForge.net', 'https://sourceforge.net/projects/thinreports/files/', class: 'navigate' %>
+    Editor 及び Generator の過去のリリースバージョンは下記サイトより入手できます。
+  </p>
+  <p>
+    <%= link_to_related_url :sourceforge, 'Get previous releases', class: 'navigate' %>
   </p>
 </div>

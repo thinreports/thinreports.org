@@ -16,6 +16,6 @@ written_by: hidakatsuya
   2. 旧ホスティングサーバのメンテナンス業からの解放
 
 www.thinreports.org は、 Ruby 製静的サイトジェネレーター [nanoc](http://nanoc.ws/) によって管理されており、
-そのソースコードは [GitHub](<%= site_related_url['github']['site'] %>) にて公開しています。サイトのリンク切れや間違いを見つけたら [こちら](<%= site_related_url['github']['site'] %>/issues/new) よりご報告いただけると嬉しいです。もちろん Pull Request もお待ちしております（近く、ローカル環境でのサイト開発、確認方法を含めた Pull Request 手順をまとめます）
+そのソースコードは [GitHub](https://github.com/thinreports/thinreports.org) にて公開しています。サイトのリンク切れや間違いを見つけたら [こちら](https://github.com/thinreports/thinreports.org/issues/new) よりご報告いただけると嬉しいです。もちろん Pull Request もお待ちしております（近く、ローカル環境でのサイト開発、確認方法を含めた Pull Request 手順をまとめます）
 
-また、サイトのソースコードや更新履歴は [thinreports.github.io](<%= site_related_url['github']['site_source'] %>) にて確認できます。
+また、サイトのソースコードや更新履歴は [thinreports.github.io](https://github.com/thinreports/thinreports.github.io) にて確認できます。
