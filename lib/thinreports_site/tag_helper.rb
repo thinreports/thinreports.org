@@ -12,12 +12,5 @@ module ThinreportsSite
       label = "Since #{version}"
       "<em#{tag_attrs(class: 'since' + ' notranslate', title: label)}>#{label}</em>"
     end
-
-    def colorbox_image_tag(img, caption, options = {})
-      group = options.delete(:group) || 'scg'
-      thumb = img.sub /(\.[a-z]+$)/, '-t\1'
-      link_to %!<img src="#{thumb}" alt="#{caption}">!, img,
-              {title: caption, rel: group}.merge(options)
-    end
   end
 end
