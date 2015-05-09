@@ -3,7 +3,6 @@ is_hidden: true
 ---
 
 @import 'compass/css3';
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,300,300italic);
 
 @function image-path($filename) {
   @return url(/assets/images/#{$filename});
@@ -430,24 +429,6 @@ code {
 
     img {
       width: 15px;
-    }
-  }
-
-  #translater {
-    width: 150px;
-    @include border-radius(2px);
-    border: 1px solid #ddd;
-    padding: 5px;
-    @include box-sizing(border-box);
-    text-align: center;
-    margin-bottom: 15px;
-
-    .goog-te-gadget-simple {
-      border-color: transparent !important;
-    }
-
-    .goog-te-menu-value span {
-      border: 0 !important;
     }
   }
 }

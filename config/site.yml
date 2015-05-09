@@ -1,5 +1,7 @@
 # Thinreports Site Configuration
 ---
+title: オープンソース PDF 帳票ツール for Ruby, Rails
+
 version:
   number: 0.8.0
   editor: 0.8.0

@@ -17,6 +17,7 @@ title: オープンソース PDF 帳票ツール for Ruby, Rails
       </a>
     </div>
   </div>
+  <% content_for :evaluate_scripts do %>
   <script>
     (function() {
       var slides = $('.showcase .slides');
@@ -27,8 +28,9 @@ title: オープンソース PDF 帳票ツール for Ruby, Rails
       }, 5000);
     })();
   </script>
+  <% end %>
   <div class="aboutme">
-    <h2><img src="/assets/images/callout.png" alt="An open source reporting tolls for Ruby - オープンソース帳票ツール"></h2>
+    <h2>An open source reporting tools for Ruby</h2>
     <p class="introduction">
       Thinreports は PDF 形式の帳票を生成する Ruby 向けのオープンソースソフトウェアです。
       専用のレポートデザイナ Thinreports Editor と PDF ジェネレータ Thinreports Generator によって

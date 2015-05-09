@@ -13,4 +13,8 @@ gem 'rake'
 
 group :development do
   gem 'guard-nanoc'
+  gem 'image_optim'
+  gem 'image_optim_pack'
+  gem 'colorize'
+  gem 'filesize'
 end

@@ -19,6 +19,10 @@ def site_data
   @site_data ||= YAML.load_file('config/site.yml')
 end
 
+def site_title
+  site_data['title']
+end
+
 def site_related_url
   site_data['related_url']
 end

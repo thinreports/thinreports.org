@@ -47,6 +47,35 @@ namespace :travis do
 end
 
 namespace :site do
+  desc 'Optimize PNG images in static/images'
+  task :optimize_images do
+    require 'image_optim'
+    require 'filesize'
+    require 'colorize'
+
+    base = Pathname.new 'static/images'
+    targets = Dir[ base.join('**', '*.png') ]
+
+    status = {
+      optimized: 'Optimized :'.colorize(:blue),
+      skipped:   'Skipped   :'.colorize(:yellow)
+    }
+
+    optimizer = ImageOptim.new pngout: false, svgo: false
+    optimizer.optimize_images!(targets) do |original, optimized|
+      original_path_from_base = Pathname.new(original).relative_path_from base
+
+      if optimized
+        print status[:optimized] + " #{original_path_from_base}"
+        print ' from ' + Filesize.from("#{optimized.original_size} B").pretty
+        print ' to '   + Filesize.from("#{optimized.size} B").pretty
+      else
+        print status[:skipped] + " #{original_path_from_base}"
+      end
+      puts ''
+    end
+  end
+
   task :news do
     require 'date'
     require 'fileutils'
