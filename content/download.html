@@ -5,39 +5,40 @@ title: Download
 
 <h2><%= @item[:title] %></h2>
 
-<div id="release-info" class="box">
-  <dl class="clearfix">
-    <dt>Latest release <%= version_number %></dt>
-    <dd><%= version_released_at %></dd>
-  </dl>
-  <ul class="navigates">
-    <li><%= link_to 'Release Announcement', version_config(:announcement), class: 'navigate' %></li>
-  </ul>
-</div>
-
 <div class="editor section">
-  <h3>Thinreports Editor <%= version_number of: :editor %></h3>
-  <p>
+  <h3>
+    Thinreports Editor <%= editor_release['version'] %>
+    <span class="released-at"><%= formatted_release_date editor_release['released_at'] %></span>
+  </h3>
+  <ul class="navigates">
+    <li><%= link_to 'Release Announcement', editor_release['announcement'], class: 'navigate' %></li>
+    <li><%= link_to_changelog_for :editor, 'Changelog', class: 'navigate' %></li>
+    <li><%= link_to_related_url :chrome_web_store, 'Chrome Web Store', class: 'navigate' %></li>
+    <li><%= link_to 'Installation Guide', '/documentation/ja/getting-started/installation.html', class: 'navigate' %></li>
+  </ul>
+  <p class="clearfix">
     <%= link_to_related_url :chrome_web_store,
                 '<img src="/assets/images/download/chrome-web-store-badge-v2.png" alt="Chrome Web Store">',
                 class: 'badge', target: '_blank' %>
     Thinreports Editor は Chrome アプリケーションです。<%= link_to_related_url :chrome_web_store, 'Chrome Web Store', target: '_blank' %> よりインストールできます。
     利用するためには Chrome ブラウザが必要です。利用可能な OS や必要なソフトウェア、
     インストール手順については <%= link_to 'Installation Guide', '/documentation/ja/getting-started/installation.html' %> を確認してください。
-  </p>
-  <p>
     従来のデスクトップバージョンは、Windows 版のみリリースしています。<%= link_to_related_url :sourceforge, 'こちら' %> からダウンロードできます。
   </p>
-  <ul class="navigates">
-    <li><%= link_to_changelog_for :editor, 'Changelog', class: 'navigate' %></li>
-    <li><%= link_to_related_url :chrome_web_store, 'Chrome Web Store', class: 'navigate' %></li>
-    <li><%= link_to 'Installation Guide', '/documentation/ja/getting-started/installation.html', class: 'navigate' %></li>
-  </ul>
 </div>
 
 <div class="generator section">
-  <h3>Thinreports Generator for Ruby <%= version_number of: :generator %></h3>
-  <p>
+  <h3>
+    Thinreports Generator for Ruby <%= generator_release['version'] %>
+    <span class="released-at"><%= formatted_release_date generator_release['released_at'] %></span>
+  </h3>
+  <ul class="navigates">
+    <li><%= link_to 'Release Announcement', generator_release['announcement'], class: 'navigate' %></li>
+    <li><%= link_to_changelog_for :generator, 'Changelog', class: 'navigate' %></li>
+    <li><%= link_to 'RubyGems.org', 'https://rubygems.org/gems/thinreports', class: 'navigate' %></li>
+    <li><%= link_to 'Installation Guide', '/documentation/ja/getting-started/installation.html', class: 'navigate' %></li>
+  </ul>
+  <p class="clearfix">
     <%= link_to '<img src="/assets/images/slides/slide-thinreports-gem.png" alt="RubyGems.org">',
                 'https://rubygems.org/gems/thinreports', class: 'badge', target: '_blank' %>
     Generator for Ruby は RubyGems です。インストールは基本的に <code>gem</code> コマンドで行いますが、
@@ -45,11 +46,6 @@ title: Download
     パッケージファイルをダウンロードすることも可能です。詳細については
     <%= link_to 'Installation Guide', '/documentation/ja/getting-started/installation.html?#toc-11' %> をご覧ください。
   </p>
-  <ul class="navigates">
-    <li><%= link_to_changelog_for :generator, 'Changelog', class: 'navigate' %></li>
-    <li><%= link_to 'RubyGems.org', 'https://rubygems.org/gems/thinreports', class: 'navigate' %></li>
-    <li><%= link_to 'Installation Guide', '/documentation/ja/getting-started/installation.html', class: 'navigate' %></li>
-  </ul>
 </div>
 
 <div class="section">

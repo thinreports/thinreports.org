@@ -1,29 +1,14 @@
 // Styles for download page
 .content-download {
-  #release-info {
-    dt, dd {
-      font-size: 24px;
-    }
-
-    dt {
-      color: black;
-      float: left;
-    }
-
-    dd {
-      font-style: italic;
-      color: #aaa;
-      text-align: right;
-    }
-
-    .navigates {
-      margin-top: 10px;
-    }
-  }
-
   h3 {
     font-size: 26px;
     margin: 50px 0 35px 0;
+
+    .released-at {
+      font-size: 18px !important;
+      color: #aaa;
+      padding-left: 20px;
+    }
   }
 
   .editor {

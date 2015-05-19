@@ -13,7 +13,7 @@ include ThinreportsSite::ArticleHelper
 include ThinreportsSite::ExternalResourceHelper
 include ThinreportsSite::LinkHelper
 include ThinreportsSite::TagHelper
-include ThinreportsSite::VersionHelper
+include ThinreportsSite::ReleaseHelper
 
 def site_data
   @site_data ||= YAML.load_file('config/site.yml')
