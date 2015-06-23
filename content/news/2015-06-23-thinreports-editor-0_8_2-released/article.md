@@ -10,12 +10,13 @@ created_at: 2015-06-23T13:15
 
 Thinreports Editor 0.8.2 をリリースしました。
 
-このリリースは主に、ポルトガル語（ブラジル）のサポートが中心ですが、その他にも、Editorの1件のバグ修正や小さな改善が含まれています。Generator のリリースはありません。
+このリリースには以下の変更が含まれています。
 
-* [#35](https://github.com/thinreports/thinreports-editor/issues/35) Underline style is added to ID of TextBlock and PageNumber
+  * [#48](https://github.com/thinreports/thinreports-editor/issues/48) Support Brazillian Portuguese locale
+  * [#52](https://github.com/thinreports/thinreports-editor/issues/52) Show description of Base Format in Tooltip
+  * [#35](https://github.com/thinreports/thinreports-editor/issues/35) Fixed: Invalid style is applied to ID text
 
-アプリは自動的に更新されるため、 0.8.1 をすでにインストールしている場合は別途インストールする必要はありません。
-また、 Generator のリリースはありません。
+アプリは自動的に更新されるため、Chromeアプリ版をインストールしている場合は別途インストールする必要はありません。また、Generator のリリースはありません。
 
 ### 関連リンク
 
