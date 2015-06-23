@@ -2,12 +2,12 @@
 ---
 title: オープンソース PDF 帳票ツール for Ruby, Rails
 
-version: 0.8.1
+version: 0.8.2
 
 editor:
-  version: 0.8.1
-  released_at: "2015-05-19"
-  announcement: /news/2015/05/thinreports-editor-0_8_1-released/
+  version: 0.8.2
+  released_at: "2015-06-23"
+  announcement: /news/2015/06/thinreports-editor-0_8_2-released/
 generator:
   version: 0.8.0
   released_at: "2015-04-30"
