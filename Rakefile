@@ -24,8 +24,6 @@ namespace :travis do
   def publish
     message = `git log -n 1 --pretty=format:"%s"`.gsub("'", '')
 
-    return if maintenance_commit?(message)
-
     cd 'output' do
       if content_changed?
         sh "git config --global user.name '#{GIT_AUTHOR_NAME}'"
@@ -35,10 +33,6 @@ namespace :travis do
         sh "git push --quiet #{REPOSITORY} master 2> /dev/null"
       end
     end
-  end
-
-  def maintenance_commit?(message)
-    message =~ /\A\[maint\]/
   end
 
   def content_changed?
