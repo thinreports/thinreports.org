@@ -19,7 +19,7 @@ Thinreports Generator 0.8.1 をリリースしました。
 この機能は、一部の透過 PNG の透明部分が正しく描画されない問題を解決するための機能です。
 具体的には、 [#32](https://github.com/thinreports/thinreports-generator/pull/32) にあるような PNG8 形式の PNG が該当します。
 
-なお、この機能を **デフォルトでは無効** になっているため、使いたい場合は下記の設定によって有効化する必要があります。
+なお、この機能は **デフォルトでは無効** になっているため、有効にする場合は下記のように設定が必要です。
 
 ~~~ruby
 Thinreports.config.convert_palleted_transparency_png = true
