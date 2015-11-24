@@ -109,7 +109,7 @@ DEPENDENCIES
   image_optim_pack
   kramdown
   mime-types
-  nanoc
+  nanoc (~> 3.0)
   nokogiri
   rainpress
   rake
