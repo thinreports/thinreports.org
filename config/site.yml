@@ -9,9 +9,9 @@ editor:
   released_at: "2015-06-23"
   announcement: /news/2015/06/thinreports-editor-0_8_2-released/
 generator:
-  version: 0.8.1
-  released_at: "2015-07-23"
-  announcement: /news/2015/07/thinreports-generator-0_8_1-released/
+  version: 0.8.2
+  released_at: "2016-02-07"
+  announcement: /news/2016/02/thinreports-generator-0_8_2-released/
 
 related_url:
   chrome_web_store: https://chrome.google.com/webstore/detail/thinreports-editor/cdlcnnandndjkbbdcbpnjoimphmifkfn
