@@ -10,6 +10,7 @@ prune:
 data_sources:
   -
     type: filesystem_unified
+    encoding: utf-8
     items_root: /
     layouts_root: /
   -
