@@ -6,12 +6,12 @@ version: 0.9.0
 
 editor:
   version: 0.9.0
-  released_at: "2016-05-28"
-  announcement: /news/2016/05/thinreports-0_9_0-released/
+  released_at: "2016-06-01"
+  announcement: /news/2016/06/thinreports-0_9_0-is-out/
 generator:
   version: 0.9.0
-  released_at: "2016-05-28"
-  announcement: /news/2016/05/thinreports-0_9_0-released/
+  released_at: "2016-06-01"
+  announcement: /news/2016/06/thinreports-0_9_0-is-out/
 
 related_url:
   chrome_web_store: https://chrome.google.com/webstore/detail/thinreports-editor/cdlcnnandndjkbbdcbpnjoimphmifkfn
