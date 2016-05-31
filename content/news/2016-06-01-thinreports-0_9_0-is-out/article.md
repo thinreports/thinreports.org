@@ -43,7 +43,7 @@ v0.9 or v1.0 の Editor を使って古い形式の `.tlf` ファイルを開き
 
 #### New Format Specification
 
-https://github.com/thinreports/thinreports/wiki/Spec%3A-Layout-File%3A-Format
+See wiki [Spec: Layout File: Format](https://github.com/thinreports/thinreports/wiki/Spec%3A-Layout-File%3A-Format).
 
 ### Drop support for layout file created with Editor v0.7 or lower
 
