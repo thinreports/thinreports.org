@@ -58,6 +58,12 @@ v0.9 以降で扱うためには、Editor v0.8 で保存し直す必要があり
 {"version":"0.7.7.2","finger-print":-1821469257,"config":{"title":"Example Barcode","option":{},"page" ... }
 ~~~
 
+### How to install old version of Editor
+
+Editor は自動的に v0.9.0 に更新されます。古いバージョン v0.8.2 を継続して使いたい場合は、
+[インストールガイド](/documentation/ja/getting-started/installation.html) の「過去のバージョンをインストールする」にて、
+Chromeウェブストアでインストールした最新版の Editor とは別に、古いバージョンの Editor を共存させることができます。
+
 ### 関連リンク
 
   * [Download](/download/)
