@@ -17,25 +17,6 @@
     .navigates {
       margin-left: 0;
     }
-
-    .badge {
-      @include inline-block;
-      @include border-radius(3px);
-      @include box-sizing(border-box);
-      float: right;
-      margin-left: 1em;
-      width: 300px;
-      border: 1px solid #eee;
-      overflow: hidden;
-
-      img {
-        width: 100%;
-      }
-
-      &:hover {
-        border-color: #ddd;
-      }
-    }
   }
 
   .generator {
