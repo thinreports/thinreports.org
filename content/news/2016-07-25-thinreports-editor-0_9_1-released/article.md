@@ -12,7 +12,7 @@ Thinreports Editor 0.9.1 をリリースしました。
 
 Editor 0.9.0 でテンプレートファイルを開いた時、リスト内の罫線が正しく描画されない問題を修正しています。
 
- * Fixed: Broken line rendering in list [#60](https://github.com/thinreports/thinreports-editor/issues/60)
+ * Fixed: Broken line rendering in list [#60](https://github.com/thinreports/thinreports-editor/issues/60)
 
 この問題の詳細は下記をご覧ください。
 
