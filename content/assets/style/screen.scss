@@ -29,9 +29,9 @@ $base-font-size: 13px;
 body {
   @include base-font-style;
   font-size: $base-font-size;
-  background: #fff;
+  background: #333;
   margin: 0;
-  padding: 100px 0 0 0;
+  padding: 0;
 }
 
 a {
@@ -165,7 +165,13 @@ code {
   margin-right: auto;
 }
 
+.root-section {
+  background: #fff;
+}
+
 #header {
+  @extend .root-section;
+  padding-top: 100px;
   height: 180px;
 }
 
@@ -175,7 +181,8 @@ code {
 }
 
 #main {
-  margin-bottom: 200px;
+  @extend .root-section;
+  padding-bottom: 200px;
 }
 
 #content {
@@ -437,6 +444,7 @@ code {
  * Footer contents
  */
 #footer {
+  @extend .root-section;
   background: #333;
   padding: 25px 0 30px 0;
   border-top: 1px solid #111;
