@@ -11,9 +11,9 @@ title: Download
     <span class="released-at"><%= formatted_release_date editor_release['released_at'] %></span>
   </h3>
   <ul class="navigates">
+    <li><%= link_to_related_url :chrome_web_store, 'Download', class: 'navigate' %></li>
     <li><%= link_to 'Release Announcement', editor_release['announcement'], class: 'navigate' %></li>
     <li><%= link_to_changelog_for :editor, 'Changelog', class: 'navigate' %></li>
-    <li><%= link_to_related_url :chrome_web_store, 'Chrome Web Store', class: 'navigate' %></li>
     <li><%= link_to 'Installation Guide', '/documentation/ja/getting-started/installation.html', class: 'navigate' %></li>
   </ul>
   <p class="clearfix">
@@ -29,9 +29,9 @@ title: Download
     <span class="released-at"><%= formatted_release_date generator_release['released_at'] %></span>
   </h3>
   <ul class="navigates">
+    <li><%= link_to 'Download', 'https://rubygems.org/gems/thinreports', class: 'navigate' %></li>
     <li><%= link_to 'Release Announcement', generator_release['announcement'], class: 'navigate' %></li>
     <li><%= link_to_changelog_for :generator, 'Changelog', class: 'navigate' %></li>
-    <li><%= link_to 'RubyGems.org', 'https://rubygems.org/gems/thinreports', class: 'navigate' %></li>
     <li><%= link_to 'Installation Guide', '/documentation/ja/getting-started/installation.html', class: 'navigate' %></li>
   </ul>
   <p class="clearfix">
