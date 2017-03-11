@@ -18,7 +18,7 @@ Fork this repository, and clone your forked thinreports.org:
 
     $ git clone git@github.com:yourname/thinreports.org.git
 
-Create your feature or improvment branch:
+Create your feature or improvement branch:
 
     $ git checkout -b new-feature
 
