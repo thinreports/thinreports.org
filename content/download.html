@@ -11,15 +11,14 @@ title: Download
     <span class="released-at"><%= formatted_release_date editor_release['released_at'] %></span>
   </h3>
   <ul class="navigates">
-    <li><%= link_to_related_url :chrome_web_store, 'Download', class: 'navigate' %></li>
+    <li><%= link_to_related_url :editor_releases, 'Download', class: 'navigate' %></li>
     <li><%= link_to 'Release Announcement', editor_release['announcement'], class: 'navigate' %></li>
     <li><%= link_to_changelog_for :editor, 'Changelog', class: 'navigate' %></li>
     <li><%= link_to 'Installation Guide', '/documentation/ja/getting-started/installation.html', class: 'navigate' %></li>
   </ul>
   <p class="clearfix">
-    Thinreports Editor は Chrome アプリケーションです。<%= link_to_related_url :chrome_web_store, 'Chrome Web Store', target: '_blank' %> よりインストールできます。
-    利用するためには Chrome ブラウザが必要です。利用可能な OS や必要なソフトウェア、
-    インストール手順については <%= link_to 'Installation Guide', '/documentation/ja/getting-started/installation.html' %> を確認してください。
+    Editor はデスクトップアプリケーションです。利用可能な OS や必要なソフトウェア、
+    インストール手順は <%= link_to 'Installation Guide', '/documentation/ja/getting-started/installation.html' %> を確認してください。
   </p>
 </div>
 
