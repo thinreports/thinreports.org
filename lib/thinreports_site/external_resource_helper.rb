@@ -12,7 +12,7 @@ module ThinreportsSite
     def link_to_changelog_for(tool, label, attributes = {})
       changelog = case tool
       when :editor
-        'https://github.com/thinreports/thinreports-editor/blob/master/doc/CHANGELOG.md'
+        'https://github.com/thinreports/thinreports-editor/blob/master/CHANGELOG.md'
       when :generator
         'https://github.com/thinreports/thinreports-generator/blob/master/CHANGELOG.md'
       end
