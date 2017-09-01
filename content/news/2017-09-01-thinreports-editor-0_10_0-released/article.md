@@ -12,12 +12,12 @@ Thinreports Editor 0.10.0 をリリースしました。
 
 Chromeアプリケーション終了に伴い、 [Electron](https://electron.atom.io/) ベースのデスクトップアプリケーションへの移行を行いました。機能の追加・変更はありません。
 
-  * Released as a Electron based application
+  * Released as an Electron based application
   * Drop support for layout created/modified with Editor 0.8.0
 
 ![New Thinreports Editor](images/editor.png)
 
-### Released as a Electron based application
+### Released as an Electron based application
 
 Electron ベースのデスクトップアプリケーションとしてリリースしました。以下の OS をサポートします。
 括弧内の数字はテスト済みのバージョンです。
