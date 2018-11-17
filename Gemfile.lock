@@ -1,5 +1,5 @@
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     adsf (1.4.0)
       rack (>= 1.0.0, < 3.0.0)
@@ -106,4 +106,4 @@ DEPENDENCIES
   rake
 
 BUNDLED WITH
-   1.16.0
+   1.17.1
