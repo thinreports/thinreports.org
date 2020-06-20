@@ -8,14 +8,14 @@ written_by: hidakatsuya
 created_at: 2020-06-20T17:09
 ---
 
-Thinreports v0.11.0 Released.
+Thinreports v0.11.0 をリリースしました。
 
-This release includes some breaking changes and bugfixes. Please check CHANGELOG below for details.
+このリリースには、いくつかの非互換の変更点とバグ修正が含まれています。
 
 ## Editor
 
-See [CHANGELOG.md](https://github.com/thinreports/thinreports-editor/blob/master/CHANGELOG.md#0110) for changes.
+変更内容は [CHANGELOG.md](https://github.com/thinreports/thinreports-editor/blob/master/CHANGELOG.md#0110) を参照してください。
 
 ## Generator
 
-See [CHANGELOG.md](https://github.com/thinreports/thinreports-generator/blob/master/CHANGELOG.md#0110) for release changes.
+変更内容は [CHANGELOG.md](https://github.com/thinreports/thinreports-generator/blob/master/CHANGELOG.md#0110) を参照してください。
