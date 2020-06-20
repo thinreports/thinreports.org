@@ -5,7 +5,7 @@ bundler_args: --without development
 script: rake travis:deploy
 env:
   global:
-  - secure: suCRsJSwNJKQlSdVWQ32HR6NbSu/MXXMwf1pCY7OKVT+u0wgX9sU2rejgjXP8yXLLi2VKe/ZKCKTCQxorLIDDZQxglbcwqnNTAf40pcTJakfSN+9ITlR4oTcrzobCMDyrhPvOaQcFiio9tDoRzJhBSffLcGjo/Y17JEz0VG7QmI=
+  - secure: jZtIcNKAOyxLEXXM7NvGSeasdqxmWKWyunhH6uBT00i25PpV7HZB8M5NWR6L4+Z3xBrdcsPdEJ9eaBFFnDXBzg9eW1MI384+1n3j1+Y8+DxpHaVn/Jt/37oLOoVCxRv0t5SVi+bEEoZWgl7O9k9iu4xgGnI1vGebw2WJdHtVch0=
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 
 branches:
