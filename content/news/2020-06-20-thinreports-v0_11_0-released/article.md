@@ -12,10 +12,10 @@ Thinreports v0.11.0 をリリースしました。
 
 このリリースには、いくつかの非互換の変更点とバグ修正が含まれています。
 
-## Editor
+### Editor
 
 変更内容は [CHANGELOG.md](https://github.com/thinreports/thinreports-editor/blob/master/CHANGELOG.md#0110) を参照してください。
 
-## Generator
+### Generator
 
 変更内容は [CHANGELOG.md](https://github.com/thinreports/thinreports-generator/blob/master/CHANGELOG.md#0110) を参照してください。
