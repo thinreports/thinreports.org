@@ -61,7 +61,7 @@ GEM
     image_size (2.0.2)
     in_threads (1.5.4)
     json_schema (0.20.9)
-    kramdown (2.2.1)
+    kramdown (2.3.0)
       rexml
     listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
