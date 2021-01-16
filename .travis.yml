@@ -1,5 +1,5 @@
 language: ruby
-rvm: 2.3.0
+rvm: 2.7.0
 sudo: false
 bundler_args: --without development
 script: rake travis:deploy
