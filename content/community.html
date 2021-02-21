@@ -6,19 +6,14 @@ title: Community
 <h2><%= @item[:title] %></h2>
 
 <div class="section">
-  <h3>Discussion Group</h3>
-  <p class="screen-image">
-    <a href="https://groups.google.com/forum/#!forum/thinreports">
-      <img src="/assets/images/community/discussion-group.png" alt="Discussion group for Thinreports">
-    </a>
+  <h3>GitHub Discussions</h3>
+  <p>
+    Thinreports は公式 <%= link_to_related_url :github_discussions, 'GitHub Discussions' %> を用意しています。
+    もしあなたが Thinreports に関する疑問や問題を持っているなら、この GitHub Discussions で解決策を得ることができるかもしれません。
+    そうでないなら、ぜひあなたの問題や質問を投稿してみて下さい。
   </p>
   <p>
-    Thinreports は Google Groups 上に公式 <%= link_to_related_url :discussion_group, 'Discussion Group' %> を用意しています。
-    もしあなたが Thinreports に関する疑問や問題を持っているなら、このグループでヒントや解決策を得ることができるかもしれません。
-    そうでないなら、グループに参加してあなたの問題を投稿してみて下さい。
-  </p>
-  <p>
-    <%= link_to_related_url :discussion_group, 'Discussion Group へ参加する', target: '_blank', class: 'navigate' %>
+    <%= link_to_related_url :github_discussions, 'GitHub Discussions', target: '_blank', class: 'navigate' %>
   </p>
 </div>
 
@@ -29,13 +24,6 @@ title: Community
     開発は、 Thinreports.org コミュニティメンバーによってボランティアで進められます。
     もしあなたが Thinreports を使っていたり、Thinreports を評価してくださるなら、
     ぜひ Thinreports にコントリビュートしてください。
-  </p>
-
-  <h4>How to contribute to Thinreports</h4>
-  <p>
-    一言で「コントリビュート」といっても、Pull Request による開発への参加だけでなく、
-    問題の報告や <%= link_to_related_url :discussion_group, 'Discussion Group' %> への投稿、
-    Discussion Group へ投稿された質問への回答などさまざまです。詳細は以下をご覧ください。
   </p>
   <p>
     <%= link_to 'How to: Contribute to Thinreports', 'https://github.com/thinreports/thinreports/wiki/How-to:-Contributing-to-Thinreports', target: '_blank', class: 'navigate' %>

@@ -16,6 +16,6 @@ generator:
 related_url:
   editor_releases: https://github.com/thinreports/thinreports-editor/releases
   rubygems: https://rubygems.org/gems/thinreports
-  discussion_group: "https://groups.google.com/forum/#!forum/thinreports"
+  github_discussions: "https://github.com/thinreports/thinreports/discussions"
   # Deptecated
   chrome_web_store: https://chrome.google.com/webstore/detail/thinreports-editor/cdlcnnandndjkbbdcbpnjoimphmifkfn
